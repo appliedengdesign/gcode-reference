@@ -1,0 +1,34 @@
+{
+  "name": "gcode-reference",
+  "version": "0.0.1",
+  "description": "Node module to provide descriptions and reference to CNC G-Codes",
+  "main": "./dist/index.js",
+  "scripts": {
+    "compile": "tsc -p ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appliedengdesign/gcode-reference.git"
+  },
+  "keywords": [
+    "nodejs",
+    "node",
+    "typescript",
+    "reference",
+    "mill",
+    "cnc",
+    "gcode",
+    "lathe",
+    "milling",
+    "turning"
+  ],
+  "author": "Mike Centola",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appliedengdesign/gcode-reference/issues"
+  },
+  "homepage": "https://github.com/appliedengdesign/gcode-reference#readme",
+  "devDependencies": {
+    "typescript": "^4.2.3"
+  }
+}
