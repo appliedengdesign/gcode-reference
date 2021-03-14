@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "G/M Code Dictionary",
+    "description": "A listing with descriptions of CNC G & M Codes",
+    "type": "object",
+    "properties": {
+        "type": {
+            "description": "The type of code (G or M)",
+            "type": "string",
+            "enum": [
+                "gcode",
+                "mcode"
+            ]
+        },
+        "machineType": {
+            "description": "The type of CNC machine",
+            "type": "string",
+            "enum": [
+                "mill",
+                "lathe",
+                "3dprinter"
+            ]
+        },
+        "title": {
+            "description": "Descriptive title of the JSON",
+            "type": "string"
+        },
+        "codes": {
+            "description": "Individual G-Codes",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "description": "The actual code (GXX or MXX)",
+                        "type": "string",
+                        "minLength": 3,
+                        "maxLength": 3
+                    },
+                    "category": {
+                        "description": "Category for the code",
+                        "type": "string",
+                        "enum": [
+                            "motion",
+                            "coordinate",
+                            "compensation",
+                            "canned",
+                            "other"
+                        ]
+                    },
+                    "shortDesc": {
+                        "description": "A short description of the code",
+                        "type": "string"
+                    },
+                    "desc": {
+                        "description": "A longer description with markdown formatting",
+                        "type": "string"
+                    }
+                }
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    }
+}
