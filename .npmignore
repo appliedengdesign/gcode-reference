@@ -1,0 +1,13 @@
+.eslintrc.json
+.editorconfig
+.eslintignore
+.gitattributes
+.prettierignore
+.prettierrc
+.gitignore
+.github
+.travis.yml
+.vscode
+src/
+tslint.json
+tsconfig.buildinfo
