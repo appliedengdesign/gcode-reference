@@ -15,7 +15,8 @@
         "skipLibCheck": true,
         "rootDir": "src",
         "outDir": "dist",
-        "sourceMap": true
+        "sourceMap": true,
+        "resolveJsonModule": true
     },
     "include": [
         "src"

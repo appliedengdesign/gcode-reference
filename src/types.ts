@@ -4,22 +4,16 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-const enum MachineType {
+const enum MachineTypes {
     Mill = 1,
     Lathe,
     Printer,
 }
 
-export interface IGCode {
-    [gCode: string]: {
-        category: string;
-        shortDesc: string;
-        desc: string;
-    };
-}
+export type MachineType = keyof typeof MachineTypes;
 
-export interface IMCode {
-    [mCode: string]: {
+export interface ICode extends Record<string, any> {
+    [code: string]: {
         category: string;
         shortDesc: string;
         desc: string;
@@ -27,12 +21,7 @@ export interface IMCode {
 }
 
 export interface Dictionary {
-    readonly gCodes: IGCode[];
-    readonly mCodes: IMCode[];
-    readonly machineType: MachineType;
-
-    getShortDesc(): string;
-    getDesc(): string;
-    getCategory(): string;
-    getAllAsHtml(): string;
+    gCodes: ICode[];
+    mCodes: ICode[];
+    machineType: MachineType;
 }

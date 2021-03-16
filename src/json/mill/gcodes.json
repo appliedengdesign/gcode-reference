@@ -1,20 +1,18 @@
 {
-    "$schema": "./cnccodes.schema.json",
+    "$schema": "../schema/cnccodes.schema.json",
     "type": "gcode",
     "machineType": "mill",
     "title": "G/M Code Milling Reference",
-    "codes": [
-        {
-            "code": "G00",
+    "codes": {
+        "G00": {
             "category": "motion",
             "shortDesc": "",
             "desc": ""
         },
-        {
-            "code": "G01",
+        "G01": {
             "category": "motion",
             "shortDesc": "",
             "desc": ""
         }
-    ]
+    }
 }

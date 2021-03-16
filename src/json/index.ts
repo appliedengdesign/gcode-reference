@@ -4,4 +4,19 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export * from './gReference';
+import { ICode } from '../types';
+
+interface CNCCodes {
+    type: string;
+    machineType: string;
+    title: string;
+    codes: ICode;
+}
+
+// Milling
+import millGCodes from './mill/gcodes.json';
+import millMCodes from './mill/mcodes.json';
+
+// Exports
+export const millingGCodes: CNCCodes = millGCodes;
+export const millingMCodes: CNCCodes = millMCodes;

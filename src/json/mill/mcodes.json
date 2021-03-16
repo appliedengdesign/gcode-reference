@@ -1,0 +1,18 @@
+{
+    "$schema": "../schema/cnccodes.schema.json",
+    "type": "mcode",
+    "machineType": "mill",
+    "title": "G/M Code Milling Reference",
+    "codes": {
+        "M00": {
+            "category": "other",
+            "shortDesc": "",
+            "desc": ""
+        },
+        "M01": {
+            "category": "other",
+            "shortDesc": "",
+            "desc": ""
+        }
+    }
+}

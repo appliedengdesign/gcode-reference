@@ -4,4 +4,6 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export * from './gReference';
+import { GReference } from '../index';
+
+const g = new GReference();

@@ -4,4 +4,18 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export * from './gReference';
+import { ICode } from './types';
+import * as codes from './json';
+
+export class GReference {
+    private _gcodes: ICode[] = [];
+
+    constructor() {
+        // Build Dictionary from JSON
+        this.buildReference();
+    }
+
+    private buildReference(): void {
+        console.error(codes.millingGCodes.codes);
+    }
+}
