@@ -18,4 +18,6 @@ export class GReference {
     private buildReference(): void {
         console.error(codes.millingGCodes.codes);
     }
+
+    getDescByCode(code: string): ICode {}
 }
