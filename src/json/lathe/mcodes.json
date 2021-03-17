@@ -1,8 +1,8 @@
 {
     "$schema": "../schema/cnccodes.schema.json",
     "type": "mcode",
-    "machineType": "mill",
-    "title": "M Code Milling Reference",
+    "machineType": "lathe",
+    "title": "M Code Lathe Reference",
     "codes": {
         "M00": {
             "category": "other",

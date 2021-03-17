@@ -1,8 +1,8 @@
 {
     "$schema": "../schema/cnccodes.schema.json",
     "type": "gcode",
-    "machineType": "mill",
-    "title": "G Code Milling Reference",
+    "machineType": "lathe",
+    "title": "G Code Lathe Reference",
     "codes": {
         "G00": {
             "category": "motion",

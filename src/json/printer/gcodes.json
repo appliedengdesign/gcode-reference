@@ -1,8 +1,8 @@
 {
     "$schema": "../schema/cnccodes.schema.json",
     "type": "gcode",
-    "machineType": "mill",
-    "title": "G Code Milling Reference",
+    "machineType": "3dprinter",
+    "title": "G Code 3D Printer Reference",
     "codes": {
         "G00": {
             "category": "motion",
