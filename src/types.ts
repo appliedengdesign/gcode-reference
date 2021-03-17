@@ -4,24 +4,19 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-const enum MachineTypes {
-    Mill = 1,
-    Lathe,
-    Printer,
+export enum MachineTypes {
+    Mill = 'Mill',
+    Lathe = 'Lathe',
+    Printer = 'Printer',
 }
 
-export type MachineType = keyof typeof MachineTypes;
+export type MachineType = MachineTypes;
 
-export interface ICode extends Record<string, any> {
-    [code: string]: {
-        category: string;
-        shortDesc: string;
-        desc: string;
-    };
-}
-
-export interface Dictionary {
-    gCodes: ICode[];
-    mCodes: ICode[];
-    machineType: MachineType;
+type Code = {
+    category: string;
+    shortDesc: string;
+    desc: string;
+};
+export interface ICode extends Record<string, Code> {
+    [code: string]: Code;
 }

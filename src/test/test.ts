@@ -4,6 +4,10 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { GReference } from '../index';
+import { GReference, MachineTypes } from '../index';
 
-const g = new GReference();
+const g = new GReference(MachineTypes.Mill);
+
+process.stdout.write(`${g.getShortDescByCode('G00')}\n`);
+process.stdout.write(`${g.getDescByCode('G00')}\n`);
+// process.stdout.write(`${g.getDescByCode('M00')}\n`);
