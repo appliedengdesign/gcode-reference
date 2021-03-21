@@ -11,24 +11,50 @@
             "modal": true,
             "parameters": {
                 "X": {
-                    "desc": "An absolute or relative coordinate on the X axis.",
+                    "desc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "An absolute or relative coordinate on the Y axis.",
+                    "desc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "An absolute or relative coordinate on the Z axis",
+                    "desc": "Z-Axis motion command",
                     "optional": true
                 }
             }
         },
         "G01": {
             "category": "motion",
-            "shortDesc": "",
+            "shortDesc": "Linear Interpolation Motion",
             "desc": "",
-            "modal": true
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "desc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "desc": "A-Axis motion command",
+                    "optional": true
+                },
+                "B": {
+                    "desc": "B-Axis motion command",
+                    "optional": true
+                },
+                "C": {
+                    "desc": "C-Axis motion command",
+                    "optional": true
+                }
+            }
         }
     }
 }

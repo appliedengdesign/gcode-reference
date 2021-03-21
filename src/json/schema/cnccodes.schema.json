@@ -28,7 +28,7 @@
             "enum": [
                 "mill",
                 "lathe",
-                "3dprinter"
+                "printer"
             ]
         },
         "title": {

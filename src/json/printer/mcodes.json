@@ -1,7 +1,7 @@
 {
     "$schema": "../schema/cnccodes.schema.json",
     "type": "mcode",
-    "machineType": "3dprinter",
+    "machineType": "printer",
     "title": "M Code 3D Printer Reference",
     "codes": {
         "M0": {
