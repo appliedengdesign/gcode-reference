@@ -1,4 +1,4 @@
-[![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/vscode-gcode-syntax)](https://github.com/appliedengdesign/gcode-reference/issues)
+[![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference/issues)
 ![Github Stars](https://badgen.net/github/stars/appliedengdesign/gcode-reference)
 ![Github Last Commit](https://badgen.net/github/last-commit/appliedengdesign/gcode-reference/)
 ![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql-analysis.yml/badge.svg)
