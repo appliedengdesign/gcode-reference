@@ -5,18 +5,46 @@
 'use strict';
 
 export enum MachineTypes {
-    Mill = 'Mill',
-    Lathe = 'Lathe',
-    Printer = 'Printer',
+    Mill = 'mill',
+    Lathe = 'lathe',
+    Printer = 'printer',
 }
 
 export type MachineType = MachineTypes;
 
-type Code = {
-    category: string;
+export enum Categories {
+    Motion = 'motion',
+    Coordinate = 'coordinate',
+    Compensation = 'compensation',
+    Canned = 'canned',
+    Other = 'other',
+}
+
+export type Category = Categories;
+
+export type Parameter = {
+    desc: string;
+    optional: boolean;
+};
+
+export interface Parameters extends Record<string, Parameter> {
+    [parameter: string]: Parameter;
+}
+
+export type Code = {
+    category: Category;
+    modal: boolean;
     shortDesc: string;
     desc: string;
+    parameters: Parameters;
 };
 export interface ICode extends Record<string, Code> {
     [code: string]: Code;
+}
+
+export interface CNCCodes {
+    type: 'gcode' | 'mcode';
+    machineType: MachineType;
+    title: string;
+    codes: ICode;
 }

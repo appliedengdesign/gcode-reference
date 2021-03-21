@@ -4,19 +4,23 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { ICode } from '../types';
+import { CNCCodes, MachineType } from '../types';
+import fs from 'fs';
+import path from 'path';
 
-interface CNCCodes {
-    type: string;
-    machineType: string;
-    title: string;
-    codes: ICode;
+export function loadJSON(type: MachineType): [CNCCodes, CNCCodes] | [undefined, undefined] {
+    // Load JSON by type
+    try {
+        const gfile = fs.readFileSync(path.join(__dirname, type, 'gcodes.json'), 'utf-8');
+        const g: CNCCodes = <CNCCodes>JSON.parse(gfile);
+
+        const mfile = fs.readFileSync(path.join(__dirname, type, 'mcodes.json'), 'utf-8');
+        const m: CNCCodes = <CNCCodes>JSON.parse(mfile);
+
+        return [g, m];
+    } catch (err) {
+        console.error('Error loading JSON file...', err);
+    }
+
+    return [undefined, undefined];
 }
-
-// Milling
-import millGCodes from './mill/gcodes.json';
-import millMCodes from './mill/mcodes.json';
-
-// Exports
-export const millingGCodes: CNCCodes = millGCodes;
-export const millingMCodes: CNCCodes = millMCodes;
