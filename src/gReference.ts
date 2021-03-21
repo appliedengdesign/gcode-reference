@@ -4,8 +4,8 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { ICode, MachineType } from './types';
-import * as codes from './json';
+import { loadJSON } from './json';
+import { Code, ICode, MachineType } from './types';
 
 export class GReference {
     private _gcodes: ICode = {};
@@ -14,23 +14,49 @@ export class GReference {
 
     constructor(type: MachineType) {
         this._machineType = type;
-        console.error(`Machine Type: ${this._machineType}`);
-
-        // Build Dictionary from JSON
         this.buildReference();
     }
 
-    private buildReference(): void {
-        Object.assign(this._gcodes, codes.millingGCodes.codes);
+    private buildReference() {
+        console.error(`Machine Type: ${this._machineType}`);
+        const [g, m] = loadJSON(this._machineType);
 
-        console.error(this._gcodes);
+        Object.assign(this._gcodes, g?.codes);
+        Object.assign(this._mcodes, m?.codes);
     }
 
-    getDescByCode(code: string): string {
-        return this._gcodes[code].desc;
+    private cleanCode(code: string): string {
+        // Check for leading zero
+        if (code.length === 2) {
+            code = `${code[0]}0${code.substring(1)}`;
+        }
+
+        return code;
     }
 
-    getShortDescByCode(code: string): string {
-        return this._gcodes[code].shortDesc;
+    get(code: string): Code | undefined {
+        code = this.cleanCode(code);
+
+        if (code[0].toUpperCase() === 'G') {
+            if (code in this._gcodes) {
+                return this._gcodes[code];
+            }
+        } else {
+            if (code in this._mcodes) {
+                return this._mcodes[code];
+            }
+        }
+    }
+
+    getDesc(code: string): string | undefined {
+        code = this.cleanCode(code);
+
+        return this.get(code)?.desc;
+    }
+
+    getShortDesc(code: string): string | undefined {
+        code = this.cleanCode(code);
+
+        return this.get(code)?.shortDesc;
     }
 }
