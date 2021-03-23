@@ -78,6 +78,101 @@
             "category": "mcode",
             "shortDesc": "Tool Change",
             "desc": "Tool Change (Same as M06)"
+        },
+        "M17": {
+            "category": "mcode",
+            "shortDesc": "APC Pallet Unclamp & Open APC Door",
+            "desc": ""
+        },
+        "M18": {
+            "category": "mcode",
+            "shortDesc": "APC Pallet Clamp & Close APC Door",
+            "desc": ""
+        },
+        "M19": {
+            "category": "mcode",
+            "shortDesc": "Orient Spindle",
+            "desc": "Orient spindle (P,R values optional)"
+        },
+        "M30": {
+            "category": "mcode",
+            "shortDesc": "Program End",
+            "desc": "Program end and reset."
+        },
+        "M31": {
+            "category": "mcode",
+            "shortDesc": "Chip Auger Forward",
+            "desc": ""
+        },
+        "M33": {
+            "category": "mcode",
+            "shortDesc": "Chip Auger Stop",
+            "desc": ""
+        },
+        "M34": {
+            "category": "mcode",
+            "shortDesc": "Programmable Coolant Position Down",
+            "desc": ""
+        },
+        "M35": {
+            "category": "mcode",
+            "shortDesc": "Programmable Coolant Position Up",
+            "desc": ""
+        },
+        "M80": {
+            "category": "mcode",
+            "shortDesc": "Automatic Door Open",
+            "desc": ""
+        },
+        "M81": {
+            "category": "mcode",
+            "shortDesc": "Automatic Door Close",
+            "desc": ""
+        },
+        "M82": {
+            "category": "mcode",
+            "shortDesc": "Tool Unclamp",
+            "desc": ""
+        },
+        "M83": {
+            "category": "mcode",
+            "shortDesc": "Auto Air Jet On",
+            "desc": ""
+        },
+        "M84": {
+            "category": "mcode",
+            "shortDesc": "Auto Air Jet Off",
+            "desc": ""
+        },
+        "M86": {
+            "category": "mcode",
+            "shortDesc": "Tool Clamp",
+            "desc": ""
+        },
+        "M88": {
+            "category": "mcode",
+            "shortDesc": "Through Spindle Coolant On",
+            "desc": ""
+        },
+        "M89": {
+            "category": "mcode",
+            "shortDesc": "Through Spindle Coolant Off",
+            "desc": ""
+        },
+        "M97": {
+            "category": "mcode",
+            "shortDesc": "Local Sub-Program Call",
+            "desc": ""
+        },
+        "M98": {
+            "category": "mcode",
+            "shortDesc": "Sub-Program Call",
+            "desc": ""
+        },
+        "M99": {
+            "category": "mcode",
+            "shortDesc": "Sub-Program Return",
+            "desc": "Local Sub-Program Return, Sub-Program Return, or Loop Program"
         }
     }
 }
