@@ -5,16 +5,79 @@
     "title": "M Code Milling Reference",
     "codes": {
         "M00": {
-            "category": "other",
+            "category": "mcode",
             "shortDesc": "Program Stop",
-            "desc": "",
-            "modal": true
+            "desc": ""
         },
         "M01": {
-            "category": "other",
+            "category": "mcode",
             "shortDesc": "Optional Program Stop",
-            "desc": "",
-            "modal": true
+            "desc": ""
+        },
+        "M02": {
+            "category": "mcode",
+            "shortDesc": "End of Program",
+            "desc": ""
+        },
+        "M03": {
+            "category": "mcode",
+            "shortDesc": "Spindle On (CW Rotation)",
+            "desc": "M03 starts the spindle clockwise. Speed is determined by the last *S* value."
+        },
+        "M04": {
+            "category": "mcode",
+            "shortDesc": "Spindle On (CCW Rotation)",
+            "desc": "M03 starts the spindle counter-clockwise. Speed is determined by the last *S* value."
+        },
+        "M05": {
+            "category": "mcode",
+            "shortDesc": "Spindle Stop",
+            "desc": "M05 stops the spindle."
+        },
+        "M06": {
+            "category": "mcode",
+            "shortDesc": "Tool Change",
+            "desc": "M06 causes the tool change. Tool is determined by the *T* value in the same block."
+        },
+        "M07": {
+            "category": "mcode",
+            "shortDesc": "Mist Coolant On",
+            "desc": "M07 turns on Mist (or Shower Coolant) on."
+        },
+        "M08": {
+            "category": "mcode",
+            "shortDesc": "Flood Cooland On",
+            "desc": "M08 turns on the flood coolant on most controls."
+        },
+        "M09": {
+            "category": "mcode",
+            "shortDesc": "Coolant Off",
+            "desc": "M09 turns off all coolant"
+        },
+        "M10": {
+            "category": "mcode",
+            "shortDesc": "4th Axis Brake On",
+            "desc": ""
+        },
+        "M11": {
+            "category": "mcode",
+            "shortDesc": "4th Axis Brake Release",
+            "desc": ""
+        },
+        "M12": {
+            "category": "mcode",
+            "shortDesc": "5th Axis Brake On",
+            "desc": ""
+        },
+        "M13": {
+            "category": "mcode",
+            "shortDesc": "5th Axis Brake Release",
+            "desc": ""
+        },
+        "M16": {
+            "category": "mcode",
+            "shortDesc": "Tool Change",
+            "desc": "Tool Change (Same as M06)"
         }
     }
 }
