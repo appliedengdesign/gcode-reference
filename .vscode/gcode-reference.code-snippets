@@ -29,5 +29,18 @@
             "}"
         ],
         "description": "Create M-Code"
+    },
+    "parameter": {
+        "scope": "json",
+        "prefix": [
+            "pm, para, param"
+        ],
+        "body": [
+            "\"$1\": {",
+            "\t\"desc\": \"$2\",",
+            "\t\"optional\": ${3|true,false|}",
+            "}"
+        ],
+        "description": "Create G-Code Parameter"
     }
 }
