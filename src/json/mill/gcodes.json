@@ -55,6 +55,98 @@
                     "optional": true
                 }
             }
+        },
+        "G02": {
+            "category": "motion",
+            "shortDesc": "CW Interpolation Motion",
+            "desc": "Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "I": {
+                    "desc": "Distance along X Axis to center of circle",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Distance along Y Axis to center of circle",
+                    "optional": true
+                },
+                "K": {
+                    "desc": "Distance along Z Axis to center of circle",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Radius of Circle",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "desc": "A-Axis motion commanmd",
+                    "optional": true
+                }
+            }
+        },
+        "G03": {
+            "category": "motion",
+            "shortDesc": "CCW Interpolation Motion",
+            "desc": "Counter-Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "I": {
+                    "desc": "Distance along X Axis to center of circle",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Distance along Y Axis to center of circle",
+                    "optional": true
+                },
+                "K": {
+                    "desc": "Distance along Z Axis to center of circle",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Radius of Circle",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "desc": "A-Axis motion commanmd",
+                    "optional": true
+                }
+            }
+        },
+        "G04": {
+            "category": "other",
+            "shortDesc": "Dwell",
+            "desc": "G04 specifies a delay or dwell in the program. The block with G04 delays for the time specified by the P address code.",
+            "modal": false,
+            "parameters": {
+                "P": {
+                    "desc": "The dwell time in seconds or milliseconds",
+                    "optional": false
+                }
+            }
         }
     }
 }
