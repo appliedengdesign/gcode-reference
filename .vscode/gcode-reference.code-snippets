@@ -33,7 +33,7 @@
     "parameter": {
         "scope": "json",
         "prefix": [
-            "pm, para, param"
+            "p, pp, pm, para, param"
         ],
         "body": [
             "\"$1\": {",
