@@ -147,6 +147,365 @@
                     "optional": false
                 }
             }
+        },
+        "G09": {
+            "category": "motion",
+            "shortDesc": "Exact Stop",
+            "desc": "G09 is used to specify a controlled axes stop. It affects only the block in which it is commanded.",
+            "modal": false
+        },
+        "G10": {
+            "category": "compensation",
+            "shortDesc": "Programmable Offset Setting",
+            "desc": "G10 lets you set offsets within the program. It replaces manual offset entry.",
+            "modal": true,
+            "parameters": {
+                "L": {
+                    "desc": "L selects the offset category.\n\nL2 - Work coordinate origin for COMMON and G54-G59\n\nL10 - Geometry or shift offset\n\nL1/L11 - Tool Wear\n\nL20 - Auxiliary work coordinate origin fo rG110-G129",
+                    "optional": false
+                },
+                "P": {
+                    "desc": "P selects a specific offset.\n\nP1-P50 - References geometry, wear or work offsets (L10-L11).\n\nP0 - References COMMON work coordinate offset (L2).\n\nP1-P6 - G54-G59 references work coordinates (L2).\n\nP1-P20 - G110-G129 references auxiliary coordinates (L20).\n\nP1-P99 - G154 P1-P99 reference auxiliary coordinate (L20).",
+                    "optional": true
+                },
+                "Q": {
+                    "desc": "Imaginary tool nose tip direction",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Tool Nose Radius",
+                    "optional": true
+                },
+                "U": {
+                    "desc": "Incremental amount to be added to X-axis offset",
+                    "optional": true
+                },
+                "V": {
+                    "desc": "Incremental amount to be added to Y-axis offset",
+                    "optional": true
+                },
+                "W": {
+                    "desc": "Incremental amount to be added to Z-axis offset",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis offset",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis offset",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Z-axis offset",
+                    "optional": true
+                }
+            }
+        },
+        "G17": {
+            "category": "coordinate",
+            "shortDesc": "XY Plane Selection",
+            "desc": "",
+            "modal": true
+        },
+        "G18": {
+            "category": "coordinate",
+            "shortDesc": "XZ Plane Selection",
+            "desc": "",
+            "modal": true
+        },
+        "G19": {
+            "category": "coordinate",
+            "shortDesc": "YZ Plane Selection",
+            "desc": "",
+            "modal": true
+        },
+        "G20": {
+            "category": "coordinate",
+            "shortDesc": "Inch Programming",
+            "desc": "",
+            "modal": true
+        },
+        "G21": {
+            "category": "coordinate",
+            "shortDesc": "Metric Programming",
+            "desc": "",
+            "modal": true
+        },
+        "G28": {
+            "category": "motion",
+            "shortDesc": "Return to Home Position",
+            "desc": "",
+            "modal": false
+        },
+        "G29": {
+            "category": "motion",
+            "shortDesc": "Move to Location through G29 Reference",
+            "desc": "",
+            "modal": true
+        },
+        "G40": {
+            "category": "compensation",
+            "shortDesc": "Cutter Comp Cancel",
+            "desc": "",
+            "modal": true
+        },
+        "G41": {
+            "category": "compensation",
+            "shortDesc": "Cutter Comp Left",
+            "desc": "",
+            "modal": true
+        },
+        "G42": {
+            "category": "compensation",
+            "shortDesc": "Cutter Comp Right",
+            "desc": "",
+            "modal": true
+        },
+        "G43": {
+            "category": "compensation",
+            "shortDesc": "Tool Length Compensation (+)",
+            "desc": "",
+            "modal": true
+        },
+        "G44": {
+            "category": "compensation",
+            "shortDesc": "Tool Length Compensation (-)",
+            "desc": "",
+            "modal": true
+        },
+        "G49": {
+            "category": "compensation",
+            "shortDesc": "Tool Length Compensation Cancel",
+            "desc": "",
+            "modal": true
+        },
+        "G51": {
+            "category": "compensation",
+            "shortDesc": "Reset Scale Factor to 1.0",
+            "desc": "",
+            "modal": true
+        },
+        "G52": {
+            "category": "compensation",
+            "shortDesc": "Turn on Scale Factors",
+            "desc": "",
+            "modal": true
+        },
+        "G53": {
+            "category": "coordinate",
+            "shortDesc": "Machine Coordinate System",
+            "desc": "",
+            "modal": true
+        },
+        "G54": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (1)",
+            "desc": "",
+            "modal": true
+        },
+        "G55": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (2)",
+            "desc": "",
+            "modal": true
+        },
+        "G56": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (3)",
+            "desc": "",
+            "modal": true
+        },
+        "G57": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (4)",
+            "desc": "",
+            "modal": true
+        },
+        "G58": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (5)",
+            "desc": "",
+            "modal": true
+        },
+        "G59": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (6)",
+            "desc": "",
+            "modal": true
+        },
+        "G61": {
+            "category": "motion",
+            "shortDesc": "Exact Stop Modal",
+            "desc": "",
+            "modal": true
+        },
+        "G64": {
+            "category": "motion",
+            "shortDesc": "G61 Cancel",
+            "desc": "",
+            "modal": true
+        },
+        "G65": {
+            "category": "other",
+            "shortDesc": "Macro Subroutine Call",
+            "desc": "",
+            "modal": false
+        },
+        "G68": {
+            "category": "coordinate",
+            "shortDesc": "Coordinate Rotation",
+            "desc": "",
+            "modal": true
+        },
+        "G69": {
+            "category": "coordinate",
+            "shortDesc": "Cancel G68 Rotation",
+            "desc": "",
+            "modal": true
+        },
+        "G73": {
+            "category": "canned",
+            "shortDesc": "High Speed Peck Drilling",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "desc": "First peck depth",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Amount to reduce pecking depth for pass",
+                    "optional": true
+                },
+                "K": {
+                    "desc": "Minimum peck depth (Control calculates the number of pecks)",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
+                    "optional": true
+                },
+                "P": {
+                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "optional": true
+                },
+                "Q": {
+                    "desc": "Peck Depth (Always Incremental)",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of the hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G74": {
+            "category": "canned",
+            "shortDesc": "Left Hand Tapping Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "J": {
+                    "desc": "Retract Multiple",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": true
+                }
+            }
+        },
+        "G76": {
+            "category": "canned",
+            "shortDesc": "Fine Boring Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {}
+        },
+        "G77": {
+            "category": "canned",
+            "shortDesc": "Back Bore Cycle",
+            "desc": "",
+            "modal": true
+        },
+        "G80": {
+            "category": "canned",
+            "shortDesc": "Canned Cycle Cancel",
+            "desc": "",
+            "modal": true
+        },
+        "G81": {
+            "category": "canned",
+            "shortDesc": "Drilling Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "E": {
+                    "desc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "optional": true
+                },
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "L": {
+                    "desc": "Number of holes to drill if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z Axis at the bottom of the hole.",
+                    "optional": false
+                }
+            }
         }
     }
 }
