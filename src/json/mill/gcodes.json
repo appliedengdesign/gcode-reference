@@ -457,13 +457,88 @@
             "shortDesc": "Fine Boring Cycle",
             "desc": "",
             "modal": true,
-            "parameters": {}
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "desc": "Shift value along the X-axis before retracting, if Q is not specified",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Shift value along the Y-axis before retracting, if Q is not specified",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "P": {
+                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "optional": true
+                },
+                "Q": {
+                    "desc": "The shift value, always incremental",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": true
+                }
+            }
         },
         "G77": {
             "category": "canned",
             "shortDesc": "Back Bore Cycle",
             "desc": "",
-            "modal": true
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "desc": "Shift value along the X-axis before retracting, if Q is not specified",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Shift value along the Y-axis before retracting, if Q is not specified",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "P": {
+                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "optional": true
+                },
+                "Q": {
+                    "desc": "The shift value, always incremental",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": true
+                }
+            }
         },
         "G80": {
             "category": "canned",
@@ -506,6 +581,418 @@
                     "optional": false
                 }
             }
+        },
+        "G82": {
+            "category": "canned",
+            "shortDesc": "Spot Drill Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "E": {
+                    "desc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "optional": true
+                },
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "L": {
+                    "desc": "Number of holes to drill if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z Axis at the bottom of the hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G83": {
+            "category": "canned",
+            "shortDesc": "Normal Peck Drilling Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "desc": "First peck depth",
+                    "optional": true
+                },
+                "J": {
+                    "desc": "Amount to reduce pecking depth for pass",
+                    "optional": true
+                },
+                "K": {
+                    "desc": "Minimum peck depth (Control calculates the number of pecks)",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
+                    "optional": true
+                },
+                "P": {
+                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "optional": true
+                },
+                "Q": {
+                    "desc": "Peck Depth (Always Incremental)",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of the hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G84": {
+            "category": "canned",
+            "shortDesc": "Tapping Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "E": {
+                    "desc": "Chip-clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "optional": true
+                },
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "J": {
+                    "desc": "Retract Multiple",
+                    "optional": true
+                },
+                "L": {
+                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "S": {
+                    "desc": "Spindle Speed",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of hole",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of hole",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": true
+                }
+            }
+        },
+        "G85": {
+            "category": "canned",
+            "shortDesc": "Bore In Bore Out Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "L": {
+                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of holes",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of holes",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G86": {
+            "category": "canned",
+            "shortDesc": "Bore And Stop Canned Cycle",
+            "desc": "G86 will stop the spindle once the tool reaches the bottom of the hole. The tool is retracted once the spindle has stopped.",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "L": {
+                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "optional": true
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of holes",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of holes",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G89": {
+            "category": "canned",
+            "shortDesc": "Bore In, Dwell, Bore Out Canned Cycle",
+            "desc": "",
+            "modal": true,
+            "parameters": {
+                "F": {
+                    "desc": "Feedrate",
+                    "optional": false
+                },
+                "L": {
+                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "optional": false
+                },
+                "P": {
+                    "desc": "The dwell time at the bottom of the hole.",
+                    "optional": false
+                },
+                "R": {
+                    "desc": "Position of the R plane (Retract)",
+                    "optional": true
+                },
+                "X": {
+                    "desc": "X-axis location of holes",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-axis location of holes",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "optional": false
+                }
+            }
+        },
+        "G90": {
+            "category": "coordinate",
+            "shortDesc": "Absolute Positioning",
+            "desc": "",
+            "modal": true
+        },
+        "G91": {
+            "category": "coordinate",
+            "shortDesc": "Incremental Positioning",
+            "desc": "",
+            "modal": true
+        },
+        "G92": {
+            "category": "coordinate",
+            "shortDesc": "Set Work Coordinate Systems Shift Value",
+            "desc": "G92 command shifts all work coordinate systems (G54-G59, G110-G129) so that the commanded position becomes the current position in the active work system. G92 is non-modal.",
+            "modal": false
+        },
+        "G93": {
+            "category": "motion",
+            "shortDesc": "Inverse Time Feed Mode",
+            "desc": "This G code specifies that all F (feedrate) values are interpreted as strokes per minute. In other words the time (in seconds) to complete the programmed motion using G93 is, 60 (seconds) divided by the F value.",
+            "modal": true
+        },
+        "G94": {
+            "category": "motion",
+            "shortDesc": "Feed Per Minute Mode",
+            "desc": "This code deactivates G93 (Inverse Time Feed Mode) and returns the control to Feed Per Minute mode.",
+            "modal": true
+        },
+        "G98": {
+            "category": "canned",
+            "shortDesc": "Canned Cycle Initial Point Return",
+            "desc": "Using G98, the Z-Axis returns to its initial starting point (the Z position in the block before the canned cycle) between each X/Y position. This lets you program up and around areas of the part, clamps, and fixtures.",
+            "modal": false
+        },
+        "G99": {
+            "category": "motion",
+            "shortDesc": "Canned Cycle R Plane Return",
+            "desc": "Using G99, the Z-Axis will stay at the R plane between each X and/or Y location. When obstructions are not in the path of the tool G99 saves machining time.",
+            "modal": true
+        },
+        "G103": {
+            "category": "other",
+            "shortDesc": "Block Look Ahead Limit",
+            "desc": "G103 specifies the maximum number of blocks the control looks ahead (Range 0-15). Cancel with G103 P0 or just G103.",
+            "modal": true,
+            "parameters": {
+                "P": {
+                    "desc": "Number of blocks to limit the look-ahead by.",
+                    "optional": true
+                }
+            }
+        },
+        "G110": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (7)",
+            "desc": "",
+            "modal": true
+        },
+        "G111": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (8)",
+            "desc": "",
+            "modal": true
+        },
+        "G112": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (9)",
+            "desc": "",
+            "modal": true
+        },
+        "G113": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (10)",
+            "desc": "",
+            "modal": true
+        },
+        "G114": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (11)",
+            "desc": "",
+            "modal": true
+        },
+        "G115": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (12)",
+            "desc": "",
+            "modal": true
+        },
+        "G116": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (13)",
+            "desc": "",
+            "modal": true
+        },
+        "G117": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (14)",
+            "desc": "",
+            "modal": true
+        },
+        "G118": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (15)",
+            "desc": "",
+            "modal": true
+        },
+        "G119": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (16)",
+            "desc": "",
+            "modal": true
+        },
+        "G120": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (17)",
+            "desc": "",
+            "modal": true
+        },
+        "G121": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (18)",
+            "desc": "",
+            "modal": true
+        },
+        "G122": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (19)",
+            "desc": "",
+            "modal": true
+        },
+        "G123": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (20)",
+            "desc": "",
+            "modal": true
+        },
+        "G124": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (21)",
+            "desc": "",
+            "modal": true
+        },
+        "G125": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (22)",
+            "desc": "",
+            "modal": true
+        },
+        "G126": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (23)",
+            "desc": "",
+            "modal": true
+        },
+        "G127": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (24)",
+            "desc": "",
+            "modal": true
+        },
+        "G128": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (25)",
+            "desc": "",
+            "modal": true
+        },
+        "G129": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (26)",
+            "desc": "",
+            "modal": true
+        },
+        "G154": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System",
+            "desc": "Use with P1-P99 to select G110-G129",
+            "modal": true
         }
     }
 }
