@@ -33,6 +33,7 @@
         "prepack": "npm run clean && npm run build",
         "prepublish": "tsc",
         "test": "npm run clean && npm run build && node ./dist/test/test.js",
+        "debug": "npm run clean && npm run build && node ./dist/test/test.js",
         "watch": "tsc --watch",
         "validate": "node ./scripts/validate.js"
     },

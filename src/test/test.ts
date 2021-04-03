@@ -14,3 +14,6 @@ process.stdout.write(`${g.getDesc('G00') ?? 'Cannot find G-Code'}\n`);
 process.stdout.write(`${g.getShortDesc('M00') ?? 'Cannot find M-Code'}\n`);
 process.stdout.write(`${g.getShortDesc('G1') ?? 'Cannot find G-Code'}\n`);
 console.error(g.get('G1'));
+console.error(g.getParams('G84'));
+const p = g.getParams('G84', true);
+console.error(p);
