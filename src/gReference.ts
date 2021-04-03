@@ -5,7 +5,7 @@
 'use strict';
 
 import { loadJSON } from './json';
-import { Code, ICode, MachineType } from './types';
+import { Code, ICode, MachineType, Parameters } from './types';
 
 export class GReference {
     private _gcodes: ICode = {};
@@ -58,5 +58,27 @@ export class GReference {
         code = this.cleanCode(code);
 
         return this.get(code)?.shortDesc;
+    }
+
+    getParams(code: string, req?: boolean): Parameters | undefined {
+        code = this.cleanCode(code);
+        const c = this.get(code);
+
+        if (req) {
+            const params: Parameters = {};
+
+            const p = c?.parameters;
+
+            for (const key in p) {
+                if (Object.prototype.hasOwnProperty.call(p, key)) {
+                    if (!p[key].optional) {
+                        params[key] = p[key];
+                    }
+                }
+            }
+            return params;
+        } else {
+            return c?.parameters;
+        }
     }
 }
