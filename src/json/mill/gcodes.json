@@ -710,7 +710,7 @@
                 },
                 "Z": {
                     "desc": "Position of the Z-axis at the bottom of hole.",
-                    "optional": true
+                    "optional": false
                 }
             }
         },
