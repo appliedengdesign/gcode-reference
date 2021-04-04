@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { GReference, MachineTypes } from '../index';
+import { GReference, MachineTypes } from '../src';
 
 const g = new GReference(MachineTypes.Mill);
 
