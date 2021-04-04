@@ -162,7 +162,13 @@
         "M97": {
             "category": "mcode",
             "shortDesc": "Local Sub-Program Call",
-            "desc": ""
+            "desc": "",
+            "parameters": {
+                "P": {
+                    "desc": "Line Number for local Sub-Program",
+                    "optional": false
+                }
+            }
         },
         "M98": {
             "category": "mcode",
