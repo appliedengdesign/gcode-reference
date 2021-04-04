@@ -16,11 +16,13 @@
         "outDir": "dist",
         "sourceMap": true,
         "resolveJsonModule": true,
+        "allowJs": true
     },
     "include": [
         "src/**/*.ts",
         "src/**/*.json",
-        "test/**/*.ts"
+        "test/**/*.ts",
+        "scripts/**/*"
     ],
     "exclude": [
         "node_modules",

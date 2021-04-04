@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* ---------------------------------------------------------------------------------------------
@@ -17,16 +19,16 @@ const mtypes = ['Mill', 'Lathe', 'Printer'];
 const files = ['gcodes.json', 'mcodes.json'];
 const jpath = path.join('.', 'src', 'json/');
 
-process.stdout.write('Validating JSON...\n\n');
+console.debug('Validating JSON...\n\n');
 
 // Load AJV
-process.stdout.write('Loading Schema...');
+console.debug('Loading Schema...');
 const ajv = new Ajv({ allErrors: true });
 const validate = ajv.compile(schema);
-process.stdout.write('Done.\n\n');
+console.debug('Done.\n\n');
 
 mtypes.forEach(mt => {
-    process.stdout.write(`Checking ${mt} G-Codes...\n`);
+    console.debug(`Checking ${mt} G-Codes...\n`);
     try {
         const file = fs.readFileSync(path.join(jpath, mt.toLowerCase(), files[0]), 'utf-8');
 
@@ -35,12 +37,12 @@ mtypes.forEach(mt => {
         const valid = validate(g);
 
         if (valid) {
-            process.stdout.write('OK\n\n');
+            console.debug('OK\n\n');
         } else {
             for (const err of validate.errors) {
-                process.stdout.write(`${err.dataPath} ${err.message ?? ''}\n`);
+                console.debug(`${err.dataPath} ${err.message ?? ''}\n`);
             }
-            process.stdout.write(`-- ${mt} G-Codes has errors --\n\n`);
+            console.debug(`-- ${mt} G-Codes has errors --\n\n`);
         }
     } catch (err) {
         if (err instanceof Error && err.code === 'ENOENT') {
@@ -48,7 +50,7 @@ mtypes.forEach(mt => {
         }
     }
 
-    process.stdout.write(`Checking ${mt} M-Codes...\n`);
+    console.debug(`Checking ${mt} M-Codes...\n`);
 
     try {
         const file = fs.readFileSync(path.join(jpath, mt.toLowerCase(), files[1]), 'utf-8');
@@ -58,12 +60,12 @@ mtypes.forEach(mt => {
         const valid = validate(m);
 
         if (valid) {
-            process.stdout.write('OK\n\n');
+            console.debug('OK\n\n');
         } else {
             for (const err of validate.errors) {
-                process.stdout.write(`${err.dataPath} ${err.message ?? ''}\n`);
+                console.debug(`${err.dataPath} ${err.message ?? ''}\n`);
             }
-            process.stdout.write(`-- ${mt} M-Codes has errors --`);
+            console.debug(`-- ${mt} M-Codes has errors --`);
         }
     } catch (err) {
         if (err instanceof Error && err.code === 'ENOENT') {
@@ -72,8 +74,8 @@ mtypes.forEach(mt => {
     }
 });
 
-process.stdout.write('Done! ');
+console.debug('Done! ');
 
 const [secs, nanosecs] = process.hrtime(start);
 
-process.stdout.write(`Finished JSON validation in ${secs * 1000 + nanosecs / 1000000} ms.`);
+console.debug(`Finished JSON validation in ${secs * 1000 + nanosecs / 1000000} ms.`);
