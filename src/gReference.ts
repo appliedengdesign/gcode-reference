@@ -5,20 +5,20 @@
 'use strict';
 
 import { loadJSON } from './json';
-import { Code, ICode, MachineType, Parameters } from './types';
+import { Code, ICode, MachineType, MachineTypes, Parameters } from './types';
 
 export class GReference {
     private _gcodes: ICode = {};
     private _mcodes: ICode = {};
     private _machineType: MachineType;
 
-    constructor(type: MachineType) {
+    constructor(private type: MachineType = MachineTypes.Mill) {
+        // Default is Mill
         this._machineType = type;
         this.buildReference();
     }
 
     private buildReference() {
-        console.error(`Machine Type: ${this._machineType}`);
         const [g, m] = loadJSON(this._machineType);
 
         Object.assign(this._gcodes, g?.codes);
@@ -32,6 +32,14 @@ export class GReference {
         }
 
         return code;
+    }
+
+    getType(): MachineType {
+        return this._machineType;
+    }
+
+    setType(type: MachineType): void {
+        this._machineType = type;
     }
 
     get(code: string): Code | undefined {
