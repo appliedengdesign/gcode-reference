@@ -6,4 +6,4 @@
 
 // Types
 export { MachineTypes } from './types';
-export * from './gReference';
+export { GReference } from './gReference';
