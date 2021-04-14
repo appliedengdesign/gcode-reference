@@ -1,6 +1,6 @@
 {
     "name": "@appliedengdesign/gcode-reference",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Node module to provide descriptions and reference to CNC G-Codes",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
