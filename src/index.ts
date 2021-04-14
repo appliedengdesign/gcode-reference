@@ -4,6 +4,7 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-// Types
-export { MachineTypes } from './types';
 export { GReference } from './gReference';
+
+// Types
+export { MachineTypes, Categories, Parameter, Code } from './types';
