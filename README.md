@@ -24,11 +24,11 @@ Since this is still in very early stages of development, here are the goals outl
 
 To install the latest version:
 
-`npm install gcode-reference`
+`npm install @appliedengdesign/gcode-reference`
 
 ## Usage
 
-Try it in the [Node.js REPL](https://runkit.com/npm/gcode-reference) :)
+Try it in the [Node.js REPL](https://npm.runkit.com/%40appliedengdesign%2Fgcode-reference) :)
 
 Javascript:
 
