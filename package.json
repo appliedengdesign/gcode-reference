@@ -41,8 +41,8 @@
         "build": "tsc",
         "clean": "shx rm -rf dist/*",
         "compile": "tsc",
-        "prepack": "npm run clean && npm run build",
-        "prepublish": "tsc",
+        "copyJSON": "shx mkdir -p dist/json && cp -rf src/json/mill src/json/lathe src/json/printer dist/json",
+        "prepack": "npm run clean && npm run build && npm run copyJSON",
         "test": "mocha --require ts-node/register test/**/*.ts",
         "watch": "tsc --watch",
         "validate": "node ./scripts/validate.js"
