@@ -13,19 +13,15 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
-        "outDir": "dist",
+        "outDir": "./dist",
         "sourceMap": true,
         "resolveJsonModule": true,
         "allowJs": true
     },
-    "include": [
-        "src/**/*.ts",
-        "src/**/*.json",
-        "test/**/*.ts",
-        "scripts/**/*"
-    ],
     "exclude": [
         "node_modules",
-        "dist"
+        "dist",
+        "scripts",
+        "test"
     ]
 }
