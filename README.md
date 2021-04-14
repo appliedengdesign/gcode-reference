@@ -28,7 +28,50 @@ To install the latest version:
 
 ## Usage
 
-TODO
+Try it in the [Node.js REPL](https://runkit.com/npm/gcode-reference) :)
+
+Javascript:
+
+```javascript
+// Import Everything ESM/Typescript style
+import * as GRef from 'gcode-reference';
+// OR
+const GRef = require('gcode-reference');
+
+const gref = new GReference();
+// OR
+// initialize with a machine type
+const gref = new GReference(GRef.MachineTypes.Mill);
+
+// Get Complete G-Code Object
+const gcode = gref.get('G1');
+
+// Get Short Description
+const shortDesc = gref.getShortDesc('G1');
+
+// Get Full Description
+const desc = gref.getDesc('G1');
+
+// Get Current Machine Type
+const type = gref.getType();
+
+// Set Machine Type (Will rebuild reference)
+gref.setType(GRef.MachineTypes.Mill);
+
+// Get Parameters for a G/M Code
+gref.getParams('G84');
+
+// You can also import the types separately / individually
+import { GReference, MachineTypes, Categories, Parameter, Code };
+
+```
+
+## TODO
+
+- Lathe G-Codes
+- 3D Printer G-Codes
+- Export to Markdown
+- Export to HTML
 
 ## Schema
 
