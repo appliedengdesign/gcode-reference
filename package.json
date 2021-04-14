@@ -2,6 +2,11 @@
     "name": "@appliedengdesign/gcode-reference",
     "version": "0.0.0",
     "description": "Node module to provide descriptions and reference to CNC G-Codes",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/appliedengdesign/gcode-reference.git"
@@ -25,10 +30,12 @@
         "url": "https://github.com/appliedengdesign/gcode-reference/issues"
     },
     "homepage": "https://github.com/appliedengdesign/gcode-reference#readme",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
     "publishConfig": {
         "access": "public"
+    },
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/appliedengdesign"
     },
     "scripts": {
         "build": "tsc",
