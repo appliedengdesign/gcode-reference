@@ -39,7 +39,12 @@ export class GReference {
     }
 
     setType(type: MachineType): void {
-        this._machineType = type;
+        if (this._machineType === type) {
+            return;
+        } else {
+            this._machineType = type;
+            this.buildReference();
+        }
     }
 
     get(code: string): Code | undefined {
