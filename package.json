@@ -1,6 +1,6 @@
 {
-    "name": "gcode-reference",
-    "version": "0.0.1",
+    "name": "@appliedengdesign/gcode-reference",
+    "version": "0.0.0",
     "description": "Node module to provide descriptions and reference to CNC G-Codes",
     "repository": {
         "type": "git",
@@ -16,7 +16,8 @@
         "gcode",
         "lathe",
         "milling",
-        "turning"
+        "turning",
+        "appliedengdesign"
     ],
     "author": "Mike Centola",
     "license": "MIT",
@@ -26,6 +27,9 @@
     "homepage": "https://github.com/appliedengdesign/gcode-reference#readme",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "build": "tsc",
         "clean": "shx rm -rf dist/*",
