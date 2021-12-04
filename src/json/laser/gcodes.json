@@ -1,0 +1,28 @@
+{
+    "$schema": "../schema/cnccodes.schema.json",
+    "type": "gcode",
+    "machineType": "laser",
+    "title": "G Code Laser Reference",
+    "codes": {
+        "G00": {
+            "category": "motion",
+            "shortDesc": "Rapid Motion Positioning",
+            "desc": "G00 is used for positioning. It moves teh table and laser head to the designated X, Y axis location at the current traverse speed",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "desc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "desc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "desc": "Z-Axis motion command",
+                    "optional": true
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "$schema": "../schema/cnccodes.schema.json",
+    "type": "mcode",
+    "machineType": "laser",
+    "title": "M Code Laser Reference",
+    "codes": {
+        "M00": {
+            "category": "other",
+            "shortDesc": "Program Stop",
+            "desc": "",
+            "modal": true
+        }
+    }
+}
