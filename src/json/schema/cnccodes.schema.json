@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "$id": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2021-03/schema",
+    "$id": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2021-12/schema",
     "title": "G/M Code Dictionary",
     "description": "JSON Schema for CNC G & M Codes",
     "type": "object",
@@ -26,9 +26,12 @@
             "description": "The type of CNC machine",
             "type": "string",
             "enum": [
+                "edm",
                 "mill",
                 "lathe",
-                "printer"
+                "laser",
+                "printer",
+                "swiss"
             ]
         },
         "title": {
