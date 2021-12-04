@@ -5,16 +5,21 @@
 'use strict';
 
 export enum MachineTypes {
+    EDM = 'edm',
     Mill = 'mill',
     Lathe = 'lathe',
+    Laser = 'laser',
     Printer = 'printer',
+    Swiss = 'swiss',
 }
 
 export type MachineType = MachineTypes;
 
 export enum SubTypes {
+    Amada = 'amada',
     Brother = 'brother',
     Centroid = 'centroid',
+    Citizen = 'citizen',
     Doosan = 'doosan',
     Fadal = 'fadal',
     Fanuc = 'fanuc',
