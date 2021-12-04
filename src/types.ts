@@ -12,6 +12,24 @@ export enum MachineTypes {
 
 export type MachineType = MachineTypes;
 
+export enum SubTypes {
+    Brother = 'brother',
+    Centroid = 'centroid',
+    Doosan = 'doosan',
+    Fadal = 'fadal',
+    Fanuc = 'fanuc',
+    Haas = 'haas',
+    Hurco = 'hurco',
+    Mach3 = 'mach3',
+    Mazak = 'mazak',
+    Milltronics = 'milltronics',
+    Mitsubishi = 'mitsubishi',
+    Okuma = 'okuma',
+    Tormach = 'tormach',
+}
+
+export type SubType = SubTypes;
+
 export enum Categories {
     Motion = 'motion',
     Coordinate = 'coordinate',
