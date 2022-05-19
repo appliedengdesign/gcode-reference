@@ -7,7 +7,7 @@
 
 # G-Code Reference
 
-This project aims to provide a JSON-backed reference to the G & M codes associated with CNC mills, lathes, 3D printers and more. This project was created to be consumed by our [VSCode G-Code Syntax] extension for hover information, but we think it can be of use for many different applications.
+This project aims to provide a JSON-backed reference to the G & M codes associated with CNC mills, lathes, 3D printers and more. This project was created to be consumed by our [VSCode G-Code Syntax](https://github.com/appliedengdesign/vscode-gcode-syntax) extension for hover information, but we think it can be of use for many different applications.
 
 ## Goals
 
