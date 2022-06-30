@@ -8,7 +8,7 @@ import { expect } from 'chai';
 import { GReference, MachineTypes } from '../src';
 import { loadJSON } from '../src/json';
 
-describe('GReference', () => {
+describe('GReference Object', () => {
     it('can be initialized without a type.', () => {
         const g = new GReference();
         expect(g.getType()).to.equal(MachineTypes.Mill);
