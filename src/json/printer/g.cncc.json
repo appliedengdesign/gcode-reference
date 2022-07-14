@@ -1,0 +1,48 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "type": "gcode",
+    "machineType": "printer",
+    "title": "G Code 3D Printer Reference",
+    "codes": {
+        "G0": {
+            "category": "motion",
+            "shortDesc": "Rapid Motion Positioning",
+            "desc": "G00 is used to move the machine axes at the maximum speed. This G code is modal.",
+            "modal": true,
+            "parameters": {
+                "E": {
+                    "shortDesc": "Position of filament spool",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feedrate of movement",
+                    "optional": false
+                },
+                "X": {
+                    "shortDesc": "An absolute or relative coordinate on the X axis.",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "An absolute or relative coordinate on the Y axis.",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "An absolute or relative coordinate on the Z axis",
+                    "optional": true
+                }
+            }
+        },
+        "G90": {
+            "category": "coordinate",
+            "shortDesc": "Absolute Positioning",
+            "desc": "G90 instructs the controller to interpret coordinates as absolute coordinates.",
+            "modal": true
+        },
+        "G91": {
+            "category": "coordinate",
+            "shortDesc": "Incremental Positioning",
+            "desc": "G91 instructs the controller to interpret coordinates as incremental coordinates.",
+            "modal": true
+        }
+    }
+}

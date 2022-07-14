@@ -1,5 +1,5 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
     "type": "mcode",
     "machineType": "lathe",
     "title": "M Code Lathe Reference",
@@ -7,264 +7,212 @@
         "M00": {
             "category": "other",
             "shortDesc": "Program Stop",
-            "desc": "",
             "modal": true
         },
         "M01": {
             "category": "other",
             "shortDesc": "Optional Program Stop",
-            "desc": "",
             "modal": true
         },
         "M02": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M03": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M04": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M05": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M08": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M09": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M10": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M11": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M12": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M13": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M14": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M15": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M17": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M18": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M19": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M21": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M22": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M23": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M24": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M30": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M31": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M32": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M33": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M36": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M37": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M38": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M39": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M41": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M42": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M43": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M44": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M85": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M86": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M88": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M89": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M97": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M98": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M99": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M109": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M110": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M111": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M119": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M133": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M134": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M135": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M143": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M144": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M145": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M154": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         },
         "M155": {
             "category": "mcode",
-            "shortDesc": "",
-            "desc": ""
+            "shortDesc": ""
         }
     }
 }

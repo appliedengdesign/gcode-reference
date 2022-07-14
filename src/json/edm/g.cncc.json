@@ -1,7 +1,7 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
     "type": "gcode",
-    "machineType": "laser",
+    "machineType": "edm",
     "title": "G Code Laser Reference",
     "codes": {
         "G00": {
@@ -11,15 +11,15 @@
             "modal": true,
             "parameters": {
                 "X": {
-                    "desc": "X-Axis motion command",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-Axis motion command",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-Axis motion command",
+                    "shortDesc": "Z-Axis motion command",
                     "optional": true
                 }
             }

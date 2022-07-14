@@ -1,5 +1,5 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
     "type": "mcode",
     "machineType": "printer",
     "title": "M Code 3D Printer Reference",
@@ -7,13 +7,11 @@
         "M0": {
             "category": "other",
             "shortDesc": "Stop or Unconditional Stop",
-            "desc": "",
             "modal": true
         },
         "M1": {
             "category": "other",
             "shortDesc": "Sleep or Conditional Stop",
-            "desc": "",
             "modal": true
         }
     }

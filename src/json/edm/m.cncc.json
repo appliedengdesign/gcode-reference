@@ -1,0 +1,13 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "type": "mcode",
+    "machineType": "edm",
+    "title": "M Code Laser Reference",
+    "codes": {
+        "M00": {
+            "category": "other",
+            "shortDesc": "Program Stop",
+            "modal": true
+        }
+    }
+}

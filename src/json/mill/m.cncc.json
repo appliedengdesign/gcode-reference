@@ -1,23 +1,20 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
     "type": "mcode",
     "machineType": "mill",
     "title": "M Code Milling Reference",
     "codes": {
         "M00": {
             "category": "mcode",
-            "shortDesc": "Program Stop",
-            "desc": ""
+            "shortDesc": "Program Stop"
         },
         "M01": {
             "category": "mcode",
-            "shortDesc": "Optional Program Stop",
-            "desc": ""
+            "shortDesc": "Optional Program Stop"
         },
         "M02": {
             "category": "mcode",
-            "shortDesc": "End of Program",
-            "desc": ""
+            "shortDesc": "End of Program"
         },
         "M03": {
             "category": "mcode",
@@ -56,23 +53,19 @@
         },
         "M10": {
             "category": "mcode",
-            "shortDesc": "4th Axis Brake On",
-            "desc": ""
+            "shortDesc": "4th Axis Brake On"
         },
         "M11": {
             "category": "mcode",
-            "shortDesc": "4th Axis Brake Release",
-            "desc": ""
+            "shortDesc": "4th Axis Brake Release"
         },
         "M12": {
             "category": "mcode",
-            "shortDesc": "5th Axis Brake On",
-            "desc": ""
+            "shortDesc": "5th Axis Brake On"
         },
         "M13": {
             "category": "mcode",
-            "shortDesc": "5th Axis Brake Release",
-            "desc": ""
+            "shortDesc": "5th Axis Brake Release"
         },
         "M16": {
             "category": "mcode",
@@ -81,13 +74,11 @@
         },
         "M17": {
             "category": "mcode",
-            "shortDesc": "APC Pallet Unclamp & Open APC Door",
-            "desc": ""
+            "shortDesc": "APC Pallet Unclamp & Open APC Door"
         },
         "M18": {
             "category": "mcode",
-            "shortDesc": "APC Pallet Clamp & Close APC Door",
-            "desc": ""
+            "shortDesc": "APC Pallet Clamp & Close APC Door"
         },
         "M19": {
             "category": "mcode",
@@ -101,79 +92,65 @@
         },
         "M31": {
             "category": "mcode",
-            "shortDesc": "Chip Auger Forward",
-            "desc": ""
+            "shortDesc": "Chip Auger Forward"
         },
         "M33": {
             "category": "mcode",
-            "shortDesc": "Chip Auger Stop",
-            "desc": ""
+            "shortDesc": "Chip Auger Stop"
         },
         "M34": {
             "category": "mcode",
-            "shortDesc": "Programmable Coolant Position Down",
-            "desc": ""
+            "shortDesc": "Programmable Coolant Position Down"
         },
         "M35": {
             "category": "mcode",
-            "shortDesc": "Programmable Coolant Position Up",
-            "desc": ""
+            "shortDesc": "Programmable Coolant Position Up"
         },
         "M80": {
             "category": "mcode",
-            "shortDesc": "Automatic Door Open",
-            "desc": ""
+            "shortDesc": "Automatic Door Open"
         },
         "M81": {
             "category": "mcode",
-            "shortDesc": "Automatic Door Close",
-            "desc": ""
+            "shortDesc": "Automatic Door Close"
         },
         "M82": {
             "category": "mcode",
-            "shortDesc": "Tool Unclamp",
-            "desc": ""
+            "shortDesc": "Tool Unclamp"
         },
         "M83": {
             "category": "mcode",
-            "shortDesc": "Auto Air Jet On",
-            "desc": ""
+            "shortDesc": "Auto Air Jet On"
         },
         "M84": {
             "category": "mcode",
-            "shortDesc": "Auto Air Jet Off",
-            "desc": ""
+            "shortDesc": "Auto Air Jet Off"
         },
         "M86": {
             "category": "mcode",
-            "shortDesc": "Tool Clamp",
-            "desc": ""
+            "shortDesc": "Tool Clamp"
         },
         "M88": {
             "category": "mcode",
-            "shortDesc": "Through Spindle Coolant On",
-            "desc": ""
+            "shortDesc": "Through Spindle Coolant On"
         },
         "M89": {
             "category": "mcode",
-            "shortDesc": "Through Spindle Coolant Off",
-            "desc": ""
+            "shortDesc": "Through Spindle Coolant Off"
         },
         "M97": {
             "category": "mcode",
             "shortDesc": "Local Sub-Program Call",
-            "desc": "",
             "parameters": {
                 "P": {
-                    "desc": "Line Number for local Sub-Program",
+                    "shortDesc": "Line Number for local Sub-Program",
                     "optional": false
                 }
             }
         },
         "M98": {
             "category": "mcode",
-            "shortDesc": "Sub-Program Call",
-            "desc": ""
+            "shortDesc": "Sub-Program Call"
         },
         "M99": {
             "category": "mcode",

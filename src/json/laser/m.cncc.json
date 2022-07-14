@@ -1,5 +1,5 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
     "type": "mcode",
     "machineType": "laser",
     "title": "M Code Laser Reference",
@@ -7,7 +7,6 @@
         "M00": {
             "category": "other",
             "shortDesc": "Program Stop",
-            "desc": "",
             "modal": true
         }
     }
