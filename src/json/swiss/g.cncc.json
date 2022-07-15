@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "gcode",
     "machineType": "swiss",
-    "title": "G Code Lathe Reference",
+    "title": "G Code Swiss Reference",
+    "description": "G-Code Listing for Swiss-style Lathe Machine Tools",
     "codes": {
         "G00": {
             "category": "motion",

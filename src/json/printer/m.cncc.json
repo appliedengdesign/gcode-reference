@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "mcode",
     "machineType": "printer",
     "title": "M Code 3D Printer Reference",
+    "description": "M-Code Listing for 3D Printers",
     "codes": {
         "M0": {
             "category": "other",

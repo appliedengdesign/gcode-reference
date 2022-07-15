@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "mcode",
     "machineType": "lathe",
     "title": "M Code Lathe Reference",
+    "description": "M-Code Listing for Lathe Machine Tools",
     "codes": {
         "M00": {
             "category": "other",

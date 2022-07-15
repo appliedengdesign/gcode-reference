@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "mcode",
     "machineType": "edm",
-    "title": "M Code Laser Reference",
+    "title": "M Code EDM Reference",
+    "description": "M-Code Listing for EDM Machine Tools",
     "codes": {
         "M00": {
             "category": "other",

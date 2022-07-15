@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "gcode",
     "machineType": "laser",
     "title": "G Code Laser Reference",
+    "description": "G-Code Listing for Laser Machine Tools",
     "codes": {
         "G00": {
             "category": "motion",

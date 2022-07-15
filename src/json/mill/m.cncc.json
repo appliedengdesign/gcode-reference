@@ -1,8 +1,9 @@
 {
-    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-06/schema",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "mcode",
     "machineType": "mill",
     "title": "M Code Milling Reference",
+    "description": "M-Code Listing for Milling Machine Tools",
     "codes": {
         "M00": {
             "category": "mcode",
