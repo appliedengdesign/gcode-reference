@@ -4,7 +4,12 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export { GReference } from './gReference';
+export enum Categories {
+    Motion = 'motion',
+    Coordinate = 'coordinate',
+    Compensation = 'compensation',
+    Canned = 'canned',
+    Other = 'other',
+}
 
-// Types
-export * from './types';
+export type Category = Categories;

@@ -1,0 +1,14 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "swiss",
+    "title": "M Code Swiss Reference",
+    "description": "M-Code Listing for Swiss-style Lathe Machine Tools",
+    "codes": {
+        "M00": {
+            "category": "other",
+            "shortDesc": "Program Stop",
+            "modal": true
+        }
+    }
+}

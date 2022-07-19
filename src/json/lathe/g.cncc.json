@@ -1,8 +1,9 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "gcode",
     "machineType": "lathe",
     "title": "G Code Lathe Reference",
+    "description": "G-Code Listing for Lathe Machine Tools",
     "codes": {
         "G00": {
             "category": "motion",
@@ -11,24 +12,18 @@
             "modal": true,
             "parameters": {
                 "X": {
-                    "desc": "An absolute or relative coordinate on the X axis.",
+                    "shortDesc": "An absolute or relative coordinate on the X axis.",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "An absolute or relative coordinate on the Y axis.",
+                    "shortDesc": "An absolute or relative coordinate on the Y axis.",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "An absolute or relative coordinate on the Z axis",
+                    "shortDesc": "An absolute or relative coordinate on the Z axis",
                     "optional": true
                 }
             }
-        },
-        "G01": {
-            "category": "motion",
-            "shortDesc": "",
-            "desc": "",
-            "modal": true
         }
     }
 }

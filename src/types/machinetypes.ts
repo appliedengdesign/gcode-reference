@@ -4,7 +4,14 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export { GReference } from './gReference';
+// To match the machineType definition in the CNCCodes JSON Schema
+export enum MachineTypes {
+    EDM = 'edm',
+    Mill = 'mill',
+    Lathe = 'lathe',
+    Laser = 'laser',
+    Printer = 'printer',
+    Swiss = 'swiss',
+}
 
-// Types
-export * from './types';
+export type MachineType = MachineTypes;

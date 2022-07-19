@@ -1,0 +1,31 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "mill",
+    "title": "M Code Milling Reference",
+    "variant": "Mazak",
+    "description": "M-Code Listing for Milling Machine Tools",
+    "keywords": [
+        "mazak",
+        "mill",
+        "milling"
+    ],
+    "codes": {
+        "M10": {
+            "category": "mcode",
+            "shortDesc": "Clamping of Tool on the Spindle"
+        },
+        "M11": {
+            "category": "mcode",
+            "shortDesc": "Unclamping of Tool on the Spindle"
+        },
+        "M46": {
+            "category": "mcode",
+            "shortDesc": "A-axis unclamping"
+        },
+        "M47": {
+            "category": "mcode",
+            "shortDesc": "A-Axis clamping"
+        }
+    }
+}

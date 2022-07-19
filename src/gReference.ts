@@ -5,27 +5,32 @@
 'use strict';
 
 import { loadJSON } from './json';
-import { Code, ICode, MachineType, MachineTypes, Parameters } from './types';
+import { Code, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant } from './types';
 
 export class GReference {
     private _gcodes: ICode = {};
     private _mcodes: ICode = {};
     private _machineType: MachineType;
+    private _variant: Variant | undefined;
 
-    constructor(private type: MachineType = MachineTypes.Mill) {
-        // Default is Mill
-        this._machineType = type;
-        this.buildReference();
+    constructor(private machineType?: MachineType, private variant?: Variant) {
+        // Default is Mill, No Variant
+        machineType !== undefined ? (this._machineType = machineType) : (this._machineType = MachineTypes.Mill);
+        variant !== undefined ? (this._variant = variant) : undefined;
+        this._buildReference();
     }
 
-    private buildReference() {
-        const [g, m] = loadJSON(this._machineType);
-
+    private _buildReference() {
+        // Load G Codes from JSON
+        const g = loadJSON(CodeTypes.G, this._machineType, this._variant);
         Object.assign(this._gcodes, g?.codes);
+
+        // Load M Codes from JSON
+        const m = loadJSON(CodeTypes.M, this._machineType, this._variant);
         Object.assign(this._mcodes, m?.codes);
     }
 
-    private cleanCode(code: string): string {
+    private _cleanCode(code: string): string {
         // Check for leading zero
         if (code.length === 2) {
             code = `${code[0]}0${code.substring(1)}`;
@@ -43,55 +48,96 @@ export class GReference {
             return;
         } else {
             this._machineType = type;
-            this.buildReference();
+            this._buildReference();
         }
     }
 
+    isVariant(): boolean {
+        if (this._variant) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    getVariant(): Variant | undefined {
+        return this._variant;
+    }
+
+    setVariant(variant: Variant | undefined): void {
+        if (this._variant === variant) {
+            return;
+        } else {
+            this._variant = variant;
+            this._buildReference();
+        }
+    }
+
+    removeVariant(): void {
+        this._variant = undefined;
+        this._buildReference();
+    }
+
     get(code: string): Code | undefined {
-        code = this.cleanCode(code);
+        code = this._cleanCode(code);
 
         if (code[0].toUpperCase() === 'G') {
             if (code in this._gcodes) {
                 return this._gcodes[code];
+            } else {
+                return undefined;
             }
-        } else {
+        } else if (code[0].toUpperCase() === 'M') {
             if (code in this._mcodes) {
                 return this._mcodes[code];
+            } else {
+                return undefined;
             }
         }
+
+        return undefined;
     }
 
     getDesc(code: string): string | undefined {
-        code = this.cleanCode(code);
-
         return this.get(code)?.desc;
     }
 
     getShortDesc(code: string): string | undefined {
-        code = this.cleanCode(code);
-
         return this.get(code)?.shortDesc;
     }
 
     getParams(code: string, req?: boolean): Parameters | undefined {
-        code = this.cleanCode(code);
         const c = this.get(code);
 
-        if (req) {
-            const params: Parameters = {};
+        if (c) {
+            if (req) {
+                const params: Parameters = {};
 
-            const p = c?.parameters;
+                const p = c.parameters;
 
-            for (const key in p) {
-                if (Object.prototype.hasOwnProperty.call(p, key)) {
-                    if (!p[key].optional) {
-                        params[key] = p[key];
+                for (const key in p) {
+                    if (Object.prototype.hasOwnProperty.call(p, key)) {
+                        if (!p[key].optional) {
+                            params[key] = p[key];
+                        }
                     }
                 }
+                return params;
+            } else {
+                return c.parameters;
             }
-            return params;
         } else {
-            return c?.parameters;
+            return undefined;
         }
+    }
+
+    getAllCodes(codeType: CodeTypes): ICode | undefined {
+        if (codeType === CodeTypes.G) {
+            return this._gcodes;
+        } else if (codeType === CodeTypes.M) {
+            return this._mcodes;
+        }
+
+        return undefined;
     }
 }

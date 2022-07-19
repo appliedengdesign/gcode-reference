@@ -4,7 +4,10 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export { GReference } from './gReference';
+interface IConstants {
+    readonly jsonExt: string;
+}
 
-// Types
-export * from './types';
+export const constants: IConstants = {
+    jsonExt: '.cncc.json',
+};

@@ -1,3 +1,5 @@
+[![NPM Version](https://badgen.net/npm/v/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference) [![NPM DL](https://badgen.net/npm/dt/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference)
+
 [![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference/issues)
 ![Github Stars](https://badgen.net/github/stars/appliedengdesign/gcode-reference)
 ![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql-analysis.yml/badge.svg)
@@ -42,9 +44,15 @@ const gref = new GReference();
 // OR
 // initialize with a machine type
 const gref = new GReference(GRef.MachineTypes.Mill);
+// OR
+// initalize with a machine type and variant
+const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak)
 
 // Get Complete G-Code Object
 const gcode = gref.get('G1');
+
+// Get All Codes
+const gcode = gref.getAllCodes(CodeTypes.G);
 
 // Get Short Description
 const shortDesc = gref.getShortDesc('G1');
@@ -58,18 +66,42 @@ const type = gref.getType();
 // Set Machine Type (Will rebuild reference)
 gref.setType(GRef.MachineTypes.Mill);
 
+// Set or Remove a Variant
+gref.setVariant(Gref.MachineTypes.Mazak);
+gref.removeVariant();
+
+// Check if there is a variant
+gref.isVariant();
+
 // Get Parameters for a G/M Code
 gref.getParams('G84');
 
 // You can also import the types separately / individually
-import { GReference, MachineTypes, Categories, Parameter, Code };
+import {
+    Categories,
+    Category,
+    CNCCodes,
+    Code,
+    CodeType,
+    CodeTypes,
+    ICode,
+    MachineType,
+    MachineTypes,
+    Parameters,
+    Variant,
+    Variants,
+} from 'gcode-reference';
 
 ```
 
 ## TODO
 
-- Lathe G-Codes
-- 3D Printer G-Codes
+- Lathe G/M Codes
+- 3D Printer G/M Codes
+- Swiss G/M Codes
+- EDM G/M Codes
+- Laser G/M Codes
+- Variants
 - Export to Markdown
 - Export to HTML
 
@@ -83,7 +115,11 @@ If you find any bugs or issues with the package, please create a [new GitHub iss
 
 ## Contributing
 
-For information on contributing, please refer to the [CONTRIBUTING](https://github.com/appliedengdesign/gcode-reference/blob/master/CONTRIBUTING.md) doc for workflows and best practices.
+### We Need Your Help
+
+We need people to help add more G & M codes to the various machine tool bases as well as adding variants.
+
+For information on contributing, please refer to the [CONTRIBUTING](https://github.com/appliedengdesign/gcode-reference/blob/master/CONTRIBUTING.md) doc for information on how to add to this project.
 
 ## About Applied Eng & Design
 

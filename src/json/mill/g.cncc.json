@@ -1,8 +1,9 @@
 {
-    "$schema": "../schema/cnccodes.schema.json",
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
     "type": "gcode",
     "machineType": "mill",
     "title": "G Code Milling Reference",
+    "description": "G-Code Listing for Milling Machine Tools",
     "codes": {
         "G00": {
             "category": "motion",
@@ -11,15 +12,15 @@
             "modal": true,
             "parameters": {
                 "X": {
-                    "desc": "X-Axis motion command",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-Axis motion command",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-Axis motion command",
+                    "shortDesc": "Z-Axis motion command",
                     "optional": true
                 }
             }
@@ -27,31 +28,31 @@
         "G01": {
             "category": "motion",
             "shortDesc": "Linear Interpolation Motion",
-            "desc": "",
+            "desc": "G01 is used to move machine axes at specified feedrate.",
             "modal": true,
             "parameters": {
                 "X": {
-                    "desc": "X-Axis motion command",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-Axis motion command",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-Axis motion command",
+                    "shortDesc": "Z-Axis motion command",
                     "optional": true
                 },
                 "A": {
-                    "desc": "A-Axis motion command",
+                    "shortDesc": "A-Axis motion command",
                     "optional": true
                 },
                 "B": {
-                    "desc": "B-Axis motion command",
+                    "shortDesc": "B-Axis motion command",
                     "optional": true
                 },
                 "C": {
-                    "desc": "C-Axis motion command",
+                    "shortDesc": "C-Axis motion command",
                     "optional": true
                 }
             }
@@ -63,35 +64,35 @@
             "modal": true,
             "parameters": {
                 "I": {
-                    "desc": "Distance along X Axis to center of circle",
+                    "shortDesc": "Distance along X Axis to center of circle",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Distance along Y Axis to center of circle",
+                    "shortDesc": "Distance along Y Axis to center of circle",
                     "optional": true
                 },
                 "K": {
-                    "desc": "Distance along Z Axis to center of circle",
+                    "shortDesc": "Distance along Z Axis to center of circle",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Radius of Circle",
+                    "shortDesc": "Radius of Circle",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-Axis motion command",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-Axis motion command",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-Axis motion command",
+                    "shortDesc": "Z-Axis motion command",
                     "optional": true
                 },
                 "A": {
-                    "desc": "A-Axis motion commanmd",
+                    "shortDesc": "A-Axis motion commanmd",
                     "optional": true
                 }
             }
@@ -103,35 +104,35 @@
             "modal": true,
             "parameters": {
                 "I": {
-                    "desc": "Distance along X Axis to center of circle",
+                    "shortDesc": "Distance along X Axis to center of circle",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Distance along Y Axis to center of circle",
+                    "shortDesc": "Distance along Y Axis to center of circle",
                     "optional": true
                 },
                 "K": {
-                    "desc": "Distance along Z Axis to center of circle",
+                    "shortDesc": "Distance along Z Axis to center of circle",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Radius of Circle",
+                    "shortDesc": "Radius of Circle",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-Axis motion command",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-Axis motion command",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-Axis motion command",
+                    "shortDesc": "Z-Axis motion command",
                     "optional": true
                 },
                 "A": {
-                    "desc": "A-Axis motion commanmd",
+                    "shortDesc": "A-Axis motion commanmd",
                     "optional": true
                 }
             }
@@ -143,7 +144,7 @@
             "modal": false,
             "parameters": {
                 "P": {
-                    "desc": "The dwell time in seconds or milliseconds",
+                    "shortDesc": "The dwell time in seconds or milliseconds",
                     "optional": false
                 }
             }
@@ -161,43 +162,43 @@
             "modal": true,
             "parameters": {
                 "L": {
-                    "desc": "L selects the offset category.\n\nL2 - Work coordinate origin for COMMON and G54-G59\n\nL10 - Geometry or shift offset\n\nL1/L11 - Tool Wear\n\nL20 - Auxiliary work coordinate origin fo rG110-G129",
+                    "shortDesc": "L selects the offset category.\n\nL2 - Work coordinate origin for COMMON and G54-G59\n\nL10 - Geometry or shift offset\n\nL1/L11 - Tool Wear\n\nL20 - Auxiliary work coordinate origin fo rG110-G129",
                     "optional": false
                 },
                 "P": {
-                    "desc": "P selects a specific offset.\n\nP1-P50 - References geometry, wear or work offsets (L10-L11).\n\nP0 - References COMMON work coordinate offset (L2).\n\nP1-P6 - G54-G59 references work coordinates (L2).\n\nP1-P20 - G110-G129 references auxiliary coordinates (L20).\n\nP1-P99 - G154 P1-P99 reference auxiliary coordinate (L20).",
+                    "shortDesc": "P selects a specific offset.\n\nP1-P50 - References geometry, wear or work offsets (L10-L11).\n\nP0 - References COMMON work coordinate offset (L2).\n\nP1-P6 - G54-G59 references work coordinates (L2).\n\nP1-P20 - G110-G129 references auxiliary coordinates (L20).\n\nP1-P99 - G154 P1-P99 reference auxiliary coordinate (L20).",
                     "optional": true
                 },
                 "Q": {
-                    "desc": "Imaginary tool nose tip direction",
+                    "shortDesc": "Imaginary tool nose tip direction",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Tool Nose Radius",
+                    "shortDesc": "Tool Nose Radius",
                     "optional": true
                 },
                 "U": {
-                    "desc": "Incremental amount to be added to X-axis offset",
+                    "shortDesc": "Incremental amount to be added to X-axis offset",
                     "optional": true
                 },
                 "V": {
-                    "desc": "Incremental amount to be added to Y-axis offset",
+                    "shortDesc": "Incremental amount to be added to Y-axis offset",
                     "optional": true
                 },
                 "W": {
-                    "desc": "Incremental amount to be added to Z-axis offset",
+                    "shortDesc": "Incremental amount to be added to Z-axis offset",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis offset",
+                    "shortDesc": "X-axis offset",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis offset",
+                    "shortDesc": "Y-axis offset",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Z-axis offset",
+                    "shortDesc": "Z-axis offset",
                     "optional": true
                 }
             }
@@ -205,213 +206,265 @@
         "G17": {
             "category": "coordinate",
             "shortDesc": "XY Plane Selection",
-            "desc": "",
+            "desc": "Circular motion with the operator looking down on the XY table from above.",
             "modal": true
         },
         "G18": {
             "category": "coordinate",
             "shortDesc": "XZ Plane Selection",
-            "desc": "",
+            "desc": "Circular motion is defined as the motion for the operator looking from the rear of the machine toward the front control panel.",
             "modal": true
         },
         "G19": {
             "category": "coordinate",
             "shortDesc": "YZ Plane Selection",
-            "desc": "",
+            "desc": "Circular motion is defined as the motion for the operator looking across the table from the side of the machine where the control panel is mounted.",
             "modal": true
         },
         "G20": {
             "category": "coordinate",
             "shortDesc": "Inch Programming",
-            "desc": "",
+            "desc": "G20 tells the controller that the code is in Inch units.",
             "modal": true
         },
         "G21": {
             "category": "coordinate",
             "shortDesc": "Metric Programming",
-            "desc": "",
+            "desc": "G21 tells the controller that the code is in Metric units.",
             "modal": true
         },
         "G28": {
             "category": "motion",
             "shortDesc": "Return to Home Position",
-            "desc": "",
+            "desc": "G28 is used to zero return the tool to its zero position via a reference point at rapid speed.",
             "modal": false
-        },
-        "G29": {
-            "category": "motion",
-            "shortDesc": "Move to Location through G29 Reference",
-            "desc": "",
-            "modal": true
         },
         "G40": {
             "category": "compensation",
             "shortDesc": "Cutter Comp Cancel",
-            "desc": "",
+            "desc": "G40 cancels cutter compensation.",
             "modal": true
         },
         "G41": {
             "category": "compensation",
             "shortDesc": "Cutter Comp Left",
-            "desc": "",
+            "desc": "G41 enables cutter compensation left.",
             "modal": true
         },
         "G42": {
             "category": "compensation",
             "shortDesc": "Cutter Comp Right",
-            "desc": "",
+            "desc": "G42 enables cutter compensation right.",
             "modal": true
         },
         "G43": {
             "category": "compensation",
             "shortDesc": "Tool Length Compensation (+)",
-            "desc": "",
-            "modal": true
+            "desc": "Selects tool length compensation in the positive direction.",
+            "modal": true,
+            "parameters": {
+                "H": {
+                    "shortDesc": "Tool number offset selector",
+                    "optional": false
+                }
+            }
         },
         "G44": {
             "category": "compensation",
             "shortDesc": "Tool Length Compensation (-)",
-            "desc": "",
-            "modal": true
+            "desc": "Selects tool length compensation in the negative direction.",
+            "modal": true,
+            "parameters": {
+                "H": {
+                    "shortDesc": "Tool number offset selector",
+                    "optional": false
+                }
+            }
         },
         "G49": {
             "category": "compensation",
             "shortDesc": "Tool Length Compensation Cancel",
-            "desc": "",
+            "desc": "Cancel tool length compensation.",
+            "modal": true
+        },
+        "G50": {
+            "category": "compensation",
+            "shortDesc": "Reset Scale Factor to 1.0",
+            "desc": "G50 command cancels scaling.",
             "modal": true
         },
         "G51": {
             "category": "compensation",
-            "shortDesc": "Reset Scale Factor to 1.0",
-            "desc": "",
-            "modal": true
-        },
-        "G52": {
-            "category": "compensation",
             "shortDesc": "Turn on Scale Factors",
-            "desc": "",
-            "modal": true
+            "desc": "Turn on scaling at a factor P about X Y Z.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "Center of scaling for X-Axis",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Center of scaling for Y-Axis",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Center of scaling for Z-Axis",
+                    "optional": true
+                },
+                "P": {
+                    "shortDesc": "Scaling factor for axes",
+                    "optional": true
+                }
+            }
         },
         "G53": {
             "category": "coordinate",
             "shortDesc": "Machine Coordinate System",
-            "desc": "",
+            "desc": "G53 temporarily cancels work coordinate offsets and uses machine coordinate system",
             "modal": true
         },
         "G54": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (1)",
-            "desc": "",
+            "desc": "Work Coordinate System (1)",
             "modal": true
         },
         "G55": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (2)",
-            "desc": "",
+            "desc": "Work Coordinate System (2)",
             "modal": true
         },
         "G56": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (3)",
-            "desc": "",
+            "desc": "Work Coordinate System (3)",
             "modal": true
         },
         "G57": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (4)",
-            "desc": "",
+            "desc": "Work Coordinate System (4)",
             "modal": true
         },
         "G58": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (5)",
-            "desc": "",
+            "desc": "Work Coordinate System (5)",
             "modal": true
         },
         "G59": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (6)",
-            "desc": "",
+            "desc": "Work Coordinate System (6)",
             "modal": true
         },
         "G61": {
             "category": "motion",
             "shortDesc": "Exact Stop Modal",
-            "desc": "",
+            "desc": " Rapid and interpolated moves will decelerate to an exact stop before another block is processed.",
             "modal": true
         },
         "G64": {
             "category": "motion",
             "shortDesc": "G61 Cancel",
-            "desc": "",
+            "desc": "Use G64 to cancel a G61 exact stop",
             "modal": true
         },
         "G65": {
             "category": "other",
             "shortDesc": "Macro Subroutine Call",
-            "desc": "",
-            "modal": false
+            "desc": "Call macro subprogram specified by P",
+            "modal": false,
+            "parameters": {
+                "P": {
+                    "shortDesc": "Number of program to call",
+                    "optional": false
+                },
+                "L": {
+                    "shortDesc": "Number of times to repeat",
+                    "optional": true
+                }
+            }
         },
         "G68": {
             "category": "coordinate",
             "shortDesc": "Coordinate Rotation",
-            "desc": "",
-            "modal": true
+            "desc": "Rotates all commands around center of rotation by R degrees",
+            "modal": true,
+            "parameters": {
+                "R": {
+                    "shortDesc": "Angle of rotation in degrees",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X component of center of rotation",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y component of center of rotation",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z component of center of rotation",
+                    "optional": true
+                }
+            }
         },
         "G69": {
             "category": "coordinate",
             "shortDesc": "Cancel G68 Rotation",
-            "desc": "",
+            "desc": "G69 canceles any G68 rotations",
             "modal": true
         },
         "G73": {
             "category": "canned",
             "shortDesc": "High Speed Peck Drilling",
-            "desc": "",
+            "desc": "G73 pecks does not return above the face of the material during each peck.",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "I": {
-                    "desc": "First peck depth",
+                    "shortDesc": "First peck depth",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Amount to reduce pecking depth for pass",
+                    "shortDesc": "Amount to reduce pecking depth for pass",
                     "optional": true
                 },
                 "K": {
-                    "desc": "Minimum peck depth (Control calculates the number of pecks)",
+                    "shortDesc": "Minimum peck depth (Control calculates the number of pecks)",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
+                    "shortDesc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
                     "optional": true
                 },
                 "P": {
-                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "shortDesc": "Pause at the bottom of the hole (seconds)",
                     "optional": true
                 },
                 "Q": {
-                    "desc": "Peck Depth (Always Incremental)",
+                    "shortDesc": "Peck Depth (Always Incremental)",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of the hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of the hole.",
                     "optional": false
                 }
             }
@@ -419,35 +472,35 @@
         "G74": {
             "category": "canned",
             "shortDesc": "Left Hand Tapping Cycle",
-            "desc": "",
+            "desc": "Reverse, Left Hand tapping canned cycle.",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "J": {
-                    "desc": "Retract Multiple",
+                    "shortDesc": "Retract Multiple",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "shortDesc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": true
                 }
             }
@@ -455,43 +508,43 @@
         "G76": {
             "category": "canned",
             "shortDesc": "Fine Boring Cycle",
-            "desc": "",
+            "desc": "G76 Fine Boring Canned Cycle",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "I": {
-                    "desc": "Shift value along the X-axis before retracting, if Q is not specified",
+                    "shortDesc": "Shift value along the X-axis before retracting, if Q is not specified",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Shift value along the Y-axis before retracting, if Q is not specified",
+                    "shortDesc": "Shift value along the Y-axis before retracting, if Q is not specified",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "shortDesc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "P": {
-                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "shortDesc": "Pause at the bottom of the hole (seconds)",
                     "optional": true
                 },
                 "Q": {
-                    "desc": "The shift value, always incremental",
+                    "shortDesc": "The shift value, always incremental",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": true
                 }
             }
@@ -499,43 +552,43 @@
         "G77": {
             "category": "canned",
             "shortDesc": "Back Bore Cycle",
-            "desc": "",
+            "desc": "G77 Back Bore Canned Cycle",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "I": {
-                    "desc": "Shift value along the X-axis before retracting, if Q is not specified",
+                    "shortDesc": "Shift value along the X-axis before retracting, if Q is not specified",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Shift value along the Y-axis before retracting, if Q is not specified",
+                    "shortDesc": "Shift value along the Y-axis before retracting, if Q is not specified",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "shortDesc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "P": {
-                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "shortDesc": "Pause at the bottom of the hole (seconds)",
                     "optional": true
                 },
                 "Q": {
-                    "desc": "The shift value, always incremental",
+                    "shortDesc": "The shift value, always incremental",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": true
                 }
             }
@@ -543,41 +596,41 @@
         "G80": {
             "category": "canned",
             "shortDesc": "Canned Cycle Cancel",
-            "desc": "",
+            "desc": "G80 cancels any canned cycles.",
             "modal": true
         },
         "G81": {
             "category": "canned",
             "shortDesc": "Drilling Canned Cycle",
-            "desc": "",
+            "desc": "G81 is a drilling canned cycle.",
             "modal": true,
             "parameters": {
                 "E": {
-                    "desc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "shortDesc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
                     "optional": true
                 },
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "L": {
-                    "desc": "Number of holes to drill if G91 (Incremental) is used.",
+                    "shortDesc": "Number of holes to drill if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis motion command",
+                    "shortDesc": "X-axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis motion command",
+                    "shortDesc": "Y-axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z Axis at the bottom of the hole.",
+                    "shortDesc": "Position of the Z Axis at the bottom of the hole.",
                     "optional": false
                 }
             }
@@ -585,35 +638,35 @@
         "G82": {
             "category": "canned",
             "shortDesc": "Spot Drill Canned Cycle",
-            "desc": "",
+            "desc": "G82 is a spot drilling canned cycle.",
             "modal": true,
             "parameters": {
                 "E": {
-                    "desc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "shortDesc": "Chip-Clean RPM (Spindle reverses to remove chips after each cycle)",
                     "optional": true
                 },
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "L": {
-                    "desc": "Number of holes to drill if G91 (Incremental) is used.",
+                    "shortDesc": "Number of holes to drill if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis motion command",
+                    "shortDesc": "X-axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis motion command",
+                    "shortDesc": "Y-axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z Axis at the bottom of the hole.",
+                    "shortDesc": "Position of the Z Axis at the bottom of the hole.",
                     "optional": false
                 }
             }
@@ -621,51 +674,51 @@
         "G83": {
             "category": "canned",
             "shortDesc": "Normal Peck Drilling Canned Cycle",
-            "desc": "",
+            "desc": "G83 is a standard peck drilling canned cycle.",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "I": {
-                    "desc": "First peck depth",
+                    "shortDesc": "First peck depth",
                     "optional": true
                 },
                 "J": {
-                    "desc": "Amount to reduce pecking depth for pass",
+                    "shortDesc": "Amount to reduce pecking depth for pass",
                     "optional": true
                 },
                 "K": {
-                    "desc": "Minimum peck depth (Control calculates the number of pecks)",
+                    "shortDesc": "Minimum peck depth (Control calculates the number of pecks)",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
+                    "shortDesc": "Number of loops (Number of holes to drill) if G91 (Incremental Mode) is used.",
                     "optional": true
                 },
                 "P": {
-                    "desc": "Pause at the bottom of the hole (seconds)",
+                    "shortDesc": "Pause at the bottom of the hole (seconds)",
                     "optional": true
                 },
                 "Q": {
-                    "desc": "Peck Depth (Always Incremental)",
+                    "shortDesc": "Peck Depth (Always Incremental)",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of the hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of the hole.",
                     "optional": false
                 }
             }
@@ -673,43 +726,43 @@
         "G84": {
             "category": "canned",
             "shortDesc": "Tapping Canned Cycle",
-            "desc": "",
+            "desc": "G84 is a standard tapping canned cycle.",
             "modal": true,
             "parameters": {
                 "E": {
-                    "desc": "Chip-clean RPM (Spindle reverses to remove chips after each cycle)",
+                    "shortDesc": "Chip-clean RPM (Spindle reverses to remove chips after each cycle)",
                     "optional": true
                 },
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "J": {
-                    "desc": "Retract Multiple",
+                    "shortDesc": "Retract Multiple",
                     "optional": true
                 },
                 "L": {
-                    "desc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
+                    "shortDesc": "Number of loops (holes to tap) if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "S": {
-                    "desc": "Spindle Speed",
+                    "shortDesc": "Spindle Speed",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of hole",
+                    "shortDesc": "X-axis location of hole",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of hole",
+                    "shortDesc": "Y-axis location of hole",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": false
                 }
             }
@@ -717,31 +770,30 @@
         "G85": {
             "category": "canned",
             "shortDesc": "Bore In Bore Out Canned Cycle",
-            "desc": "",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "L": {
-                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "shortDesc": "Number of holes if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of holes",
+                    "shortDesc": "X-axis location of holes",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of holes",
+                    "shortDesc": "Y-axis location of holes",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": false
                 }
             }
@@ -753,27 +805,27 @@
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "L": {
-                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "shortDesc": "Number of holes if G91 (Incremental) is used.",
                     "optional": true
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of holes",
+                    "shortDesc": "X-axis location of holes",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of holes",
+                    "shortDesc": "Y-axis location of holes",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": false
                 }
             }
@@ -781,35 +833,34 @@
         "G89": {
             "category": "canned",
             "shortDesc": "Bore In, Dwell, Bore Out Canned Cycle",
-            "desc": "",
             "modal": true,
             "parameters": {
                 "F": {
-                    "desc": "Feedrate",
+                    "shortDesc": "Feedrate",
                     "optional": false
                 },
                 "L": {
-                    "desc": "Number of holes if G91 (Incremental) is used.",
+                    "shortDesc": "Number of holes if G91 (Incremental) is used.",
                     "optional": false
                 },
                 "P": {
-                    "desc": "The dwell time at the bottom of the hole.",
+                    "shortDesc": "The dwell time at the bottom of the hole.",
                     "optional": false
                 },
                 "R": {
-                    "desc": "Position of the R plane (Retract)",
+                    "shortDesc": "Position of the R plane (Retract)",
                     "optional": true
                 },
                 "X": {
-                    "desc": "X-axis location of holes",
+                    "shortDesc": "X-axis location of holes",
                     "optional": true
                 },
                 "Y": {
-                    "desc": "Y-axis location of holes",
+                    "shortDesc": "Y-axis location of holes",
                     "optional": true
                 },
                 "Z": {
-                    "desc": "Position of the Z-axis at the bottom of hole.",
+                    "shortDesc": "Position of the Z-axis at the bottom of hole.",
                     "optional": false
                 }
             }
@@ -817,13 +868,13 @@
         "G90": {
             "category": "coordinate",
             "shortDesc": "Absolute Positioning",
-            "desc": "",
+            "desc": "G90 instructs the controller to interpret coordinates as absolute coordinates.",
             "modal": true
         },
         "G91": {
             "category": "coordinate",
             "shortDesc": "Incremental Positioning",
-            "desc": "",
+            "desc": "G91 instructs the controller to interpret coordinates as incremental coordinates.",
             "modal": true
         },
         "G92": {
@@ -863,7 +914,7 @@
             "modal": true,
             "parameters": {
                 "P": {
-                    "desc": "Number of blocks to limit the look-ahead by.",
+                    "shortDesc": "Number of blocks to limit the look-ahead by.",
                     "optional": true
                 }
             }
@@ -871,121 +922,121 @@
         "G110": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (7)",
-            "desc": "",
+            "desc": "Work Coordinate System (7)",
             "modal": true
         },
         "G111": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (8)",
-            "desc": "",
+            "desc": "Work Coordinate System (8)",
             "modal": true
         },
         "G112": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (9)",
-            "desc": "",
+            "desc": "Work Coordinate System (9)",
             "modal": true
         },
         "G113": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (10)",
-            "desc": "",
+            "desc": "Work Coordinate System (10)",
             "modal": true
         },
         "G114": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (11)",
-            "desc": "",
+            "desc": "Work Coordinate System (11)",
             "modal": true
         },
         "G115": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (12)",
-            "desc": "",
+            "desc": "Work Coordinate System (12)",
             "modal": true
         },
         "G116": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (13)",
-            "desc": "",
+            "desc": "Work Coordinate System (13)",
             "modal": true
         },
         "G117": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (14)",
-            "desc": "",
+            "desc": "Work Coordinate System (14)",
             "modal": true
         },
         "G118": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (15)",
-            "desc": "",
+            "desc": "Work Coordinate System (15)",
             "modal": true
         },
         "G119": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (16)",
-            "desc": "",
+            "desc": "Work Coordinate System (16)",
             "modal": true
         },
         "G120": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (17)",
-            "desc": "",
+            "desc": "Work Coordinate System (17)",
             "modal": true
         },
         "G121": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (18)",
-            "desc": "",
+            "desc": "Work Coordinate System (18)",
             "modal": true
         },
         "G122": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (19)",
-            "desc": "",
+            "desc": "Work Coordinate System (19)",
             "modal": true
         },
         "G123": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (20)",
-            "desc": "",
+            "desc": "Work Coordinate System (20)",
             "modal": true
         },
         "G124": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (21)",
-            "desc": "",
+            "desc": "Work Coordinate System (21)",
             "modal": true
         },
         "G125": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (22)",
-            "desc": "",
+            "desc": "Work Coordinate System (22)",
             "modal": true
         },
         "G126": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (23)",
-            "desc": "",
+            "desc": "Work Coordinate System (23)",
             "modal": true
         },
         "G127": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (24)",
-            "desc": "",
+            "desc": "Work Coordinate System (24)",
             "modal": true
         },
         "G128": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (25)",
-            "desc": "",
+            "desc": "Work Coordinate System (25)",
             "modal": true
         },
         "G129": {
             "category": "coordinate",
             "shortDesc": "Work Coordinate System (26)",
-            "desc": "",
+            "desc": "Work Coordinate System (26)",
             "modal": true
         },
         "G154": {

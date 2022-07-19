@@ -1,0 +1,193 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "lathe",
+    "title": "M Code Lathe Reference",
+    "description": "M-Code Listing for Lathe Machine Tools",
+    "codes": {
+        "M00": {
+            "category": "mcode",
+            "shortDesc": "Program Stop",
+            "modal": true
+        },
+        "M01": {
+            "category": "mcode",
+            "shortDesc": "Optional Program Stop",
+            "modal": true
+        },
+        "M02": {
+            "category": "mcode",
+            "shortDesc": "End of Program"
+        },
+        "M03": {
+            "category": "mcode",
+            "shortDesc": "Spindle On (CW Rotation)"
+        },
+        "M04": {
+            "category": "mcode",
+            "shortDesc": "Spindle On (CCW Rotation)"
+        },
+        "M05": {
+            "category": "mcode",
+            "shortDesc": "Spindle Stop"
+        },
+        "M06": {
+            "category": "mcode",
+            "shortDesc": "Tool Change"
+        },
+        "M07": {
+            "category": "mcode",
+            "shortDesc": "Mist Coolant On"
+        },
+        "M08": {
+            "category": "mcode",
+            "shortDesc": "Flood Coolant On"
+        },
+        "M09": {
+            "category": "mcode",
+            "shortDesc": "Coolant Off"
+        },
+        "M14": {
+            "category": "mcode",
+            "shortDesc": "Main Spindle Clamp",
+            "modal": true
+        },
+        "M15": {
+            "category": "mcode",
+            "shortDesc": "Main Spindle Clamp",
+            "modal": true
+        },
+        "M17": {
+            "category": "mcode",
+            "shortDesc": "Rotate Turret Forward",
+            "modal": true
+        },
+        "M18": {
+            "category": "mcode",
+            "shortDesc": "Rotate Turret Reverse",
+            "modal": true
+        },
+        "M19": {
+            "category": "mcode",
+            "shortDesc": "Orient Spindle",
+            "modal": true
+        },
+        "M21": {
+            "category": "mcode",
+            "shortDesc": "Tailstock Advance",
+            "modal": true
+        },
+        "M22": {
+            "category": "mcode",
+            "shortDesc": "Tailstock Retract",
+            "modal": true
+        },
+        "M23": {
+            "category": "mcode",
+            "shortDesc": "Angle out of Thread On",
+            "modal": true
+        },
+        "M24": {
+            "category": "mcode",
+            "shortDesc": "Angle out of Thread Off",
+            "modal": true
+        },
+        "M30": {
+            "category": "mcode",
+            "shortDesc": "Program End and Reset",
+            "modal": true
+        },
+        "M31": {
+            "category": "mcode",
+            "shortDesc": "Chip Auger Forward"
+        },
+        "M33": {
+            "category": "mcode",
+            "shortDesc": "Chip Auger Stop"
+        },
+        "M36": {
+            "category": "mcode",
+            "shortDesc": "Parts Catcher Extend"
+        },
+        "M37": {
+            "category": "mcode",
+            "shortDesc": "Parts Catcher Retract"
+        },
+        "M38": {
+            "category": "mcode",
+            "shortDesc": "Spindle Variation On"
+        },
+        "M39": {
+            "category": "mcode",
+            "shortDesc": "Spindle Variation Off"
+        },
+        "M41": {
+            "category": "mcode",
+            "shortDesc": "Spindle Low Gear Override"
+        },
+        "M42": {
+            "category": "mcode",
+            "shortDesc": "Spindle High Gear Override"
+        },
+        "M85": {
+            "category": "mcode",
+            "shortDesc": "Automatic Door Open"
+        },
+        "M86": {
+            "category": "mcode",
+            "shortDesc": "Automatic Door Close"
+        },
+        "M88": {
+            "category": "mcode",
+            "shortDesc": "High Pressure Coolant On"
+        },
+        "M89": {
+            "category": "mcode",
+            "shortDesc": "High Pressure Coolant Off"
+        },
+        "M97": {
+            "category": "mcode",
+            "shortDesc": "Local Sub-Routine Call"
+        },
+        "M98": {
+            "category": "mcode",
+            "shortDesc": "Sub-Program Call"
+        },
+        "M99": {
+            "category": "mcode",
+            "shortDesc": "Sub-Program / Routine Return"
+        },
+        "M133": {
+            "category": "mcode",
+            "shortDesc": "Live Tool Drive Forward"
+        },
+        "M134": {
+            "category": "mcode",
+            "shortDesc": "Live Tool Drive Reverse"
+        },
+        "M135": {
+            "category": "mcode",
+            "shortDesc": "Live Tool Drive Stop"
+        },
+        "M143": {
+            "category": "mcode",
+            "shortDesc": "Sub-Spindle Forward"
+        },
+        "M144": {
+            "category": "mcode",
+            "shortDesc": "Sub-Spindle Reverse"
+        },
+        "M145": {
+            "category": "mcode",
+            "shortDesc": "Sub-Spindle Stop"
+        },
+        "M154": {
+            "category": "mcode",
+            "shortDesc": "C-Axis Engage"
+        },
+        "M155": {
+            "category": "mcode",
+            "shortDesc": "C-Axis Disengage"
+        }
+    }
+}

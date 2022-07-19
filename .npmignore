@@ -9,5 +9,7 @@
 .travis.yml
 .vscode
 src/
+test/
+scripts/
 tslint.json
 tsconfig.buildinfo

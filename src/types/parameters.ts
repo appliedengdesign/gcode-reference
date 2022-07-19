@@ -4,7 +4,12 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-export { GReference } from './gReference';
+export type Parameter = {
+    shortDesc: string;
+    desc?: string;
+    optional: boolean;
+};
 
-// Types
-export * from './types';
+export interface Parameters extends Record<string, Parameter> {
+    [parameter: string]: Parameter;
+}
