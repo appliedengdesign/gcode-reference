@@ -7,4 +7,4 @@
 export { GReference } from './gReference';
 
 // Types
-export { MachineTypes, Categories, Parameter, Code } from './types';
+export * from './types';
