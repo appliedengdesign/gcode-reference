@@ -4,23 +4,83 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { CNCCodes, MachineType } from '../types';
+import { CNCCodes, CodeType, CodeTypes, MachineType, Variant } from '../types';
 import fs from 'fs';
 import path from 'path';
+import { constants } from '../util/constants';
 
-export function loadJSON(type: MachineType): [CNCCodes, CNCCodes] | [undefined, undefined] {
-    // Load JSON by type
-    try {
-        const gfile = fs.readFileSync(path.join(__dirname, type, 'gcodes.json'), 'utf-8');
-        const g: CNCCodes = <CNCCodes>JSON.parse(gfile);
+export function loadJSON(codeType: CodeType, machineType: MachineType, variant?: Variant): CNCCodes | undefined {
+    const fname = `${codeType[0]}${constants.jsonExt}`;
 
-        const mfile = fs.readFileSync(path.join(__dirname, type, 'mcodes.json'), 'utf-8');
-        const m: CNCCodes = <CNCCodes>JSON.parse(mfile);
+    switch (codeType) {
+        // G Code
+        case CodeTypes.G:
+            {
+                try {
+                    const gFile = fs.readFileSync(path.join(__dirname, machineType, fname), { encoding: 'utf-8' });
+                    const g: CNCCodes = <CNCCodes>JSON.parse(gFile);
 
-        return [g, m];
-    } catch (err) {
-        console.error('Error loading JSON file...', err);
+                    if (variant) {
+                        const variantName = `${codeType[0]}.${variant}${constants.jsonExt}`;
+                        if (!fs.existsSync(path.join(__dirname, machineType, 'variants', variantName))) {
+                            return g;
+                        }
+                        try {
+                            const vFile = fs.readFileSync(
+                                path.join(__dirname, machineType, 'variants', variantName),
+                                'utf-8',
+                            );
+                            const v: CNCCodes = <CNCCodes>JSON.parse(vFile);
+                            const newCodes = { ...g.codes, ...v.codes };
+                            g.codes = newCodes;
+                            return g;
+                        } catch (err) {
+                            console.error(`Error loading ${variant} G-Code JSON File`);
+                        }
+                    }
+                    return g;
+                } catch (err) {
+                    console.error(`Error loading JSON file ${fname}...`, err);
+                }
+            }
+            break;
+
+        // M Code
+        case CodeTypes.M:
+            {
+                try {
+                    const mFile = fs.readFileSync(path.join(__dirname, machineType, fname), { encoding: 'utf-8' });
+                    const m: CNCCodes = <CNCCodes>JSON.parse(mFile);
+
+                    if (variant) {
+                        const variantName = `${codeType[0]}.${variant}${constants.jsonExt}`;
+                        if (!fs.existsSync(path.join(__dirname, machineType, 'variants', variantName))) {
+                            return m;
+                        }
+                        try {
+                            const vFile = fs.readFileSync(
+                                path.join(__dirname, machineType, 'variants', variantName),
+                                'utf-8',
+                            );
+                            const v: CNCCodes = <CNCCodes>JSON.parse(vFile);
+                            const newCodes = { ...m.codes, ...v.codes };
+                            m.codes = newCodes;
+                            return m;
+                        } catch (err) {
+                            console.error(`Error loading ${variant} M-Code JSON File`);
+                        }
+                    }
+                    return m;
+                } catch (err) {
+                    console.error(`Error loading JSON file ${fname}...`, err);
+                }
+            }
+            break;
+
+        default: {
+            return undefined;
+        }
     }
 
-    return [undefined, undefined];
+    return undefined;
 }
