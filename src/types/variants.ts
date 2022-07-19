@@ -16,10 +16,10 @@ export enum Variants {
     Hurco = 'hurco',
     Mach3 = 'mach3',
     Mazak = 'mazak',
-    Milltronics = 'milltronics',
-    Mitsubishi = 'mitsubishi',
+    Milltronics = 'milltrs',
+    Mitsubishi = 'mitsu',
     Okuma = 'okuma',
-    Snapmaker = 'snapmaker',
+    Snapmaker = 'snpmaker',
     Tormach = 'tormach',
 }
 
