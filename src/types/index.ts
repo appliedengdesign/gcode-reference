@@ -4,9 +4,23 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
+import { Categories, Category } from './categories';
 import { CNCCodes, Code, CodeType, CodeTypes, ICode } from './codes';
 import { MachineType, MachineTypes } from './machinetypes';
 import { Parameters } from './parameters';
 import { Variant, Variants } from './variants';
 
-export { CNCCodes, Code, CodeType, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant, Variants };
+export {
+    Categories,
+    Category,
+    CNCCodes,
+    Code,
+    CodeType,
+    CodeTypes,
+    ICode,
+    MachineType,
+    MachineTypes,
+    Parameters,
+    Variant,
+    Variants,
+};
