@@ -1,6 +1,6 @@
 {
     "env": {
-        "es6": true,
+        "es2021": true,
         "node": true,
         "mocha": true
     },
@@ -15,7 +15,7 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 2019,
+        "ecmaVersion": 2021,
         "sourceType": "module",
         "ecmaFeatures": {
             "impliedStrict": true
@@ -109,15 +109,7 @@
             }
         ],
         "no-bitwise": "error",
-        "no-console": [
-            "error",
-            {
-                "allow": [
-                    "info",
-                    "error"
-                ]
-            }
-        ],
+        "no-console": "off",
         "no-duplicate-imports": "error",
         "no-inner-declarations": "off",
         "no-invalid-this": "error",
