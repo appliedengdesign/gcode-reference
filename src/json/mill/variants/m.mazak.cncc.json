@@ -17,7 +17,7 @@
         },
         "M11": {
             "category": "mcode",
-            "shortDesc": "Unclamping of Tool on the psindle"
+            "shortDesc": "Unclamping of Tool on the Spindle"
         },
         "M46": {
             "category": "mcode",
