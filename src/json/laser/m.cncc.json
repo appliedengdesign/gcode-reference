@@ -3,7 +3,7 @@
     "type": "mcode",
     "machineType": "laser",
     "title": "M Code Laser Reference",
-    "description": "M-Code Listing for Laser Machine Toola",
+    "description": "M-Code Listing for Laser Machine Tools",
     "codes": {
         "M00": {
             "category": "other",
