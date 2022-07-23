@@ -3,7 +3,9 @@
     "type": "mcode",
     "machineType": "mill",
     "title": "M Code Milling Reference",
-    "variant": "Mazak",
+    "variant": {
+        "name": "mazak"
+    },
     "description": "M-Code Listing for Milling Machine Tools",
     "keywords": [
         "mazak",
