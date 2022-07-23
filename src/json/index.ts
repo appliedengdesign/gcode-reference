@@ -30,9 +30,17 @@ export function loadJSON(codeType: CodeType, machineType: MachineType, variant?:
                                 path.join(__dirname, machineType, 'variants', variantName),
                                 'utf-8',
                             );
+
+                            // Overlay variant codes over original
                             const v: CNCCodes = <CNCCodes>JSON.parse(vFile);
                             const newCodes = { ...g.codes, ...v.codes };
                             g.codes = newCodes;
+
+                            // Remove codes from object
+                            v.variant.remove.forEach(c => {
+                                delete g.codes[c];
+                            });
+
                             return g;
                         } catch (err) {
                             console.error(`Error loading ${variant} G-Code JSON File`);
@@ -62,9 +70,17 @@ export function loadJSON(codeType: CodeType, machineType: MachineType, variant?:
                                 path.join(__dirname, machineType, 'variants', variantName),
                                 'utf-8',
                             );
+
+                            // Overlay variant codes over original
                             const v: CNCCodes = <CNCCodes>JSON.parse(vFile);
                             const newCodes = { ...m.codes, ...v.codes };
                             m.codes = newCodes;
+
+                            // Remove codes from object
+                            v.variant.remove.forEach(c => {
+                                delete m.codes[c];
+                            });
+
                             return m;
                         } catch (err) {
                             console.error(`Error loading ${variant} M-Code JSON File`);
