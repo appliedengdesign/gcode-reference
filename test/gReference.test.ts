@@ -122,6 +122,12 @@ describe('GReference Object', () => {
                 const mcv = loadJSON(CodeTypes.M, MachineTypes.Mill, Variants.Mazak);
                 expect(g.getShortDesc('M10')).to.equal(mcv?.codes.M10.shortDesc);
             });
+
+            it('removes codes listed in remove object', () => {
+                const g = new GReference(MachineTypes.Mill, Variants.Mazak);
+                expect(g.get('M12')).to.be.undefined;
+                expect(g.get('M13')).to.be.undefined;
+            });
         });
     });
 });
