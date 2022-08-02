@@ -14,6 +14,62 @@
             "category": "other",
             "shortDesc": "Sleep or Conditional Stop",
             "modal": true
+        },
+        "M2": {
+            "category": "mcode",
+            "shortDesc": "Program End",
+            "modal": true
+        },
+        "M30": {
+            "category": "mcode",
+            "shortDesc": "Program Stop",
+            "modal": true
+        },
+        "M82": {
+            "category": "mcode",
+            "shortDesc": "Set Extruder to Absolute Mode",
+            "modal": true
+        },
+        "M83": {
+            "category": "mcode",
+            "shortDesc": "Set Extruder to Relative Mode",
+            "modal": true
+        },
+        "M104": {
+            "category": "mcode",
+            "shortDesc": "Set Extruder Temperature",
+            "modal": true,
+            "parameters": {
+                "S": {
+                    "shortDesc": "Target Temperature",
+                    "optional": false
+                }
+            }
+        },
+        "M106": {
+            "category": "mcode",
+            "shortDesc": "Fan On",
+            "modal": true
+        },
+        "M107": {
+            "category": "mcode",
+            "shortDesc": "Fan Off",
+            "modal": true
+        },
+        "M109": {
+            "category": "mcode",
+            "shortDesc": "Set Extruder Temperature & Wait",
+            "modal": true,
+            "parameters": {
+                "S": {
+                    "shortDesc": "Minimum Target Temperature",
+                    "optional": false
+                },
+                "R": {
+                    "shortDesc": "Maximum Target Temperature",
+                    "optional": true
+                }
+            }
         }
     }
 }

@@ -24,6 +24,178 @@
                     "optional": true
                 }
             }
+        },
+        "G01": {
+            "category": "motion",
+            "shortDesc": "Linear Interpolation Motion",
+            "desc": "G01 is used to move machine axes at specified feedrate.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis motion command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis motion command",
+                    "optional": true
+                },
+                "C": {
+                    "shortDesc": "C-Axis motion command",
+                    "optional": true
+                }
+            }
+        },
+        "G02": {
+            "category": "motion",
+            "shortDesc": "CW Interpolation Motion",
+            "desc": "Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "I": {
+                    "shortDesc": "Distance along X Axis to center of circle",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Distance along Y Axis to center of circle",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Distance along Z Axis to center of circle",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Radius of Circle",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis motion commanmd",
+                    "optional": true
+                }
+            }
+        },
+        "G03": {
+            "category": "motion",
+            "shortDesc": "CCW Interpolation Motion",
+            "desc": "Counter-Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "I": {
+                    "shortDesc": "Distance along X Axis to center of circle",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Distance along Y Axis to center of circle",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Distance along Z Axis to center of circle",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Radius of Circle",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis motion commanmd",
+                    "optional": true
+                }
+            }
+        },
+        "G04": {
+            "category": "other",
+            "shortDesc": "Dwell",
+            "desc": "G04 specifies a delay or dwell in the program. The block with G04 delays for the time specified by the P address code.",
+            "modal": false,
+            "parameters": {
+                "P": {
+                    "shortDesc": "The dwell time in seconds or milliseconds",
+                    "optional": false
+                }
+            }
+        },
+        "G20": {
+            "category": "coordinate",
+            "shortDesc": "Inch Programming",
+            "desc": "G20 tells the controller that the code is in Inch units.",
+            "modal": true
+        },
+        "G21": {
+            "category": "coordinate",
+            "shortDesc": "Metric Programming",
+            "desc": "G21 tells the controller that the code is in Metric units.",
+            "modal": true
+        },
+        "G54": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (1)",
+            "desc": "Work Coordinate System (1)",
+            "modal": true
+        },
+        "G55": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (2)",
+            "desc": "Work Coordinate System (2)",
+            "modal": true
+        },
+        "G56": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (3)",
+            "desc": "Work Coordinate System (3)",
+            "modal": true
+        },
+        "G57": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (4)",
+            "desc": "Work Coordinate System (4)",
+            "modal": true
+        },
+        "G58": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (5)",
+            "desc": "Work Coordinate System (5)",
+            "modal": true
+        },
+        "G59": {
+            "category": "coordinate",
+            "shortDesc": "Work Coordinate System (6)",
+            "desc": "Work Coordinate System (6)",
+            "modal": true
         }
     }
 }

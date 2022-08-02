@@ -11,27 +11,153 @@
             "desc": "G00 is used to move the machine axes at the maximum speed. This G code is modal.",
             "modal": true,
             "parameters": {
-                "E": {
-                    "shortDesc": "Position of filament spool",
-                    "optional": true
-                },
-                "F": {
-                    "shortDesc": "Feedrate of movement",
-                    "optional": false
-                },
                 "X": {
-                    "shortDesc": "An absolute or relative coordinate on the X axis.",
+                    "shortDesc": "X-Axis motion command",
                     "optional": true
                 },
                 "Y": {
-                    "shortDesc": "An absolute or relative coordinate on the Y axis.",
+                    "shortDesc": "Y-Axis motion command",
                     "optional": true
                 },
                 "Z": {
-                    "shortDesc": "An absolute or relative coordinate on the Z axis",
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Amount to extrude",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feed Rate",
+                    "optional": true
+                },
+                "H": {
+                    "shortDesc": "Flag to Check End Stop",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Restore Point Number",
+                    "optional": true
+                },
+                "S": {
+                    "shortDesc": "Laser Cutter / Engraver Power",
                     "optional": true
                 }
             }
+        },
+        "G1": {
+            "category": "motion",
+            "shortDesc": "Linear Interpolation Motion",
+            "desc": "G01 is used to move machine axes at specified feedrate.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Amount to extrude",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feed Rate",
+                    "optional": true
+                },
+                "H": {
+                    "shortDesc": "Flag to Check End Stop",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Restore Point Number",
+                    "optional": true
+                },
+                "S": {
+                    "shortDesc": "Laser Cutter / Engraver Power",
+                    "optional": true
+                }
+            }
+        },
+        "G2": {
+            "category": "motion",
+            "shortDesc": "CW Interpolation Motion",
+            "desc": "Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Amount to extrude",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feed Rate",
+                    "optional": true
+                }
+            }
+        },
+        "G3": {
+            "category": "motion",
+            "shortDesc": "CW Interpolation Motion",
+            "desc": "Counter-Clockwise circular arc motion at current Feedrate.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Amount to extrude",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feed Rate",
+                    "optional": true
+                }
+            }
+        },
+        "G20": {
+            "category": "coordinate",
+            "shortDesc": "Inch Programming",
+            "desc": "G20 tells the controller that the code is in Inch units.",
+            "modal": true
+        },
+        "G21": {
+            "category": "coordinate",
+            "shortDesc": "Metric Programming",
+            "desc": "G21 tells the controller that the code is in Metric units.",
+            "modal": true
+        },
+        "G28": {
+            "category": "motion",
+            "shortDesc": "Return to Home Position",
+            "desc": "G28 is used to zero return the tool to its zero position via a reference point at rapid speed.",
+            "modal": false
         },
         "G90": {
             "category": "coordinate",
@@ -44,6 +170,30 @@
             "shortDesc": "Incremental Positioning",
             "desc": "G91 instructs the controller to interpret coordinates as incremental coordinates.",
             "modal": true
+        },
+        "G92": {
+            "category": "coordinate",
+            "shortDesc": "Set Position",
+            "desc": "Allows programming of absolute zero point, by reseting the current position to the values specified.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Amount to extrude",
+                    "optional": true
+                }
+            }
         }
     }
 }
