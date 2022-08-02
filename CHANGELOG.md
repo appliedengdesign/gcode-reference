@@ -2,6 +2,26 @@
 
 All changes to the `gcode-reference` project will be documented here
 
+## v0.0.5
+
+### New Feaures
+
+- `getCodes` script now shows full object depth
+- Variant now able to *remove* G/M codes
+
+### Fixes
+
+- Refactor types to fit schema better
+- Updated test suite for variants
+
+### Other
+
+- Added more code entries in EDM / Laser / 3D Printer
+- Updated dependencies
+- Added Stale workflow
+- Updated CodeQL workflow
+- [CNCCodes JSON Schema](https://github.com/appliedengdesign/cnccodes-json-schema) updated to v0.3.0 *Possible Breaking*
+
 ## v0.0.4
 
 ### New Features
