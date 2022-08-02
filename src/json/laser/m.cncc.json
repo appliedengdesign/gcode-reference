@@ -9,6 +9,14 @@
             "category": "other",
             "shortDesc": "Program Stop",
             "modal": true
+        },
+        "M02": {
+            "category": "mcode",
+            "shortDesc": "End of Program"
+        },
+        "M30": {
+            "category": "mcode",
+            "shortDesc": "End of Program"
         }
     }
 }

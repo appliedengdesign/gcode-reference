@@ -3,7 +3,13 @@
     "type": "mcode",
     "machineType": "mill",
     "title": "M Code Milling Reference",
-    "variant": "Mazak",
+    "variant": {
+        "name": "mazak",
+        "remove": [
+            "M12",
+            "M13"
+        ]
+    },
     "description": "M-Code Listing for Milling Machine Tools",
     "keywords": [
         "mazak",
@@ -18,6 +24,14 @@
         "M11": {
             "category": "mcode",
             "shortDesc": "Unclamping of Tool on the Spindle"
+        },
+        "M23": {
+            "category": "mcode",
+            "shortDesc": "Magazine Cover Closed"
+        },
+        "M24": {
+            "category": "mcode",
+            "shortDesc": "Magazine Cover Opened"
         },
         "M46": {
             "category": "mcode",

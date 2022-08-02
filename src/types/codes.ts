@@ -5,9 +5,7 @@
 'use strict';
 
 import { Category } from './categories';
-import { MachineType } from './machinetypes';
 import { Parameters } from './parameters';
-import { Variant } from './variants';
 
 export type Code = {
     category: Category;
@@ -26,11 +24,3 @@ export enum CodeTypes {
 }
 
 export type CodeType = CodeTypes;
-
-export interface CNCCodes {
-    type: CodeType;
-    machineType: MachineType;
-    variant?: Variant;
-    title: string;
-    codes: ICode;
-}

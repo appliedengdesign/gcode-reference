@@ -40,7 +40,7 @@ if (process.argv[2] !== undefined) {
             console.log(`Type: ${gref.getType()}`);
 
             // Output Codes
-            console.log(gref.getAllCodes(type[1] as CodeTypes));
+            console.dir(gref.getAllCodes(type[1] as CodeTypes), { depth: null });
         }
     } else {
         // No Specific Code

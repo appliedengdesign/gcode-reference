@@ -9,6 +9,18 @@
             "category": "other",
             "shortDesc": "Program Stop",
             "modal": true
+        },
+        "M01": {
+            "category": "mcode",
+            "shortDesc": "Optional Stop"
+        },
+        "M02": {
+            "category": "mcode",
+            "shortDesc": "End of Program"
+        },
+        "M99": {
+            "category": "mcode",
+            "shortDesc": "Return from Sub-Routine"
         }
     }
 }
