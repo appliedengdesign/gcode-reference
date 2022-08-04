@@ -3,7 +3,10 @@
     "type": "mcode",
     "machineType": "laser",
     "title": "M Code Laser Reference",
-    "variant": "snpmaker",
+    "variant": {
+        "name": "snpmaker",
+        "remove": []
+    },
     "description": "M-Code Listing for Laser Machine Tools",
     "keywords": [
         "snapmaker",

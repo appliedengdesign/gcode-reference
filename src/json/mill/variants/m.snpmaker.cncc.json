@@ -9,7 +9,6 @@
             "M00",
             "M01",
             "M02",
-            // "M05", This matches existing default mill command
             "M06",
             "M07",
             "M08",
