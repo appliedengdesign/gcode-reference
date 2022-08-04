@@ -1,0 +1,25 @@
+# dependabot.yml reference: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+
+updates:
+
+  # Maintain updates for GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: weekly
+    
+    labels:
+     - "workflows"
+
+  # Maintain updates for npm
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: weekly
+
+    labels:
+      - "dependencies"
+
+    open-pull-requests-limit: 10
