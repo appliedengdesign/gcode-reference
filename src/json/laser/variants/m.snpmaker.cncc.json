@@ -1,0 +1,88 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "laser",
+    "title": "M Code Laser Reference",
+    "variant": {
+        "name": "snpmaker",
+        "remove": []
+    },
+    "description": "M-Code Listing for Laser Machine Tools",
+    "keywords": [
+        "snapmaker",
+        "laser",
+        "lazer",
+        "lasing",
+        "lasering",
+        "lazing",
+        "lazering"
+    ],
+    "codes": {
+        "M03": {
+            "category": "mcode",
+            "shortDesc": "Spindle CW / Laser On",
+            "desc": "M03: Wait for moves to complete, then set the spindle speed (clockwise) or laser power (full if unspecified).",
+            "modal": true,
+            "parameters": {
+                "P": {
+                    "shortDesc": "Percentage of spindle speed or laser power 0-100",
+                    "optional": true
+                },
+                "S": {
+                    "shortDesc": "Spindle speed or laser power 0-255",
+                    "optional": true
+                }
+            }
+        },
+        "M04": {
+            "category": "mcode",
+            "shortDesc": "Spindle CCW / Laser On",
+            "desc": "M04: Wait for moves to complete, then set the spindle speed (counter-clockwise) or laser power (full if unspecified).",
+            "modal": true,
+            "parameters": {
+                "P": {
+                    "shortDesc": "Percentage of spindle speed or laser power 0-100",
+                    "optional": true
+                },
+                "S": {
+                    "shortDesc": "Spindle speed or laser power 0-255",
+                    "optional": true
+                }
+            }
+        },
+        "M1010": {
+            "category": "mcode",
+            "shortDesc": "Enclosure control",
+            "desc": "M1010: Enclosure module status query and control.",
+            "modal": false,
+            "parameters": {
+                "S": {
+                    "shortDesc": "Control code (S0-1doorDetect,S3light,S4fan)",
+                    "optional": true,
+                    "desc": "S: control code\nS0: Disabled door opening trigger\nS1: Enabled door opening trigger\nS3: Set light power. M1010 S3 P[0 - 100]\nS4: Set fan power. M1010 S4 P[0 - 100]\nS12: Refresh door Status"
+                },
+                "P": {
+                    "shortDesc": "Percentage fan or light power 0-100",
+                    "optional": true
+                }
+            }
+        },
+        "M1011": {
+            "category": "mcode",
+            "shortDesc": "Air purifier control",
+            "desc": "M1011: Air purifier status query and control.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Control code (F0 off,F1-3 gear 1-3)",
+                    "optional": true,
+                    "desc": "F: control code\nF0: Turn off the purifier.\nS1: Enabled door opening trigger\nS3: Set light power. M1010 S3 P[0 - 100]\nS4: Set fan power. M1010 S4 P[0 - 100]\nS12: Refresh door Status"
+                },
+                "S1": {
+                    "shortDesc": "Force power up and run in specified F gear speed",
+                    "optional": true
+                }
+            }
+        }
+    }
+}
