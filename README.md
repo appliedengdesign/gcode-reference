@@ -2,7 +2,7 @@
 
 [![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference/issues)
 ![Github Stars](https://badgen.net/github/stars/appliedengdesign/gcode-reference)
-![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql-analysis.yml/badge.svg)
+![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql.yml/badge.svg)
 [![MIT License](https://badgen.net/badge/license/MIT)](https://opensource.org/licenses/MIT)
 
 [![Follow @appliedengdesign](https://badgen.net/twitter/follow/appliedengdes)](https://twitter.com/appliedengdes)
