@@ -44,7 +44,7 @@ const gref = new GReference();
 const gref = new GReference(GRef.MachineTypes.Mill);
 // OR
 // initalize with a machine type and variant
-const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak)
+const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak);
 
 // Get Complete G-Code Object
 const gcode = gref.get('G1');
@@ -76,20 +76,19 @@ gref.getParams('G84');
 
 // You can also import the types separately / individually
 import {
-    Categories,
-    Category,
-    CNCCodes,
-    Code,
-    CodeType,
-    CodeTypes,
-    ICode,
-    MachineType,
-    MachineTypes,
-    Parameters,
-    Variant,
-    Variants,
+  Categories,
+  Category,
+  CNCCodes,
+  Code,
+  CodeType,
+  CodeTypes,
+  ICode,
+  MachineType,
+  MachineTypes,
+  Parameters,
+  Variant,
+  Variants,
 } from 'gcode-reference';
-
 ```
 
 ## TODO
@@ -121,7 +120,7 @@ For information on contributing, please refer to the [CONTRIBUTING](https://gith
 
 ## About Applied Eng & Design
 
-We are a full service engineering and design firm, specializing in CAD/CAM, CNC milling, rapid prototyping, training and more.  We also like to dabble in Arudino / RaspberryPi projects, electronics, drones and robotics projects! Subscribe to our YouTube channel for videos on our projects, screencast tutorials, and more!
+We are a full service engineering and design firm, specializing in CAD/CAM, CNC milling, rapid prototyping, training and more. We also like to dabble in Arudino / RaspberryPi projects, electronics, drones and robotics projects! Subscribe to our YouTube channel for videos on our projects, screencast tutorials, and more!
 
 Follow us on [Twitter](https://twitter.com/appliedengdes) & [Instagram](https://instagram.com/appliedengdes), and like our [Facebook Page](https://facebook.com/appliedengdesign)!
 

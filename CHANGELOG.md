@@ -7,7 +7,7 @@ All changes to the `gcode-reference` project will be documented here
 ### New Feaures
 
 - `getCodes` script now shows full object depth
-- Variant now able to *remove* G/M codes
+- Variant now able to _remove_ G/M codes
 
 ### Fixes
 
@@ -20,13 +20,13 @@ All changes to the `gcode-reference` project will be documented here
 - Updated dependencies
 - Added Stale workflow
 - Updated CodeQL workflow
-- [CNCCodes JSON Schema](https://github.com/appliedengdesign/cnccodes-json-schema) updated to v0.3.0 *Possible Breaking*
+- [CNCCodes JSON Schema](https://github.com/appliedengdesign/cnccodes-json-schema) updated to v0.3.0 _Possible Breaking_
 
 ## v0.0.4
 
 ### New Features
 
-- *NEW* Support for JSON Variant files
+- _NEW_ Support for JSON Variant files
 - Added `getAllCodes` function to `GReference` class
 
 ### Fixes

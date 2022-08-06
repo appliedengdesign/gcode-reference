@@ -33,10 +33,7 @@
     "editor.formatOnPaste": true,
     "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
-    "eslint.validate": [
-        "typescript",
-        "javascript"
-    ],
+    "eslint.validate": ["typescript", "javascript"],
     "prettier.requireConfig": true,
     "[yaml]": {
         "editor.tabSize": 4

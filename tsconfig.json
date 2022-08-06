@@ -3,9 +3,7 @@
     "display": "Node 16",
     "compilerOptions": {
         "target": "ES2021",
-        "lib": [
-            "ES2021"
-        ],
+        "lib": ["ES2021"],
         "module": "CommonJS",
         "declaration": true,
         "moduleResolution": "node",
@@ -20,8 +18,5 @@
         "resolveJsonModule": true,
         "allowJs": true
     },
-    "exclude": [
-        "node_modules",
-        "dist"
-    ]
+    "exclude": ["node_modules", "dist"]
 }

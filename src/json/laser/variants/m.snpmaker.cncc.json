@@ -8,15 +8,7 @@
         "remove": []
     },
     "description": "M-Code Listing for Laser Machine Tools",
-    "keywords": [
-        "snapmaker",
-        "laser",
-        "lazer",
-        "lasing",
-        "lasering",
-        "lazing",
-        "lazering"
-    ],
+    "keywords": ["snapmaker", "laser", "lazer", "lasing", "lasering", "lazing", "lazering"],
     "codes": {
         "M03": {
             "category": "mcode",

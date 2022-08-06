@@ -47,7 +47,7 @@
         "lint:fix": "eslint src/**/*.ts scripts/**/*.ts --fix",
         "prepack": "npm run clean && npm run build && npm run copyJSON",
         "pretty": "prettier --config .prettierrc --check .",
-        "pretty:fix": "prettier --config .prettierrc --loglevel warn --write .",
+        "pretty:fix": "prettier --config .prettierrc --write .",
         "refresh": "shx rm-rf ./node_modules ./package-lock.json && npm install",
         "test-all": "mocha --require ts-node/register test/**/*.ts",
         "test-gref": "mocha --require ts-node/register test/gReference.test.ts",

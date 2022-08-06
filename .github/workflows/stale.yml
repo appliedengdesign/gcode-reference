@@ -6,28 +6,27 @@
 name: Mark Stale Issues and Pull Requests
 
 on:
-  schedule:
-  - cron: '41 20 * * *'
+    schedule:
+        - cron: '41 20 * * *'
 
 jobs:
-  stale:
+    stale:
+        runs-on: ubuntu-latest
+        permissions:
+            issues: write
+            pull-requests: write
 
-    runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      pull-requests: write
+        steps:
+            - uses: actions/stale@v5
+              with:
+                  repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-    steps:
-    - uses: actions/stale@v5
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        
-        days-before-stale: 60
-        days-before-close: -1
+                  days-before-stale: 60
+                  days-before-close: -1
 
-        stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity.'
+                  stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity.'
 
-        stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity.'
+                  stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity.'
 
-        stale-issue-label: 'stale-issue'
-        stale-pr-label: 'stale-pull-request'
+                  stale-issue-label: 'stale-issue'
+                  stale-pr-label: 'stale-pull-request'

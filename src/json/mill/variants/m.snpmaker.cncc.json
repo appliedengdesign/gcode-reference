@@ -40,11 +40,7 @@
         ]
     },
     "description": "M-Code Listing for Milling Machine Tools",
-    "keywords": [
-        "snapmaker",
-        "mill",
-        "milling"
-    ],
+    "keywords": ["snapmaker", "mill", "milling"],
     "codes": {
         "M03": {
             "category": "mcode",

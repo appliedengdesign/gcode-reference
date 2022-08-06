@@ -1,2 +1,5 @@
-*.md
-package*.json
+# Dependencies
+node_modules/
+
+# Production
+dist/

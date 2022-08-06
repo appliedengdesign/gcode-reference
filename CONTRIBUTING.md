@@ -4,11 +4,11 @@ Thank you for your interest in contributing to this g-code reference package. Pl
 
 There are a variety of ways you can contribute to this project.
 
-* Edit descriptions of the G or M codes in the machine type JSON files
-* Add new codes that have not yet been added to the machine tools
-* Fix Typos! (I tend to make a lot of them)
-* Add additional functionality to the main application (Advanced)
-* Edit documentation
+- Edit descriptions of the G or M codes in the machine type JSON files
+- Add new codes that have not yet been added to the machine tools
+- Fix Typos! (I tend to make a lot of them)
+- Add additional functionality to the main application (Advanced)
+- Edit documentation
 
 Here are a couple guidelines to get you started...
 
@@ -16,10 +16,10 @@ Here are a couple guidelines to get you started...
 
 To contribute to [G-Code Reference](https://github.com/appliedengdesign/gcode-reference), you need to fork this repository and submit a pull request for the JSON that you want to add to or change.
 
-* [How to fork a repository](https://help.github.com/articles/fork-a-repo)
-* [How to make a pull request](https://help.github.com/articles/creating-a-pull-request/)
-* [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/)
-* [How to squash commits](https://help.github.com/articles/about-pull-request-merges/)
+- [How to fork a repository](https://help.github.com/articles/fork-a-repo)
+- [How to make a pull request](https://help.github.com/articles/creating-a-pull-request/)
+- [Changing a commit message](https://help.github.com/articles/changing-a-commit-message/)
+- [How to squash commits](https://help.github.com/articles/about-pull-request-merges/)
 
 ### Branches
 
@@ -29,30 +29,30 @@ Create a local working branch that is specific to the scope of the changes that 
 
 The content in this repository is as follows:
 
-* `/src` - Main Source Files of npm package
-  * `/src/json/` - Location of JSON files
-    * `/src/json/edm` - EDM JSON Files
-    * `/src/json/laser` - Laser JSON Files
-    * `/src/json/lathe/` - Lathe JSON Files
-    * `/src/json/mill` - Mill JSON Files
-    * `/src/json/printer` - 3D Printer JSON Files
-    * `/src/json/[type]/variants/` - Variant files
-  * `/src/test/` - Typescript files for testing package
-* `/scripts` - Utility scripts for workflow, etc.
+- `/src` - Main Source Files of npm package
+  - `/src/json/` - Location of JSON files
+    - `/src/json/edm` - EDM JSON Files
+    - `/src/json/laser` - Laser JSON Files
+    - `/src/json/lathe/` - Lathe JSON Files
+    - `/src/json/mill` - Mill JSON Files
+    - `/src/json/printer` - 3D Printer JSON Files
+    - `/src/json/[type]/variants/` - Variant files
+  - `/src/test/` - Typescript files for testing package
+- `/scripts` - Utility scripts for workflow, etc.
 
 ### JSON File Naming Scheme
 
 In order to keep a consistent file naming scheme we have designated the following for the JSON files containing the G/M codes:
 
-* G Code Files: `g.cncc.json`
-* M Code Files: `m.cncc.json`
+- G Code Files: `g.cncc.json`
+- M Code Files: `m.cncc.json`
 
 Starting in Version 0.0.4, the reference supports variants of the codes to allow for machine-tool specific codes. These variants should be placed inside of the variants folder within the type-specific (i.e laser, lathe mill) folder.
 
 The naming scheme for the variant files shall include the variant-specific name as follows:
 
-* G Code files `g.[variant].cncc.json`
-* M Code files `m.[variant].cncc.json`
+- G Code files `g.[variant].cncc.json`
+- M Code files `m.[variant].cncc.json`
 
 ## Adding or Modifying G/M Code Files
 
@@ -77,13 +77,13 @@ The JSON files strictly follow the [CNC Codes JSON Schema](https://appliedengdes
 }
 ```
 
-*For the most part, only `category` and `shortDesc` are required and if you add parameters, at leat one is required.*
+_For the most part, only `category` and `shortDesc` are required and if you add parameters, at leat one is required._
 
 ### Adding a new variant
 
 You can also add a new variant to the reference, but it needs to be done two-fold. First, add your G (`g.[variant].cncc.json`) or M (`m.[variant].cncc.json`) file into the `variants` folder of the Machine Type (`edm`, `laser`, `lathe`, `mill`, `printer`, or `swiss`) folder under `./src/json`. Make sure your file adheres to the [CNC Codes JSON Schema](https://appliedengdesign.github.io/cnccodes-json-schema) and has the additional property of `variant`. The variant name must be at least 3 characters long and no more than 8 characters, using only uppercase or lowercase alphabet and numbers.
 
-Once, you've added your variant JSON file, you need to edit the `./src/types/variants.ts` file and add your new variant to the `Variants` enum. The name of it should be the camelCase, *spelled-out* version of your variant.
+Once, you've added your variant JSON file, you need to edit the `./src/types/variants.ts` file and add your new variant to the `Variants` enum. The name of it should be the camelCase, _spelled-out_ version of your variant.
 
 ### Formatting
 
@@ -109,18 +109,18 @@ Depending on how you have contributed to the project, you can run tests in a var
 
 #### Validate JSON
 
-* `npm run test-validate-json` will validate all of the JSON files
-  * To Validate specific machine type JSON add the environment variable `TEST=[type]` to the test line (i.e. `TEST=lathe npm run test-validate-json`)
-  * To Validate specific G or M code for the machine type use the format `TEST=[type]:[gcode|mcode]` (i.e. `TEST=mill:mcode npm run test-validate-json`)
-  * You can also add the environment variable `VARIANTS=no` to skip testing of any varient JSON files.
+- `npm run test-validate-json` will validate all of the JSON files
+  - To Validate specific machine type JSON add the environment variable `TEST=[type]` to the test line (i.e. `TEST=lathe npm run test-validate-json`)
+  - To Validate specific G or M code for the machine type use the format `TEST=[type]:[gcode|mcode]` (i.e. `TEST=mill:mcode npm run test-validate-json`)
+  - You can also add the environment variable `VARIANTS=no` to skip testing of any varient JSON files.
 
 #### Application Testing
 
-* To test the `GReference` class, use `npm run test-gref`
+- To test the `GReference` class, use `npm run test-gref`
 
 #### Test Everything
 
-* To test everything in one, use `npm run test-all`
+- To test everything in one, use `npm run test-all`
 
 ### Helper Scripts
 
@@ -128,11 +128,11 @@ There a couple helper scripts that help when working with the code.
 
 `./scripts/copyJSON.ts`
 
-* Used by the `prepack` script to copy relavant JSON files into the `./dist/` folder
+- Used by the `prepack` script to copy relavant JSON files into the `./dist/` folder
 
 `./scripts/getCodes.ts`
 
-* Can be used with `npm run getCodes [type]:[gcode:mcode]:[variant]` to retrieve the codes object through the application (i.e. `npm run getCodes mill:mcode:mazak`)
+- Can be used with `npm run getCodes [type]:[gcode:mcode]:[variant]` to retrieve the codes object through the application (i.e. `npm run getCodes mill:mcode:mazak`)
 
 ### Authoring Tools
 
@@ -142,13 +142,12 @@ There a couple helper scripts that help when working with the code.
 
 Please follow all instructions in the [PR template](.github/PULL_REQUEST_TEMPLATE.md).
 
-* Push your changes to your branch in your fork of the repository.
-* Submit a pull request to the [main](https://github.com/appliedengdesign/gcode-reference/tree/main) of the [gcode-reference](https://github.com/appliedengdesign/gcode-reference) respository.
-* Make sure to explicitly say not to complete pull request if you are still making changes.
+- Push your changes to your branch in your fork of the repository.
+- Submit a pull request to the [main](https://github.com/appliedengdesign/gcode-reference/tree/main) of the [gcode-reference](https://github.com/appliedengdesign/gcode-reference) respository.
+- Make sure to explicitly say not to complete pull request if you are still making changes.
 
 ## Additional Resources
 
-* [GitHub Docs](http://help.github.com/)
-* [GitHub Pull Request Docs](http://help.github.com/send-pull-requests/)
-* [Successful Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/)
-  
+- [GitHub Docs](http://help.github.com/)
+- [GitHub Pull Request Docs](http://help.github.com/send-pull-requests/)
+- [Successful Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/)
