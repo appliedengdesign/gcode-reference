@@ -1,0 +1,63 @@
+# Workflow to run testing for pull requests and push to main
+
+name: Node CI
+
+on: [ push, pull_request ]
+
+jobs:
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run Linting Check
+        run: npm run lint
+
+      - name: Run Pretty Check
+        run: npm run pretty
+
+  test:
+    name: Test Code
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run All Tests
+        run: npm run test-all
+
+  publish-dry-run:
+    name: Publish Dry Run
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Publish Dry Run
+        run: npm publish --dry-run
