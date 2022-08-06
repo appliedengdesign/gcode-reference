@@ -15,9 +15,6 @@
             "strings": true
         },
         "editor.suggest.insertMode": "replace",
-        "gitlens.codeLens.scopes": [
-            "document"
-        ],
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
@@ -25,9 +22,6 @@
             "strings": true
         },
         "editor.suggest.insertMode": "replace",
-        "gitlens.codeLens.scopes": [
-            "document"
-        ],
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[javascript]": {
@@ -37,9 +31,6 @@
     "editor.formatOnPaste": true,
     "eslint.alwaysShowStatus": true,
     "eslint.format.enable": true,
-    "eslint.validate": [
-        "typescript",
-        "javascript"
-    ],
+    "eslint.validate": ["typescript", "javascript"],
     "prettier.requireConfig": true
 }
