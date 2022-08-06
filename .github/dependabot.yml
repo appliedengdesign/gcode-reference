@@ -3,22 +3,22 @@
 version: 2
 
 updates:
-    # Maintain updates for GitHub Actions
-    - package-ecosystem: 'github-actions'
-      directory: '/'
-      schedule:
-          interval: weekly
+  # Maintain updates for GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: weekly
 
-      labels:
-          - 'workflows'
+    labels:
+      - 'workflows'
 
-    # Maintain updates for npm
-    - package-ecosystem: 'npm'
-      directory: '/'
-      schedule:
-          interval: weekly
+  # Maintain updates for npm
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: weekly
 
-      labels:
-          - 'dependencies'
+    labels:
+      - 'dependencies'
 
-      open-pull-requests-limit: 10
+    open-pull-requests-limit: 10
