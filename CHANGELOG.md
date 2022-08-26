@@ -2,12 +2,36 @@
 
 All changes to the `gcode-reference` project will be documented here
 
+## v0.0.6
+
+### New Features
+
+- Added Snampmaker2 a350 [#4](https://github.com/appliedengdesign/gcode-reference/issues/3)
+
+### Other
+
+- Updated dependencies
+- Added `dependabot.yml` configuration
+- Moved [`SECURITY.md`](.github/SECURITY.md) into .github
+- Fixed typo in CodeQL badge link
+- Added action to lock closed issues
+- Added CODEOWNERS file
+- Updated [`.prettierrc`](.prettierrc) with `semi` and `quoteProps`
+- Added `lint:fix` and `pretty:fix` scripts
+- Added NodeJS Github Actions workflow
+- Removed GitLens configurations
+- Added NodeJS CI badge to README
+- Cleaned up and Prettied code
+- Added Contributors section to [README](README.md)
+- Added recommended VSCode extensions to [`extensions.json`](.vscode/extensions.json)
+- Added prettier use, fixed a typo and added contributors addition to [`CONTRIBUTING.ms`](CONTRIBUTING.md)
+
 ## v0.0.5
 
 ### New Feaures
 
 - `getCodes` script now shows full object depth
-- Variant now able to *remove* G/M codes
+- Variant now able to _remove_ G/M codes
 
 ### Fixes
 
@@ -20,13 +44,13 @@ All changes to the `gcode-reference` project will be documented here
 - Updated dependencies
 - Added Stale workflow
 - Updated CodeQL workflow
-- [CNCCodes JSON Schema](https://github.com/appliedengdesign/cnccodes-json-schema) updated to v0.3.0 *Possible Breaking*
+- [CNCCodes JSON Schema](https://github.com/appliedengdesign/cnccodes-json-schema) updated to v0.3.0 _Possible Breaking_
 
 ## v0.0.4
 
 ### New Features
 
-- *NEW* Support for JSON Variant files
+- _NEW_ Support for JSON Variant files
 - Added `getAllCodes` function to `GReference` class
 
 ### Fixes

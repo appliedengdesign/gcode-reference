@@ -3,25 +3,30 @@
 # You can adjust the behavior by modifying this file.
 # For more information, see:
 # https://github.com/actions/stale
-name: Mark stale issues and pull requests
+name: Mark Stale Issues and Pull Requests
 
 on:
   schedule:
-  - cron: '41 20 * * *'
+    - cron: '41 20 * * *'
 
 jobs:
   stale:
-
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
 
     steps:
-    - uses: actions/stale@v5
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+      - uses: actions/stale@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          days-before-stale: 60
+          days-before-close: -1
+
+          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity.'
+
+          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity.'
+
+          stale-issue-label: 'stale-issue'
+          stale-pr-label: 'stale-pull-request'

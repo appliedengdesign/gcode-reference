@@ -1,27 +1,50 @@
-## Thank you for contributing to GCode Reference! :)
+<!---
 
-### IMPORTANT
+Thank you for contributing to GCode Reference! :)
+
+Before you submit, please read the following:
+
+Search open/closed issues before submitting. Someone may have pushed the same code before.
+
+Provide a clear & concise title in the field above.
 
 - Please create an issue _before_ creating a Pull Request
 
-## ↑ DELETE above _before_ submitting ↑
+-->
 
----
+# Pull Request
 
-# Description
+## Description
 
 <!--
 Please include a summary of the changes and which issue or issues it will address. Please also include context and reasoning for pull request.
 -->
 
-# Checklist
+## Issues
+
+<!--
+
+    * List and link any relevant issues here.
+
+-->
+
+## Reviewer Notes
+
+<!--
+
+    Provide any notes for reviewers to help them provide feedback or testing.
+
+-->
+
+## Checklist
 
 <!-- Please check off the following -->
 
-- [ ] I have followed the guidelines in the Contributing document.
-- [ ] My changes follow the coding style of this project.
-- [ ] I have run `npm run test-all` and it completed without errors.
-- [ ] My changes have been formatted and linted.
-- [ ] I have made any relavant changes to the documentation as needed (include CHANGELOG.md and/or README.md).
-- [ ] My changes have a descriptive commit message with a short title, including links to issues it addresses.
-- [ ] I had fun.
+- [] I have followed the guidelines in the [Contributing](https://github.com/appliedengdesign/gcode-reference/blob/main/CONTRIBUTING.md) document.
+- [] I have followed the [Code of Conduct](https://github.com/appliedengdesign/gcode-reference/blob/main/CODE_OF_CONDUCT.md) for this project.
+- [] My changes follow the coding style of this project.
+- [] I have run `npm run test-all` and it completed without errors.
+- [] My changes have been formatted and linted.
+- [] I have made any relevant changes to the documentation as needed (include CHANGELOG.md and/or README.md).
+- [] My changes have a descriptive commit message with a short title, including links to issues it addresses.
+- [] I had fun.

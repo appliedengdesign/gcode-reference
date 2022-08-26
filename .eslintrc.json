@@ -22,11 +22,7 @@
         },
         "project": "tsconfig.json"
     },
-    "plugins": [
-        "import",
-        "@typescript-eslint",
-        "prettier"
-    ],
+    "plugins": ["import", "@typescript-eslint", "prettier"],
     "root": true,
     "rules": {
         "@typescript-eslint/explicit-module-boundary-types": "off",
@@ -34,9 +30,7 @@
         "@typescript-eslint/no-empty-function": [
             "warn",
             {
-                "allow": [
-                    "constructors"
-                ]
+                "allow": ["constructors"]
             }
         ],
         "@typescript-eslint/no-empty-interface": "error",
@@ -63,10 +57,7 @@
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/semi": "error",
         "@typescript-eslint/unbound-method": "off",
-        "arrow-parens": [
-            "error",
-            "as-needed"
-        ],
+        "arrow-parens": ["error", "as-needed"],
         "brace-style": [
             "warn",
             "1tbs",
@@ -74,17 +65,11 @@
                 "allowSingleLine": true
             }
         ],
-        "comma-dangle": [
-            "error",
-            "only-multiline"
-        ],
+        "comma-dangle": ["error", "only-multiline"],
         "complexity": "off",
         "curly": "error",
         "dot-notation": "error",
-        "eqeqeq": [
-            "error",
-            "smart"
-        ],
+        "eqeqeq": ["error", "smart"],
         "eol-last": "error",
         "import/no-dynamic-require": "error",
         "import/no-default-export": "error",
@@ -93,15 +78,10 @@
         "import/no-unresolved": [
             "warn",
             {
-                "ignore": [
-                    "vscode"
-                ]
+                "ignore": ["vscode"]
             }
         ],
-        "max-classes-per-file": [
-            "error",
-            1
-        ],
+        "max-classes-per-file": ["error", 1],
         "max-len": [
             "error",
             {
@@ -131,34 +111,17 @@
             }
         ],
         "radix": "error",
-        "semi": [
-            "error",
-            "always"
-        ],
-        "semi-style": [
-            "error",
-            "last"
-        ],
-        "spaced-comment": [
-            "error",
-            "always"
-        ],
-        "space-in-parens": [
-            "error",
-            "never"
-        ],
+        "semi": ["error", "always"],
+        "semi-style": ["error", "last"],
+        "spaced-comment": ["error", "always"],
+        "space-in-parens": ["error", "never"],
         "sort-imports": [
             "error",
             {
                 "ignoreCase": true,
                 "ignoreDeclarationSort": true,
                 "ignoreMemberSort": false,
-                "memberSyntaxSortOrder": [
-                    "none",
-                    "all",
-                    "multiple",
-                    "single"
-                ]
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
             }
         ],
         "yoda": "error"

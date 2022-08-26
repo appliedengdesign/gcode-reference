@@ -19,9 +19,7 @@
                 "${workspaceFolder}/test/**/*.ts"
             ],
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
+            "skipFiles": ["<node_internals>/**"]
         },
         {
             "type": "node",
@@ -38,9 +36,7 @@
                 "${workspaceFolder}/test/gReference.test.ts"
             ],
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
+            "skipFiles": ["<node_internals>/**"]
         },
         {
             "type": "node",
@@ -57,9 +53,7 @@
                 "${workspaceFolder}/test/validateJSON.test.ts"
             ],
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": [
-                "<node_internals>/**"
-            ]
+            "skipFiles": ["<node_internals>/**"]
         }
     ]
 }

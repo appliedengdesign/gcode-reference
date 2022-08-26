@@ -1,9 +1,7 @@
-[![NPM Version](https://badgen.net/npm/v/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference) [![NPM DL](https://badgen.net/npm/dt/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference)
+[![NPM Version](https://badgen.net/npm/v/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference) [![NPM DL](https://badgen.net/npm/dt/@appliedengdesign/gcode-reference)](https://www.npmjs.com/package/@appliedengdesign/gcode-reference) [![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference/issues)
+[![Github Stars](https://badgen.net/github/stars/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference) [![MIT License](https://badgen.net/badge/license/MIT)](https://opensource.org/licenses/MIT)
 
-[![GitHub Issues](https://badgen.net/github/open-issues/appliedengdesign/gcode-reference)](https://github.com/appliedengdesign/gcode-reference/issues)
-![Github Stars](https://badgen.net/github/stars/appliedengdesign/gcode-reference)
-![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql-analysis.yml/badge.svg)
-[![MIT License](https://badgen.net/badge/license/MIT)](https://opensource.org/licenses/MIT)
+[![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql.yml/badge.svg)](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql.yml) [![Node.js CI](https://github.com/appliedengdesign/gcode-reference/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/appliedengdesign/gcode-reference/actions/workflows/nodejs-ci.yml)
 
 [![Follow @appliedengdesign](https://badgen.net/twitter/follow/appliedengdes)](https://twitter.com/appliedengdes)
 
@@ -46,7 +44,7 @@ const gref = new GReference();
 const gref = new GReference(GRef.MachineTypes.Mill);
 // OR
 // initalize with a machine type and variant
-const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak)
+const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak);
 
 // Get Complete G-Code Object
 const gcode = gref.get('G1');
@@ -78,20 +76,19 @@ gref.getParams('G84');
 
 // You can also import the types separately / individually
 import {
-    Categories,
-    Category,
-    CNCCodes,
-    Code,
-    CodeType,
-    CodeTypes,
-    ICode,
-    MachineType,
-    MachineTypes,
-    Parameters,
-    Variant,
-    Variants,
+  Categories,
+  Category,
+  CNCCodes,
+  Code,
+  CodeType,
+  CodeTypes,
+  ICode,
+  MachineType,
+  MachineTypes,
+  Parameters,
+  Variant,
+  Variants,
 } from 'gcode-reference';
-
 ```
 
 ## TODO
@@ -121,9 +118,14 @@ We need people to help add more G & M codes to the various machine tool bases as
 
 For information on contributing, please refer to the [CONTRIBUTING](https://github.com/appliedengdesign/gcode-reference/blob/master/CONTRIBUTING.md) doc for information on how to add to this project.
 
+### Contributors
+
+- Mike Centola ([@mikecentola](https://github.com/mikecentola)) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=mikecentola)
+- Tyeth Gundry ([@tyeth](https://github.com/tyeth)) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=tyeth)
+
 ## About Applied Eng & Design
 
-We are a full service engineering and design firm, specializing in CAD/CAM, CNC milling, rapid prototyping, training and more.  We also like to dabble in Arudino / RaspberryPi projects, electronics, drones and robotics projects! Subscribe to our YouTube channel for videos on our projects, screencast tutorials, and more!
+We are a full service engineering and design firm, specializing in CAD/CAM, CNC milling, rapid prototyping, training and more. We also like to dabble in Arudino / RaspberryPi projects, electronics, drones and robotics projects! Subscribe to our YouTube channel for videos on our projects, screencast tutorials, and more!
 
 Follow us on [Twitter](https://twitter.com/appliedengdes) & [Instagram](https://instagram.com/appliedengdes), and like our [Facebook Page](https://facebook.com/appliedengdesign)!
 
