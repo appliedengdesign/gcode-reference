@@ -99,9 +99,15 @@ Add the following to your User Settings to run prettier:
 
 ### Linting
 
-This project uses [ESLint](https://eslint.org/) for code linting. You can run ESLint across the code by calling `yarn run lint` from a terminal. Warnings from ESLint show up in the `Errors and Warnings` quick box and you can navigate to them from inside VS Code.
+This project uses [ESLint](https://eslint.org/) for code linting. You can run ESLint across the code by calling `npm run lint` from a terminal. Warnings from ESLint show up in the `Errors and Warnings` quick box and you can navigate to them from inside VS Code.
 
 To lint the code as you make changes you can install the [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) extension.
+
+### Prettier Code
+
+This project uses [Prettier.io](https://prettier.io) for consistent code formatting style. You can check the code using `npm run pretty` to see if there are any violations and use `npm run pretty:fix` to fix any of the violations automatically.
+
+We also recommend using the Prettier extension for VSCode so that it can automatically format it as you are working on the code.
 
 ### Testing & Debugging
 
@@ -134,9 +140,20 @@ There a couple helper scripts that help when working with the code.
 
 - Can be used with `npm run getCodes [type]:[gcode:mcode]:[variant]` to retrieve the codes object through the application (i.e. `npm run getCodes mill:mcode:mazak`)
 
+### Update the README
+
+If this is your first contribution to GCode Reference, please give yourself credit by adding yourself to the _Contributors_ section of the [README](README.md) in the following format:
+
+- `Your Name ([@<your-github-username>(https://github.com/<your-github-username)]) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=<your-github-username>`
+
 ### Authoring Tools
 
 [Visual Studio Code](https://code.visualstudio.com) is a preferred tool to work on this project.
+
+#### Recommended Extensions
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ### Submitting a Pull Request
 
