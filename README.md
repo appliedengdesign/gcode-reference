@@ -41,10 +41,10 @@ const GRef = require('gcode-reference');
 const gref = new GReference();
 // OR
 // initialize with a machine type
-const gref = new GReference(GRef.MachineTypes.Mill);
+const gref = new GReference('mill');
 // OR
 // initalize with a machine type and variant
-const gref = new GReference(GRef.MachineTypes.Mill, GRef.Variants.Mazak);
+const gref = new GReference('mill', 'mazak');
 
 // Get Complete G-Code Object
 const gcode = gref.get('G1');
@@ -57,6 +57,12 @@ const shortDesc = gref.getShortDesc('G1');
 
 // Get Full Description
 const desc = gref.getDesc('G1');
+
+// Get Code as Markdown
+const codeMarkdown = gref.getCodeAsMarkdown('G1');
+
+// Get All Codes formatted in Markdown
+const codesMarkdown = gref.getAllCodesAsMarkdown('gcode')
 
 // Get Current Machine Type
 const type = gref.getType();
@@ -74,7 +80,7 @@ gref.isVariant();
 // Get Parameters for a G/M Code
 gref.getParams('G84');
 
-// You can also import the types separately / individually
+// You can also import the types separately / individually when using Typescript
 import {
   Categories,
   Category,
@@ -91,16 +97,15 @@ import {
 } from 'gcode-reference';
 ```
 
-## TODO
+### Machine Types
 
-- Lathe G/M Codes
-- 3D Printer G/M Codes
-- Swiss G/M Codes
-- EDM G/M Codes
-- Laser G/M Codes
-- Variants
-- Export to Markdown
-- Export to HTML
+Supported machine types are `edm`, `mill`, `lathe`, `laser`, `printer` or `swiss`. You can select the machine type using the string variant or use the enum `MachineTypes`.
+
+### Variants
+
+The current supported variants are `amada`, `brother`, `centroid`, `citizen`, `doosan`, `fadal`, `fanuc`, `haas`, `hurco`, `mach3`, `mazak`, `milltrs`, `mitsu`, `okuma`, `snpmaker` and `tormach`. These are also exposed under the enum `Variants`.
+
+For more information on creating more variants or requesting them, please check out our [Contributing](CONTRIBUTING.md) page.
 
 ## Schema
 
