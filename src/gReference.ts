@@ -6,6 +6,7 @@
 
 import { loadJSON } from './json';
 import { CNCCodes, Code, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant } from './types';
+import { HTMLUtils } from './util/htmlUtils';
 import { MDUtils } from './util/mdUtils';
 
 export class GReference {
@@ -166,6 +167,26 @@ export class GReference {
             return MDUtils.allCodesToMarkdown(this._gcode);
         } else if (codeType === CodeTypes.M && this._mcode) {
             return MDUtils.allCodesToMarkdown(this._mcode);
+        }
+
+        return undefined;
+    }
+
+    getCodeAsHTML(code: string, partial: boolean = true): string | undefined {
+        const c = this.get(code);
+
+        if (c) {
+            return HTMLUtils.codeToHTML(code, c, partial);
+        } else {
+            return undefined;
+        }
+    }
+
+    getAllCodesAsHTML(codeType: CodeTypes, partial: boolean = true): string | undefined {
+        if (codeType === CodeTypes.G && this._gcode) {
+            return HTMLUtils.allCodesToHTML(this._gcode, partial);
+        } else if (codeType === CodeTypes.M && this._mcode) {
+            return HTMLUtils.allCodesToHTML(this._mcode, partial);
         }
 
         return undefined;
