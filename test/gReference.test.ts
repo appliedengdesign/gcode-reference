@@ -129,5 +129,30 @@ describe('GReference Object', () => {
                 expect(g.get('M13')).to.be.undefined;
             });
         });
+
+        describe('Verifying Markdown Generation...', () => {
+            it('generates the proper markdown for a code', () => {
+                const g = new GReference();
+                const md = g.getCodeAsMarkdown('G1');
+                expect(md).to.equal(
+                    '# G1 - Linear Interpolation Motion\n' +
+                        '\n' +
+                        '## Description\n' +
+                        'G01 is used to move machine axes at specified feedrate.\n' +
+                        '\n' +
+                        '### Modal: true\n' +
+                        '\n' +
+                        '## Parameters\n' +
+                        '\n' +
+                        '| Parameter | Description | Optional |\n' +
+                        '| X | X-Axis motion command | true\n' +
+                        '| Y | Y-Axis motion command | true\n' +
+                        '| Z | Z-Axis motion command | true\n' +
+                        '| A | A-Axis motion command | true\n' +
+                        '| B | B-Axis motion command | true\n' +
+                        '| C | C-Axis motion command | true\n',
+                );
+            });
+        });
     });
 });
