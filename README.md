@@ -62,7 +62,7 @@ const desc = gref.getDesc('G1');
 const codeMarkdown = gref.getCodeAsMarkdown('G1');
 
 // Get All Codes formatted in Markdown
-const codesMarkdown = gref.getAllCodesAsMarkdown('gcode')
+const codesMarkdown = gref.getAllCodesAsMarkdown('gcode');
 
 // Get Current Machine Type
 const type = gref.getType();
