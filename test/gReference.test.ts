@@ -145,12 +145,12 @@ describe('GReference Object', () => {
                         '## Parameters\n' +
                         '\n' +
                         '| Parameter | Description | Optional |\n' +
-                        '| X | X-Axis motion command | true\n' +
-                        '| Y | Y-Axis motion command | true\n' +
-                        '| Z | Z-Axis motion command | true\n' +
-                        '| A | A-Axis motion command | true\n' +
-                        '| B | B-Axis motion command | true\n' +
-                        '| C | C-Axis motion command | true\n',
+                        '| X | X-Axis motion command | true |\n' +
+                        '| Y | Y-Axis motion command | true |\n' +
+                        '| Z | Z-Axis motion command | true |\n' +
+                        '| A | A-Axis motion command | true |\n' +
+                        '| B | B-Axis motion command | true |\n' +
+                        '| C | C-Axis motion command | true |\n',
                 );
             });
         });
