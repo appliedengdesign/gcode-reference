@@ -2,6 +2,19 @@
 
 All changes to the `gcode-reference` project will be documented here
 
+## v0.0.7
+
+### New Features
+
+- Added Markdown generation per code or all codes [#21](https://github.com/appliedengdesign/gcode-reference/pull/21)
+
+### Other
+
+- Updated dependencies
+- Fixed dependabot configuration
+- Updated README
+- Updated Mocha tests for markdown generation
+
 ## v0.0.6
 
 ### New Features
