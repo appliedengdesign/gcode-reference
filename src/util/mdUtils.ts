@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { Code } from '../types';
+import { CNCCodes, Code } from '../types';
 
 export class MDUtils {
     static codeToMarkdown(title: string, code: Code): string {
@@ -23,8 +23,27 @@ export class MDUtils {
             md.push('## Parameters\n');
             md.push('| Parameter | Description | Optional |');
             for (const p in code.parameters) {
-                md.push(`| ${p} | ${code.parameters[p].shortDesc} | ${code.parameters[p].optional ? 'true' : 'false'}`);
+                md.push(
+                    `| ${p} | ${code.parameters[p].shortDesc} | ${code.parameters[p].optional ? 'true' : 'false'} |`,
+                );
             }
+        }
+
+        return `${md.join('\n')}\n`;
+    }
+
+    static allCodesToMarkdown(codes: CNCCodes) {
+        const md: Array<string> = [];
+
+        md.push(`# ${codes.title}\n`);
+
+        md.push(`${codes.description}`);
+
+        md.push('---');
+
+        for (const c in codes.codes) {
+            md.push(MDUtils.codeToMarkdown(c, codes.codes[c]));
+            md.push('---');
         }
 
         return `${md.join('\n')}\n`;

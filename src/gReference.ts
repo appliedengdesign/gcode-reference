@@ -160,4 +160,14 @@ export class GReference {
             return undefined;
         }
     }
+
+    getAllCodesAsMarkdown(codeType: CodeTypes): string | undefined {
+        if (codeType === CodeTypes.G && this._gcode) {
+            return MDUtils.allCodesToMarkdown(this._gcode);
+        } else if (codeType === CodeTypes.M && this._mcode) {
+            return MDUtils.allCodesToMarkdown(this._mcode);
+        }
+
+        return undefined;
+    }
 }
