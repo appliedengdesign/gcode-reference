@@ -5,11 +5,12 @@
 'use strict';
 
 import { loadJSON } from './json';
-import { Code, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant } from './types';
+import { CNCCodes, Code, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant } from './types';
+import { MDUtils } from './util/mdUtils';
 
 export class GReference {
-    private _gcodes: ICode = {};
-    private _mcodes: ICode = {};
+    private _gcode: CNCCodes | undefined;
+    private _mcode: CNCCodes | undefined;
     private _machineType: MachineType;
     private _variant: Variant | undefined;
 
@@ -22,12 +23,10 @@ export class GReference {
 
     private _buildReference() {
         // Load G Codes from JSON
-        const g = loadJSON(CodeTypes.G, this._machineType, this._variant);
-        Object.assign(this._gcodes, g?.codes);
+        this._gcode = loadJSON(CodeTypes.G, this._machineType, this._variant);
 
         // Load M Codes from JSON
-        const m = loadJSON(CodeTypes.M, this._machineType, this._variant);
-        Object.assign(this._mcodes, m?.codes);
+        this._mcode = loadJSON(CodeTypes.M, this._machineType, this._variant);
     }
 
     private _cleanCode(code: string): string {
@@ -82,14 +81,25 @@ export class GReference {
         code = this._cleanCode(code);
 
         if (code[0].toUpperCase() === 'G') {
-            if (code in this._gcodes) {
-                return this._gcodes[code];
+            if (this._gcode) {
+                const codes = this._gcode.codes;
+
+                if (code in codes) {
+                    return codes[code];
+                } else {
+                    return undefined;
+                }
             } else {
                 return undefined;
             }
         } else if (code[0].toUpperCase() === 'M') {
-            if (code in this._mcodes) {
-                return this._mcodes[code];
+            if (this._mcode) {
+                const codes = this._mcode.codes;
+                if (code in codes) {
+                    return codes[code];
+                } else {
+                    return undefined;
+                }
             } else {
                 return undefined;
             }
@@ -133,9 +143,29 @@ export class GReference {
 
     getAllCodes(codeType: CodeTypes): ICode | undefined {
         if (codeType === CodeTypes.G) {
-            return this._gcodes;
+            return this._gcode?.codes;
         } else if (codeType === CodeTypes.M) {
-            return this._mcodes;
+            return this._mcode?.codes;
+        }
+
+        return undefined;
+    }
+
+    getCodeAsMarkdown(code: string): string | undefined {
+        const c = this.get(code);
+
+        if (c) {
+            return MDUtils.codeToMarkdown(code, c);
+        } else {
+            return undefined;
+        }
+    }
+
+    getAllCodesAsMarkdown(codeType: CodeTypes): string | undefined {
+        if (codeType === CodeTypes.G && this._gcode) {
+            return MDUtils.allCodesToMarkdown(this._gcode);
+        } else if (codeType === CodeTypes.M && this._mcode) {
+            return MDUtils.allCodesToMarkdown(this._mcode);
         }
 
         return undefined;
