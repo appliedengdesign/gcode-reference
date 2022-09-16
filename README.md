@@ -74,7 +74,6 @@ gref.isVariant();
 // Get Parameters for a G/M Code
 gref.getParams('G84');
 
-
 // MARKDOWN GENERATION
 
 // Get Code as Markdown
@@ -93,7 +92,6 @@ const codeHTML = gref.getCodeAsHTML('G1');
 
 // Get All Codes as HTML (partial by default as well)
 const codeHTML = gref.getAllCodesAsHTML('G1', false);
-
 
 // You can also import the types separately / individually when using Typescript
 import {
