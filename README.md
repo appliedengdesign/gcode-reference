@@ -24,7 +24,7 @@ Since this is still in very early stages of development, here are the goals outl
 
 To install the latest version:
 
-`npm install @appliedengdesign/gcode-reference`
+`npm install @appliedengdesign/gcode-reference` --save
 
 ## Usage
 
@@ -58,12 +58,6 @@ const shortDesc = gref.getShortDesc('G1');
 // Get Full Description
 const desc = gref.getDesc('G1');
 
-// Get Code as Markdown
-const codeMarkdown = gref.getCodeAsMarkdown('G1');
-
-// Get All Codes formatted in Markdown
-const codesMarkdown = gref.getAllCodesAsMarkdown('gcode');
-
 // Get Current Machine Type
 const type = gref.getType();
 
@@ -79,6 +73,25 @@ gref.isVariant();
 
 // Get Parameters for a G/M Code
 gref.getParams('G84');
+
+// MARKDOWN GENERATION
+
+// Get Code as Markdown
+const codeMarkdown = gref.getCodeAsMarkdown('G1');
+
+// Get All Codes formatted in Markdown
+const codesMarkdown = gref.getAllCodesAsMarkdown('gcode');
+
+// HTML GENERATION
+
+// Get Code as HTML (complete w/ head/meta)
+const codeHTML = gref.getCodeAsHTML('G1', false);
+
+// Get Code as HTML (partial) - default if true/false not included
+const codeHTML = gref.getCodeAsHTML('G1');
+
+// Get All Codes as HTML (partial by default as well)
+const codeHTML = gref.getAllCodesAsHTML('G1', false);
 
 // You can also import the types separately / individually when using Typescript
 import {

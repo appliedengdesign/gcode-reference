@@ -154,5 +154,125 @@ describe('GReference Object', () => {
                 );
             });
         });
+
+        describe('Verifying HTML Generation...', () => {
+            it('generates the proper html for a code', () => {
+                const g = new GReference();
+                const html = g.getCodeAsHTML('G1', false);
+                expect(html).to.equal(
+                    '<!DOCTYPE html>\n' +
+                        '<html lang="en"\n' +
+                        '<head>\n' +
+                        '<meta charset="utf-8">\n' +
+                        '</head>\n' +
+                        '<h1>G1 - Linear Interpolation Motion</h1>\n' +
+                        '\n' +
+                        '<h2>Description</h2>\n' +
+                        '\n' +
+                        '<p>G01 is used to move machine axes at specified feedrate.</p>\n' +
+                        '\n' +
+                        '<h3>Modal: true</h3>\n' +
+                        '\n' +
+                        '<h2>Parameters</h2>\n' +
+                        '\n' +
+                        '<table>\n' +
+                        '<thead>\n' +
+                        '<tr>\n' +
+                        '<th>Parameter</th>\n' +
+                        '<th>Description</th>\n' +
+                        '<th>Optional</th>\n' +
+                        '</tr>\n' +
+                        '</thead>\n' +
+                        '<tbody>\n' +
+                        '<tr>\n' +
+                        '<td>X</td>\n' +
+                        '<td>X-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>Y</td>\n' +
+                        '<td>Y-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>Z</td>\n' +
+                        '<td>Z-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>A</td>\n' +
+                        '<td>A-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>B</td>\n' +
+                        '<td>B-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>C</td>\n' +
+                        '<td>C-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '</html>',
+                );
+            });
+
+            it('generates the proper partial html for a code', () => {
+                const g = new GReference();
+                const html = g.getCodeAsHTML('G1', true);
+                expect(html).to.equal(
+                    '<h1>G1 - Linear Interpolation Motion</h1>\n' +
+                        '\n' +
+                        '<h2>Description</h2>\n' +
+                        '\n' +
+                        '<p>G01 is used to move machine axes at specified feedrate.</p>\n' +
+                        '\n' +
+                        '<h3>Modal: true</h3>\n' +
+                        '\n' +
+                        '<h2>Parameters</h2>\n' +
+                        '\n' +
+                        '<table>\n' +
+                        '<thead>\n' +
+                        '<tr>\n' +
+                        '<th>Parameter</th>\n' +
+                        '<th>Description</th>\n' +
+                        '<th>Optional</th>\n' +
+                        '</tr>\n' +
+                        '</thead>\n' +
+                        '<tbody>\n' +
+                        '<tr>\n' +
+                        '<td>X</td>\n' +
+                        '<td>X-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>Y</td>\n' +
+                        '<td>Y-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>Z</td>\n' +
+                        '<td>Z-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>A</td>\n' +
+                        '<td>A-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>B</td>\n' +
+                        '<td>B-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>\n' +
+                        '<tr>\n' +
+                        '<td>C</td>\n' +
+                        '<td>C-Axis motion command</td>\n' +
+                        '<td>true\n' +
+                        '</tr>',
+                );
+            });
+        });
     });
 });
