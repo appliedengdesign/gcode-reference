@@ -2,6 +2,17 @@
 
 All changes to the `gcode-reference` project will be documented here
 
+## v0.0.8
+
+### New Features
+
+- Added HTML Generation per code or all codes. Both as partials or complete HTML (including head) [#24](https://github.com/appliedengdesign/gcode-reference/pull/24)
+
+### Other
+
+- Updated dependencies
+- Updated README
+
 ## v0.0.7
 
 ### New Features
