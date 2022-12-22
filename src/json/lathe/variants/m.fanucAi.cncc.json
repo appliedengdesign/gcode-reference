@@ -1,0 +1,293 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "lathe",
+    "title": "M Code Fanuc i-series Lathe Reference",
+    "variant": {
+        "name": "fanucAi"
+    },
+    "description": "M-Code Listing for Fanuc i-series Controls",
+    "keywords": ["fanuc, lathe, turning"],
+    "codes": {
+        "M00": {
+            "category": "mcode",
+            "shortDesc": "Program Stop",
+            "desc": "Operation holds temporarily under the state of the cycle start switch.",
+            "modal": true
+        },
+        "M01": {
+            "category": "mcode",
+            "shortDesc": "Optional Stop",
+            "desc": "Operation stops temporarily (hold) under the state of the optional stop switch.",
+            "modal": true
+        },
+        "M02": {
+            "category": "mcode",
+            "shortDesc": "End Program",
+            "desc": "End program and reset CNC."
+        },
+        "M03": {
+            "category": "mcode",
+            "shortDesc": "Spindle Forward",
+            "desc": "Turns spindle on in forward rotation, accompany with a S-code and a P-code."
+        },
+        "M04": {
+            "category": "mcode",
+            "shortDesc": "Spindle Reverse",
+            "desc": "Turns spindle on in reverse rotation, accompany with a S-code and a P-code."
+        },
+        "M05": {
+            "category": "mcode",
+            "shortDesc": "Spindle Stop",
+            "desc": "Stops specified spindle with accompanying P-code"
+        },
+        "M08": {
+            "category": "mcode",
+            "shortDesc": "Coolant On"
+        },
+        "M09": {
+            "category": "mcode",
+            "shortDesc": "Coolant Off"
+        },
+        "M10": {
+            "category": "mcode",
+            "shortDesc": "Parts Catcher Advance"
+        },
+        "M11": {
+            "category": "mcode",
+            "shortDesc": "Parts Catcher Retract"
+        },
+        "M14": {
+            "category": "mcode",
+            "shortDesc": "Main Chuck Air Blast On"
+        },
+        "M15": {
+            "category": "mcode",
+            "shortDesc": "Main Chuck Air Blast Off"
+        },
+        "M24": {
+            "category": "mcode",
+            "shortDesc": "Chip Conveyor On"
+        },
+        "M25": {
+            "category": "mcode",
+            "shortDesc": "Chip Conveyor Off"
+        },
+        "M29": {
+            "category": "mcode",
+            "shortDesc": "Rigid Tapping On",
+            "desc": "Accompany with S-code, in order to command new speed and spindle of the control path P-code mst be commanded."
+        },
+        "M30": {
+            "category": "mcode",
+            "shortDesc": "Program End"
+        },
+        "M31": {
+            "category": "mcode",
+            "shortDesc": "Interlock By-Pass for Main Chuck",
+            "desc": "While main chuck is rotating, chuck, tailstock, and steady rest commands become effective."
+        },
+        "M34": {
+            "category": "mcode",
+            "shortDesc": "C1-Axis Select Off",
+            "desc": "This function can be used as the method to change C1-Axis (cs contouring mode) to main spindle status (spindle speed control mode)."
+        },
+        "M35": {
+            "category": "mcode",
+            "shortDesc": "C1-Axis Select On",
+            "desc": "This function can be used as the method to change main spindle status (spindle speed control mode) to C1-Axis (cs contouring mode)."
+        },
+        "M54": {
+            "category": "mcode",
+            "shortDesc": "Parts Count",
+            "desc": "Count the quantity of the workpiece that has finished machining and display the quantity in CRT"
+        },
+        "M68": {
+            "category": "mcode",
+            "shortDesc": "Main Chuck Clamp"
+        },
+        "M69": {
+            "category": "mcode",
+            "shortDesc": "Main Chuck Unclamp"
+        },
+        "M86": {
+            "category": "mcode",
+            "shortDesc": "Torque Skip Act",
+            "desc": "This command can be used to skip by load capacity of servo motor at the time of axis moving."
+        },
+        "M87": {
+            "category": "mcode",
+            "shortDesc": "Torque Skip Cancel",
+            "desc": "This command can be used to cancel torque skip function."
+        },
+        "M88": {
+            "category": "mcode",
+            "shortDesc": "C1-Axis Low Clamp",
+            "desc": "Clamp C1-Axis with low pressure"
+        },
+        "M89": {
+            "category": "mcode",
+            "shortDesc": "C1-Axis High Clamp",
+            "desc": "Clamp C1-Axis with high pressure"
+        },
+        "M90": {
+            "category": "mcode",
+            "shortDesc": "C-Axis Unclamp"
+        },
+        "M110": {
+            "category": "mcode",
+            "shortDesc": "Interference Check Off",
+            "desc": "Releases the function which checks the interference on each feeding axes."
+        },
+        "M111": {
+            "category": "mcode",
+            "shortDesc": "Interference Check On",
+            "desc": "Cancels the function of interference check release."
+        },
+        "M114": {
+            "category": "mcode",
+            "shortDesc": "Sub Spindle Air Blow On"
+        },
+        "M115": {
+            "category": "mcode",
+            "shortDesc": "Sub Spindle Air Blow Off"
+        },
+        "M116": {
+            "category": "mcode",
+            "shortDesc": "Work Ejection On"
+        },
+        "M131": {
+            "category": "mcode",
+            "shortDesc": "Interlock By-Pass For Sub Chuck",
+            "desc": "While sub spindle is rotating, sub chuck, tailstock, and steady rest commands become effective."
+        },
+        "M134": {
+            "category": "mcode",
+            "shortDesc": "C2-Axis Select Off",
+            "desc": "This function can be used as the method to change C2-Axis (cs contouring mode) to sub spindle status (Spindle speed control mode)."
+        },
+        "M135": {
+            "category": "mcode",
+            "shortDesc": "C2-Axis Select On",
+            "desc": "This function can be used as the method to change sub spindle status (spindle speed control mode) to C2-Axis (cs contouring mode)."
+        },
+        "M136": {
+            "category": "mcode",
+            "shortDesc": "Synchronous Control On Between C1 and C2",
+            "desc": "It is possible to use that C1-Axis and C2-Axis rotate in synchronized same feed speed. In order to use this function, C1 and C2 must be returned to their origin position, and both chucks must be clamped."
+        },
+        "M137": {
+            "category": "mcode",
+            "shortDesc": "Synchronous Control Off Between C1 and C2"
+        },
+        "M138": {
+            "category": "mcode",
+            "shortDesc": "Cooland Flush On"
+        },
+        "M139": {
+            "category": "mcode",
+            "shortDesc": "Coolant Flush Off"
+        },
+        "M168": {
+            "category": "mcode",
+            "shortDesc": "Sub Chuck Clamp"
+        },
+        "M169": {
+            "category": "mcode",
+            "shortDesc": "Sub Chuck Unclamp"
+        },
+        "M188": {
+            "category": "mcode",
+            "shortDesc": "C2-Axis Low Pressure Clamp",
+            "desc": "Clamp C2-Axis with low pressure"
+        },
+        "M189": {
+            "category": "mcode",
+            "shortDesc": "C2-Axis High Pressure Clamp",
+            "desc": "Clamp C2-Axis with high pressure"
+        },
+        "M190": {
+            "category": "mcode",
+            "shortDesc": "C2-Axis Unclamp"
+        },
+        "M203": {
+            "category": "mcode",
+            "shortDesc": "Spindle Forward Speed Synchronous Command",
+            "desc": "Main spindle and sub spindle rotate in CW direction with same r/min. In order to use this command, one out of main or sub chuck must be unclamped. M31 or M131 must be commanded before unclmaping.",
+            "parameters": {
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Which chuck the command is for",
+                    "optional": false
+                }
+            }
+        },
+        "M204": {
+            "category": "mcode",
+            "shortDesc": "Spindle Reverse Speed Synchronous Command",
+            "desc": "Main spindle and sub spindle rotate in CCW direction with same r/min. In order to use this command, one out of main or sub chuck must be unclamped. M31 or M131 must be commanded before unclmaping.",
+            "parameters": {
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Which chuck the command is for",
+                    "optional": false
+                }
+            }
+        },
+        "M205": {
+            "category": "mcode",
+            "shortDesc": "Synchronous Stop",
+            "desc": "Main spindle and sub spindle stop with same rpm and phase.",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Which chuck the command is for",
+                    "optional": false
+                }
+            }
+        },
+        "M213": {
+            "category": "mcode",
+            "shortDesc": "Spindle Forward Phase Synchro Command",
+            "desc": "Main spindle and sub spindle rotate in CW direction with same r/min and phase. In order to use command, one out of main or sub chuck must be unclamped. M31 or M131 must be commanded before unclamping.",
+            "parameters": {
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Which chuck the command is for",
+                    "optional": false
+                }
+            }
+        },
+        "M214": {
+            "category": "mcode",
+            "shortDesc": "Spindle Reverse Phase Synchro Command",
+            "desc": "Main spindle and sub spindle rotate in CCW direction with same r/min and phase. In order to use command, one out of main or sub chuck must be unclamped. M31 or M131 must be commanded before unclamping.",
+            "parameters": {
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Which chuck the command is for",
+                    "optional": false
+                }
+            }
+        },
+        "M226": {
+            "category": "mcode",
+            "shortDesc": "Work Ejector Advance"
+        },
+        "M227": {
+            "category": "mcode",
+            "shortDesc": "Work Ejector Retract"
+        }
+    }
+}

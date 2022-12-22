@@ -12,6 +12,7 @@ export enum Variants {
     Doosan = 'doosan',
     Fadal = 'fadal',
     Fanuc = 'fanuc',
+    FanucAi = 'fanucAi',
     Haas = 'haas',
     Hurco = 'hurco',
     Mach3 = 'mach3',
