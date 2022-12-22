@@ -1,0 +1,84 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "gcode",
+    "machineType": "lathe",
+    "title": "G Code Fanuc Lathe Reference",
+    "variant": {
+        "name": "fanuc"
+    },
+    "description": "G-Code Listing for Fanuc Lathe Machine Tools",
+    "keywords": ["fanuc, lathe, turning"],
+    "codes": {
+        "G00": {
+            "category": "motion",
+            "shortDesc": "Rapid Motion Positioning",
+            "desc": "G00 is used to move the machine axes at the maximum speed. This G code is modal.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "An absolute or relative coordinate on the X axis.",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "An absolute or relative coordinate on the Y axis.",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "An absolute or relative coordinate on the Z axis",
+                    "optional": true
+                }
+            }
+        },
+        "G01": {
+            "category": "motion",
+            "shortDesc": "Linear Interpolation CW",
+            "desc": "G01 is used to move the axes at a consistent feed speed.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "An absolute or relative coordinate on the X axis.",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "An absolute or relative coordinate on the Y axis.",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "An absolute or relative coordinate on the Z axis",
+                    "optional": true
+                }
+            }
+        },
+        "G02": {
+            "category": "motion",
+            "shortDesc": "Circular Interpolation CW",
+            "desc": "G02 is used to move along a circular arc in a clockwise rotation.",
+            "modal": true
+        },
+        "G03": {
+            "category": "motion",
+            "shortDesc": "Linear Interpolation CCW",
+            "desc": "G03 is used to move along a circular arc in a counter clockwise rotation.",
+            "modal": true
+        },
+        "G04": {
+            "category": "other",
+            "shortDesc": "Dwell for a set amount of time.",
+            "desc": "G04 dwells the machine for a programmed amount of time.",
+            "parameters": {
+                "X": {
+                    "shortDesc": "Dwell in seconds",
+                    "optional": true
+                },
+                "U": {
+                    "shortDesc": "Dwell in seconds",
+                    "optional": true
+                },
+                "P": {
+                    "shortDesc": "Dwell in milliseconds",
+                    "optional": true
+                }
+            }
+        }
+    }
+}
