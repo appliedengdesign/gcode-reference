@@ -1,0 +1,796 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "mill",
+    "title": "G Code Milling Reference",
+    "variant": {
+        "name": "haas",
+        "remove": []
+    },
+    "description": "G-Code Listing for Milling Machine Tools",
+    "keywords": [
+        "haas",
+        "mill",
+        "milling"
+    ],
+    "codes": {
+        "G12": {
+            "category": "motion",
+            "shortDesc": "Circular Pocket Milling CW",
+            "desc": "G12 mills circular shapes in the clockwise direction in the defualt XY plane (G17). The use of Cutter Compensation (G42) is implied.",
+            "modal": false,
+            "parameters": {
+                "D": {
+                    "shortDesc": "Tool radius or diameter selection\n\nTo get the programmed circle diameter, the control uses the selected D code tool size. To program tool centerline select D0.",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Radius of first circle (or finish if no K).\n\nI value must be greater than Tool Radius, but less than K value.",
+                    "optional": false
+                },
+                "K": {
+                    "shortDesc": "Radius of finished circle (if specified)",
+                    "optional": true
+                },
+                "L": {
+                    "shortDesc": "Loop count for repeating deeper cuts ",
+                    "optional": true
+                },
+                "Q": {
+                    "shortDesc": "Radius increment, or stepover (must be used with K)",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Depth of cut or increment",
+                    "optional": false
+                }
+            }
+        },
+        "G13": {
+            "category": "motion",
+            "shortDesc": "Circular Pocket Milling CCW",
+            "desc": "G13 mills circular shapes in the counter-clockwise direction in the defualt XY plane (G17). The use of Cutter Compensation (G41) is implied.",
+            "modal": false,
+            "parameters": {
+                "D": {
+                    "shortDesc": "Tool radius or diameter selection\n\nTo get the programmed circle diameter, the control uses the selected D code tool size. To program tool centerline select D0.",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Radius of first circle (or finish if no K).\n\nI value must be greater than Tool Radius, but less than K value.",
+                    "optional": false
+                },
+                "K": {
+                    "shortDesc": "Radius of finished circle (if specified)",
+                    "optional": true
+                },
+                "L": {
+                    "shortDesc": "Loop count for repeating deeper cuts ",
+                    "optional": true
+                },
+                "Q": {
+                    "shortDesc": "Radius increment, or stepover (must be used with K)",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Depth of cut or increment",
+                    "optional": false
+                }
+            }
+        },
+        "G29": {
+            "category": "motion",
+            "shortDesc": "Return From Reference Point",
+            "desc": "G29 moves the axes to a specific position.\n\nThe axes selected in this block are moved to the G29 reference point saved in G28, and then moved to the location specified in the G29 command.",
+            "modal": false
+        },
+        "G31": {
+            "category": "motion",
+            "shortDesc": "Feed Until Skip",
+            "desc": "G31 is used to record a probed location to a macro variable.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "X": {
+                    "shortDesc": "X-Axis absolute motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis absolute motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis absolute motion command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis absolute motion command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis absolute motion command",
+                    "optional": true
+                },
+                "C": {
+                    "shortDesc": "C-Axis absolute motion command",
+                    "optional": true
+                }
+            }
+        },
+        "G35": {
+            "category": "motion",
+            "shortDesc": "Automatic Tool Diameter Measurement",
+            "desc": "G35 is used to set a tool diameter/radius offset using two touches of the probe.",
+            "modal": false,
+            "parameters": {
+                "D": {
+                    "shortDesc": "Tool diameter offset number",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "X": {
+                    "shortDesc": "X-Axis command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis command",
+                    "optional": true
+                }
+            }
+        },
+        "G36": {
+            "category": "motion",
+            "shortDesc": "Automatic Work Offset Measurement",
+            "desc": "G36 is used to set work offsets with a probe.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Offset distance along X-Axis",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Offset distance along Y-Axis",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Offset distance along Z-Axis",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis motion command",
+                    "optional": true
+                }
+            }
+        },
+        "G37": {
+            "category": "motion",
+            "shortDesc": "Automatic Tool Diameter Measurement",
+            "desc": "G37 is used to command a probe to set tool length offsets.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "H": {
+                    "shortDesc": "Tool offset number ",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Required Z-Axis offset",
+                    "optional": false
+                }
+            }
+        },
+        "G47": {
+            "category": "motion",
+            "shortDesc": "Text Engraving",
+            "desc": "G47 lets you engrave a line of text, or sequential serial numbers, with a single G-code.\n\nTo use G47, Settings 29 (G91 Non-Modal) and 73 (G68 Incremental Angle) must be OFF",
+            "modal": false,
+            "parameters": {
+                "D": {
+                    "shortDesc": "Controls the smoothness level, D1(rough), D2(medium), or D3(finish). If D is not used then default is D3.",
+                    "optional": true
+                },
+                "E": {
+                    "shortDesc": "Plunge feed rate (units/min)",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Engraving feed rate (units/min)",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Angle of rotation (-360 to +360, default is 0)",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Height of text in in/mm (minimum = 0.001 inch, default is 1.0 inch or 1.0 mm)",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Sets the max corner rounding value (if K is not used then default is K0.002)",
+                    "optional": true
+                },
+                "P": {
+                    "shortDesc": "0 for literal text engraving\n\n- 1 for sequential serial number engraving\n\n- 32-126 for ASCII characters",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Return plane",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X start of engraving",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y start of engraving",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Depth of cut",
+                    "optional": true
+                }
+            }
+        },
+        "G70": {
+            "category": "motion",
+            "shortDesc": "Bolt Hole Circle",
+            "desc": "G70 is used to drill/tap a circular pattern.\n\nMust be used with one of the canned cycles G73, G74, G76, G77, or G81-G89",
+            "modal": false,
+            "parameters": {
+                "I": {
+                    "shortDesc": "Radius",
+                    "optional": false
+                },
+                "J": {
+                    "shortDesc": "Starting angle (0 to 360 degrees CCW from horizontal or the 3 o'clock position)",
+                    "optional": true
+                },
+                "L": {
+                    "shortDesc": "Number of holes evenly spaced around the circle",
+                    "optional": false
+                }
+            }
+        },
+        "G71": {
+            "category": "motion",
+            "shortDesc": "Bolt Hole Arc",
+            "desc": "G71 is similar to G70 except that it is not limited to a complete circle.\n\nA canned cycle must be active so that at each position, a drill or tap function is performed.",
+            "modal": false,
+            "parameters": {
+                "I": {
+                    "shortDesc": "Radius",
+                    "optional": false
+                },
+                "J": {
+                    "shortDesc": "Starting angle (degrees CCW from horizontal)",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Angular spacing of holes (+ or -)",
+                    "optional": false
+                },
+                "L": {
+                    "shortDesc": "Number of holes",
+                    "optional": false
+                }
+            }
+        },
+        "G72": {
+            "category": "motion",
+            "shortDesc": "Bolt Holes Along an Angle",
+            "desc": "G72 is used to set a tool diameter offset.\n\n",
+            "modal": false,
+            "parameters": {
+                "I": {
+                    "shortDesc": "Distance between holes",
+                    "optional": false
+                },
+                "J": {
+                    "shortDesc": "Angle of line (degrees CCW from horizontal)",
+                    "optional": true
+                },
+                "L": {
+                    "shortDesc": "Number of holes",
+                    "optional": false
+                }
+            }
+        },
+        "G95": {
+            "category": "other",
+            "shortDesc": "Feed per Revolution",
+            "desc": "When G95 is active, a spindle revolution will result in a travel distance specified by the Feed value.",
+            "modal": true
+        },
+        "G100": {
+            "category": "other",
+            "shortDesc": "Cancel Mirror Image",
+            "desc": "G100 turns off mirroring",
+            "modal": false,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis command",
+                    "optional": true
+                },
+                "C": {
+                    "shortDesc": "C-Axis command",
+                    "optional": true
+                }
+            }
+        },
+        "G101": {
+            "category": "other",
+            "shortDesc": "Enable Mirror Image",
+            "desc": "G100 turns on mirroring about a single or multiple axes",
+            "modal": false,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis command",
+                    "optional": true
+                },
+                "C": {
+                    "shortDesc": "C-Axis command",
+                    "optional": true
+                }
+            }
+        },
+        "G107": {
+            "category": "other",
+            "shortDesc": "Cylindrical Mapping",
+            "desc": "G107 translates all programmed motion occurring in a specified linear axis into the equivalent motion along the surface of a cylinder (as attached to a rotary axis)",
+            "modal": false,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis command",
+                    "optional": true
+                },
+                "A": {
+                    "shortDesc": "A-Axis command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis command",
+                    "optional": true
+                },
+                "C": {
+                    "shortDesc": "C-Axis command",
+                    "optional": false
+                },
+                "Q": {
+                    "shortDesc": "Diameter of the cylindrical surface",
+                    "optional": true
+                },
+                "R": {
+                    "shortDesc": "Radius of the rotary axis",
+                    "optional": true
+                }
+            }
+        },
+        "G136": {
+            "category": "other",
+            "shortDesc": "Automatic Work Offset Center Measurement",
+            "desc": "G136 is is optional and requires a probe. Use it to set work offsets to the center of a work piece with a work probe.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Optional offset distance along X-Axis",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Optional offset distance along Y-Axis",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Optional offset distance along Z-Axis",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "Optional X-Axis motion command",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Optional Y-Axis motion command",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Optional Z-Axis motion command",
+                    "optional": true
+                }
+            }
+        },
+        "G141": {
+            "category": "compensation",
+            "shortDesc": "3D+ Cutter Compensation",
+            "desc": "G141 is used to ",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "X-Axis command",
+                    "optional": false
+                },
+                "Y": {
+                    "shortDesc": "Y-Axis command",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Z-Axis command",
+                    "optional": false
+                },
+                "A": {
+                    "shortDesc": "A-Axis command",
+                    "optional": true
+                },
+                "B": {
+                    "shortDesc": "B-Axis command",
+                    "optional": true
+                },
+                "D": {
+                    "shortDesc": "Cutter Size Selection",
+                    "optional": true
+                },
+                "I": {
+                    "shortDesc": "X-Axis cutter compensation direction from program path",
+                    "optional": false
+                },
+                "J": {
+                    "shortDesc": "Y-Axis cutter compensation direction from program path",
+                    "optional": false
+                },
+                "K": {
+                    "shortDesc": "Z-Axis cutter compensation direction from program path",
+                    "optional": false
+                },
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                }
+            }
+        },
+        "G143": {
+            "category": "compensation",
+            "shortDesc": "5-Axis Tool Length Compensation +",
+            "desc": "G143 allows the user to correct for variations in the length of cutting tools without the need for a CAD/CAM processor.",
+            "modal": true
+        },
+        "G150": {
+            "category": "motion",
+            "shortDesc": "General Purpose Pocket Milling",
+            "desc": "G150 starts by positioning the cutter to a start point inside the pocket, followed by the outline, and completes with a finish cut. The end mill will plunge in the Z-Axis. A subprogram P### is called, which defines the pocket geometry of a closed area using G01, G02, and G03 motions in the X and Y axes on the pocket. The G150 command will search for an internal subprogram with a N-number specified by the P-code. If that is not found the control will search for an external subprogram. If neither are found, alarm 314 Subprogram Not In Memory will be generated.",
+            "modal": false,
+            "parameters": {
+                "D": {
+                    "shortDesc": "Tool radius/diameter offset selection",
+                    "optional": false
+                },
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "X-Axis cut increment (positive value)",
+                    "optional": false
+                },
+                "J": {
+                    "shortDesc": "Y-Axis cut increment (positive value)",
+                    "optional": false
+                },
+                "K": {
+                    "shortDesc": "Finishing pass amount (positive value)",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Subprogram number that defines pocket geometry",
+                    "optional": false
+                },
+                "Q": {
+                    "shortDesc": "Incremental Z-Axis cut depth per pass (positive value)",
+                    "optional": false
+                },
+                "R": {
+                    "shortDesc": "Position of the rapid R-plane location",
+                    "optional": true
+                },
+                "S": {
+                    "shortDesc": "Spindle speed",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X start position",
+                    "optional": false
+                },
+                "Y": {
+                    "shortDesc": "Y start position",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Z start position",
+                    "optional": false
+                }
+            }
+        },
+        "G156": {
+            "category": "canned",
+            "shortDesc": "Broaching Canned Cycle",
+            "desc": "G156 is used to broach a keyway",
+            "modal": true,
+            "parameters": {
+                "C": {
+                    "shortDesc": "C-axis position",
+                    "optional": true
+                },
+                "D": {
+                    "shortDesc": "Tool clearance when returning to starting plane",
+                    "optional": true
+                },
+                "F": {
+                    "shortDesc": "Feed rate per minute",
+                    "optional": true
+                },
+                "I": {
+                    "shortDesc": "Size of increment between slice cycles",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Z-axis size of increment between pecks in a cycle",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X-axis absolute location of furthest slice cycle",
+                    "optional": true
+                },
+                "Y": {
+                    "shortDesc": "Y-axis absolute location of furthest slice cycle",
+                    "optional": true
+                },
+                "Z": {
+                    "shortDesc": "Z-axis absolute location total pecking depth",
+                    "optional": false
+                }
+            }
+        },
+        "G167": {
+            "category": "other",
+            "shortDesc": "Modify Setting",
+            "desc": "G167 allows the user to permanently make changes to settings during program execution.",
+            "modal": false,
+            "parameters": {
+                "K": {
+                    "shortDesc": "Specifies a guard code for permanent changes",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "This code specifies the setting number",
+                    "optional": false
+                },
+                "Q": {
+                    "shortDesc": "Specifies the setting value. This can be a decimal numeric value or an enumerated representation for unit-less settings.",
+                    "optional": false
+                }
+            }
+        },
+        "G174": {
+            "category": "motion",
+            "shortDesc": "CCW Non-Vertical Rigid Tap",
+            "desc": "G174 is used to perform rigid tapping for non-vertical holes.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X position at bottom of hole",
+                    "optional": false
+                },
+                "Y": {
+                    "shortDesc": "Y position at bottom of hole",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Z position at bottom of hole",
+                    "optional": false
+                }
+            }
+        },
+        "G184": {
+            "category": "motion",
+            "shortDesc": "CW Non-Vertical Rigid Tap",
+            "desc": "G184 is used to perform rigid tapping for non-vertical holes.",
+            "modal": false,
+            "parameters": {
+                "F": {
+                    "shortDesc": "Feedrate",
+                    "optional": false
+                },
+                "S": {
+                    "shortDesc": "Spindle Speed",
+                    "optional": true
+                },
+                "X": {
+                    "shortDesc": "X position at bottom of hole",
+                    "optional": false
+                },
+                "Y": {
+                    "shortDesc": "Y position at bottom of hole",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Z position at bottom of hole",
+                    "optional": false
+                }
+            }
+        },
+        "G187": {
+            "category": "other",
+            "shortDesc": "Accuracy Control",
+            "desc": "G187 is an accuracy command that can set and control both the smoothness and max corner rounding value when cutting a part.",
+            "modal": false,
+            "parameters": {
+                "E": {
+                    "shortDesc": "Sets the max corner rounding value. Temporarily overrides Setting 85. Setting 191 sets the default smoothness to the user specified ROUGH, MEDIUM, or FINISH when G187 is not active. The Medium setting is the factory default setting.",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Controls the smoothness level, P1(rough), P2(medium), or P3(finish). Temporarily overrides Setting 191.",
+                    "optional": false
+                }
+            }
+        },
+        "G234": {
+            "category": "coordinate",
+            "shortDesc": "Tool Center Point Control (TCPC)",
+            "desc": "G234 lets a machine correctly run a contouring 4- or 5-axis program when the workpiece is not located in the exact location specified by the CAM-generated program.",
+            "modal": true
+        },
+        "G254": {
+            "category": "coordinate",
+            "shortDesc": "Dynamic Work Offset (DWO)",
+            "desc": "G166 is similar to TCPC, except that it is designed for use with 3+1 or 3+2 positioning, not for simultaneous 4- or 5-axis machining. If the program does not use the B and C Axes, there is no need to use DWO.",
+            "modal": true
+        },
+        "G255": {
+            "category": "coordinate",
+            "shortDesc": "Cancel Dynamic Work Offset (DWO)",
+            "desc": "G255 cancels G254 Dynamic Work Offset (DWO)",
+            "modal": true
+        },
+        "G266": {
+            "category": "motion",
+            "shortDesc": "Visible Axes Linear Rapid %Motion",
+            "desc": "G266 is used to rapid a single axis at given rate",
+            "modal": false,
+            "parameters": {
+                "E": {
+                    "shortDesc": "Rapid rate",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Machine coordinate position command",
+                    "optional": false
+                },
+                "P": {
+                    "shortDesc": "Axis parameter number. Example P1 = X, P2 = Y, P3 = Z",
+                    "optional": false
+                }
+            }
+        },
+        "G268": {
+            "category": "coordinate",
+            "shortDesc": "Enable Feature Coordinate System",
+            "desc": "G268 is a 5 axis G-Code used to define a tilted feature coordinate system relative to the working coordinate system.",
+            "modal": true,
+            "parameters": {
+                "X": {
+                    "shortDesc": "Feature coordinate system origin X coordinate in the WCS",
+                    "optional": false
+                },
+                "Y": {
+                    "shortDesc": "Feature coordinate system origin Y coordinate in the WCS",
+                    "optional": false
+                },
+                "Z": {
+                    "shortDesc": "Feature coordinate system origin Z coordinate in the WCS",
+                    "optional": false
+                },
+                "I": {
+                    "shortDesc": "Rotation of feature coordinate system about working coordinate system X axis",
+                    "optional": true
+                },
+                "J": {
+                    "shortDesc": "Rotation of feature coordinate system about working coordinate system Y axis",
+                    "optional": true
+                },
+                "K": {
+                    "shortDesc": "Rotation of feature coordinate system about working coordinate system Z axis",
+                    "optional": true
+                },
+                "Q": {
+                    "shortDesc": "Qnnn is used to define the order in which the I,J,K rotations will be applied",
+                    "optional": true
+                }
+            }
+        },
+        "G269": {
+            "category": "coordinate",
+            "shortDesc": "Disable Feature Coordinate System",
+            "desc": "G269 is used to disbale feature coordinate system set by G268",
+            "modal": true
+        }
+    }
+}

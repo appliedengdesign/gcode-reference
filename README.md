@@ -140,6 +140,7 @@ For information on contributing, please refer to the [CONTRIBUTING](https://gith
 
 - Mike Centola ([@mikecentola](https://github.com/mikecentola)) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=mikecentola)
 - Tyeth Gundry ([@tyeth](https://github.com/tyeth)) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=tyeth)
+- Gavin Coelho ([@gavincoelho](https://github.com/gavincoelho)) - [contributions](https://github.com/appliedengdesign/gcode-reference/commits?author=gavincoelho)
 
 ## About Applied Eng & Design
 
