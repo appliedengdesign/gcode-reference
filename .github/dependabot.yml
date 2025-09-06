@@ -12,6 +12,11 @@ updates:
     labels:
       - "workflows"
 
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
   # Maintain updates for npm
   - package-ecosystem: "npm"
     directory: "/"
