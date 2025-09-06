@@ -12,6 +12,11 @@ updates:
     labels:
       - "workflows"
 
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+
   # Maintain updates for npm
   - package-ecosystem: "npm"
     directory: "/"
@@ -41,11 +46,15 @@ updates:
       utilities:
         applies-to: version-updates
         patterns:
-          - "@types/node"
           - "ajv"
           - "prettier"
           - "shx"
           - "ts-node"
+
+    ignore:
+      - dependency-name: "@types/node"
+        update-types:
+          - version-update:semver-major
 
     labels:
       - "dependencies"
