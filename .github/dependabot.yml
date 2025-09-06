@@ -4,26 +4,54 @@ version: 2
 
 updates:
   # Maintain updates for GitHub Actions
-  - package-ecosystem: 'github-actions'
-    directory: '/'
+  - package-ecosystem: "github-actions"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
 
     labels:
-      - 'workflows'
+      - "workflows"
 
   # Maintain updates for npm
-  - package-ecosystem: 'npm'
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: weekly
+      interval: monthly
+
+    groups:
+      eslint:
+        applies-to: version-updates
+        patterns:
+          - "eslint*"
+          - "@typescript-eslint*"
+
+      mocha-chai:
+        applies-to: version-updates
+        patterns:
+          - "@types/chai"
+          - "@types/mocha"
+          - "@chai"
+          - "mocha"
+
+      typescript:
+        applies-to: version-updates
+        patterns:
+          - "typescript"
+
+      utilities:
+        applies-to: version-updates
+        patterns:
+          - "@types/node"
+          - "ajv"
+          - "prettier"
+          - "shx"
+          - "ts-node"
 
     labels:
-      - 'dependencies'
+      - "dependencies"
 
     commit-message:
-      prefix: 'npm prod'
-      prefix-development: 'npm dev'
+      prefix: "NPM"
       include: scope
 
     versioning-strategy: increase
