@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* ---------------------------------------------------------------------------------------------
  *  Copyright (c) Applied Eng & Design All rights reserved.
  *  Licensed under the MIT License. See License.md in the project root for license information.
@@ -22,7 +21,7 @@ const validate = ajv.compile(cncCodesJSONSchema);
 function _validate(type: MachineTypes | string, file: string): void {
     it(`validating ${file}`, () => {
         const data = fs.readFileSync(path.join(jpath, type, file), 'utf-8');
-        const code = JSON.parse(data);
+        const code = JSON.parse(data) as string;
         const valid = validate(code);
         if (!valid) {
             console.error(validate.errors);

@@ -43,8 +43,8 @@
         "compile": "tsc --project tsconfig.build.json",
         "copyJSON": "npx ts-node ./scripts/copyJSON.ts",
         "getCodes": "npx ts-node ./scripts/getCodes.ts",
-        "lint": "eslint src/**/*.ts scripts/**/*.ts",
-        "lint:fix": "eslint src/**/*.ts scripts/**/*.ts --fix",
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
         "prepack": "npm run clean && npm run build && npm run copyJSON",
         "pretty": "prettier --config .prettierrc --check .",
         "pretty:fix": "prettier --config .prettierrc --write .",
@@ -55,11 +55,10 @@
     },
     "devDependencies": {
         "@appliedengdesign/cnccodes-json-schema": "^0.3.0",
+        "@eslint/js": "^9.35.0",
         "@types/chai": "^5.2.2",
         "@types/mocha": "^10.0.10",
         "@types/node": "^22.18.1",
-        "@typescript-eslint/eslint-plugin": "^8.42.0",
-        "@typescript-eslint/parser": "^8.42.0",
         "ajv": "^8.17.1",
         "chai": "^6.0.1",
         "eslint": "^9.35.0",
@@ -70,6 +69,7 @@
         "prettier": "^3.6.2",
         "shx": "^0.4.0",
         "ts-node": "^10.9.2",
-        "typescript": "^5.9.2"
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.43.0"
     }
 }

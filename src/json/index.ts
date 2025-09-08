@@ -43,7 +43,7 @@ export function loadJSON(codeType: CodeType, machineType: MachineType, variant?:
 
                             return g;
                         } catch (err) {
-                            console.error(`Error loading ${variant} G-Code JSON File`);
+                            console.error(`Error loading ${variant} G-Code JSON File`, err);
                         }
                     }
                     return g;
@@ -83,7 +83,7 @@ export function loadJSON(codeType: CodeType, machineType: MachineType, variant?:
 
                             return m;
                         } catch (err) {
-                            console.error(`Error loading ${variant} M-Code JSON File`);
+                            console.error(`Error loading ${variant} M-Code JSON File`, err);
                         }
                     }
                     return m;

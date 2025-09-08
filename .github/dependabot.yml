@@ -24,18 +24,20 @@ updates:
       interval: monthly
 
     groups:
-      eslint:
+      linting:
         applies-to: version-updates
         patterns:
+          - "@eslint*"
           - "eslint*"
-          - "@typescript-eslint*"
+          - "typescript-eslint"
+          - "prettier"
 
       mocha-chai:
         applies-to: version-updates
         patterns:
           - "@types/chai"
           - "@types/mocha"
-          - "@chai"
+          - "chai"
           - "mocha"
 
       typescript:
@@ -47,7 +49,6 @@ updates:
         applies-to: version-updates
         patterns:
           - "ajv"
-          - "prettier"
           - "shx"
           - "ts-node"
 

@@ -15,10 +15,13 @@ export class GReference {
     private _machineType: MachineType;
     private _variant: Variant | undefined;
 
-    constructor(private machineType?: MachineType, private variant?: Variant) {
+    constructor(
+        private machineType?: MachineType,
+        private variant?: Variant,
+    ) {
         // Default is Mill, No Variant
         machineType !== undefined ? (this._machineType = machineType) : (this._machineType = MachineTypes.Mill);
-        variant !== undefined ? (this._variant = variant) : undefined;
+        variant !== undefined ? (this._variant = variant) : (this._variant = undefined);
         this._buildReference();
     }
 
