@@ -35,7 +35,10 @@
     "eslint.format.enable": true,
     "eslint.validate": [
         "typescript",
-        "javascript"
+        "javascript",
+        "json",
+        "markdown",
+        "yaml"
     ],
     "prettier.requireConfig": true
 }
