@@ -4,13 +4,13 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { expect } from 'chai';
-import Ajv from 'ajv/dist/2020';
-import fs from 'fs';
-import path from 'path';
 import { CodeTypes, MachineTypes } from '../src';
+import Ajv from 'ajv/dist/2020';
 import { cncCodesJSONSchema } from '@appliedengdesign/cnccodes-json-schema';
 import { constants } from '../src/util/constants';
+import { expect } from 'chai';
+import fs from 'fs';
+import path from 'path';
 
 const jpath = path.join(__dirname, '..', 'src', 'json');
 

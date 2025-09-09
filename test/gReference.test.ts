@@ -4,8 +4,8 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { expect } from 'chai';
 import { CodeTypes, GReference, MachineTypes, Variants } from '../src';
+import { expect } from 'chai';
 import { loadJSON } from '../src/json';
 
 describe('GReference Object', () => {

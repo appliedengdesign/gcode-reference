@@ -7,8 +7,8 @@
 const start = process.hrtime();
 
 import fs from 'fs';
-import path from 'path';
 import { MachineTypes } from '../src';
+import path from 'path';
 
 const jpath = path.join(__dirname, '..', 'src', 'json');
 const distJPath = path.join(__dirname, '..', 'dist', 'json');

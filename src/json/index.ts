@@ -5,9 +5,9 @@
 'use strict';
 
 import { CNCCodes, CodeType, CodeTypes, MachineType, Variant } from '../types';
+import { constants } from '../util/constants';
 import fs from 'fs';
 import path from 'path';
-import { constants } from '../util/constants';
 
 export function loadJSON(codeType: CodeType, machineType: MachineType, variant?: Variant): CNCCodes | undefined {
     const fname = `${codeType[0]}${constants.jsonExt}`;

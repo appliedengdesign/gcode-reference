@@ -4,9 +4,9 @@
  * -------------------------------------------------------------------------------------------- */
 'use strict';
 
-import { loadJSON } from './json';
 import { CNCCodes, Code, CodeTypes, ICode, MachineType, MachineTypes, Parameters, Variant } from './types';
 import { HTMLUtils } from './util/htmlUtils';
+import { loadJSON } from './json';
 import { MDUtils } from './util/mdUtils';
 
 export class GReference {
