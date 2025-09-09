@@ -1,18 +1,21 @@
-name: 'CodeQL'
+name: "CodeQL"
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
   pull_request:
+    branches: ["main"]
 
   schedule:
-    - cron: '28 20 * * 6'
+    - cron: "28 20 * * 6"
+
+  # eslint-disable-next-line yml/no-empty-mapping-value
+  workflow_dispatch:
 
 jobs:
   analyze:
-    name: Analyze
+    name: Analyze (${{ matrix.language }})
     runs-on: ubuntu-latest
     permissions:
       actions: read
@@ -22,7 +25,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['javascript', 'typescript']
+        include:
+          - language: javascript-typescript
+            build-mode: none
 
     steps:
       - name: Checkout repository

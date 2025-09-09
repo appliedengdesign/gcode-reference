@@ -1,13 +1,11 @@
-# This workflow warns and then closes issues and PRs that have had no activity for a specified amount of time.
-#
-# You can adjust the behavior by modifying this file.
-# For more information, see:
-# https://github.com/actions/stale
 name: Mark Stale Issues and Pull Requests
 
 on:
   schedule:
-    - cron: '41 20 * * *'
+    - cron: "41 20 * * *"
+
+  # eslint-disable-next-line yml/no-empty-mapping-value
+  workflow_dispatch:
 
 jobs:
   stale:
@@ -24,9 +22,9 @@ jobs:
           days-before-stale: 60
           days-before-close: -1
 
-          stale-issue-message: 'This issue has been automatically marked as stale because it has not had recent activity.'
+          stale-issue-message: "This issue has been automatically marked as stale because it has not had recent activity."
 
-          stale-pr-message: 'This pull request has been automatically marked as stale because it has not had recent activity.'
+          stale-pr-message: "This pull request has been automatically marked as stale because it has not had recent activity."
 
-          stale-issue-label: 'stale-issue'
-          stale-pr-label: 'stale-pull-request'
+          stale-issue-label: "stale-issue"
+          stale-pr-label: "stale-pull-request"
