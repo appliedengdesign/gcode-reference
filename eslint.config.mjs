@@ -11,6 +11,7 @@ import json from '@eslint/json';
 import markdown from '@eslint/markdown';
 import prettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
+import yml from 'eslint-plugin-yml';
 
 
 export default defineConfig([
@@ -132,6 +133,12 @@ export default defineConfig([
         plugins: { markdown },
         language: 'markdown/commonmark',
         extends: [ 'markdown/recommended' ],
+    },
+
+    // Lint YAML
+    {
+        files: [ '**/*.yaml', '**/*.yml' ],
+        extends: [ yml.configs['flat/recommended'] ],
     },
 
     //prettier,
