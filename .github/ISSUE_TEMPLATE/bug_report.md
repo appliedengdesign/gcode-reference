@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Environment / Version:**
 
-- OS Version: [e.g. Windows 10, OS X, Linux]
+- OS Version: (e.g. Windows 10, OS X, Linux)
 - VSCode Version:
 - Extension Version:
 
