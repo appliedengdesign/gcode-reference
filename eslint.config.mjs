@@ -24,7 +24,7 @@ export default defineConfig([
         'eslint.config.mjs',
     ]),
 
-    tseslint.configs.recommendedTypeChecked,
+    //tseslint.configs.recommendedTypeChecked,
     {
         files: [
             'src/**/*.ts',
@@ -32,6 +32,7 @@ export default defineConfig([
             'test/*.ts',
         ],
         ...js.configs.recommended,
+        ...tseslint.configs.recommendedTypeChecked[0],
 
         languageOptions: {
             sourceType: 'module',
@@ -71,6 +72,9 @@ export default defineConfig([
             ],
             'curly': ['error', 'all'],
             'eqeqeq': 'error',
+            'import/no-dynamic-require': 'error',
+            'import/no-default-export': 'error',
+            'import/no-self-import': 'error',
             'max-len': ['error', {
                 'code': 120, // needs to be in sync w/ .prettierrc printWidth
                 'ignoreUrls': true,
@@ -108,7 +112,7 @@ export default defineConfig([
         plugins: { json },
         language: 'json/json',
         ...json.configs.recommended,
-        extends: [ tseslint.configs.disableTypeChecked],   
+        //extends: [ tseslint.configs.disableTypeChecked],   
     },
 
     // Lint JSONC
@@ -124,7 +128,7 @@ export default defineConfig([
         files: ['**/*.md'],
         plugins: { markdown },
         language: 'markdown/commonmark',
-        extends: [ 'markdown/recommended', tseslint.configs.disableTypeChecked ],
+        extends: [ 'markdown/recommended' ],
     },
 
     //prettier,
