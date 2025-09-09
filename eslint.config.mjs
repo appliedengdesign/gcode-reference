@@ -8,20 +8,20 @@ import _import from 'eslint-plugin-import';
 import globals from 'globals';
 import js from '@eslint/js';
 import json from '@eslint/json';
+import markdown from '@eslint/markdown';
 import prettier from 'eslint-plugin-prettier/recommended';
 import tseslint from 'typescript-eslint';
 
 
 export default defineConfig([
     
-    js.configs.recommended,
     _import.flatConfigs.recommended,
     _import.flatConfigs.typescript,
 
     globalIgnores([
-        'eslint.config.mjs',
         'out/*',
         'dist/*',
+        'eslint.config.mjs',
     ]),
 
     tseslint.configs.recommendedTypeChecked,
@@ -31,6 +31,7 @@ export default defineConfig([
             'scripts/*.ts',
             'test/*.ts',
         ],
+        ...js.configs.recommended,
 
         languageOptions: {
             sourceType: 'module',
@@ -77,7 +78,7 @@ export default defineConfig([
             'no-duplicate-imports': 'error',
             'no-var': 'warn',
             'prefer-const': 'error',
-            'quotes': ['error', 'ingle', {
+            'quotes': ['error', 'single', {
                 'allowTemplateLiterals': true,
                 'avoidEscape': true,
             }],
@@ -102,7 +103,7 @@ export default defineConfig([
 
     // Lint JSON
     {
-        files: ['/**/*.json'],
+        files: ['**/*.json'],
         ignores: ['package-lock.json'],
         plugins: { json },
         language: 'json/json',
@@ -110,6 +111,22 @@ export default defineConfig([
         extends: [ tseslint.configs.disableTypeChecked],   
     },
 
-    prettier,
+    // Lint JSONC
+    {
+        files: ['**/*.jsonc', '.vscode/*.json'],
+        plugins: { json },
+        language: 'json/jsonc',
+        ...json.configs.recommended,
+    },
+
+    // Lint Markdown
+    {
+        files: ['**/*.md'],
+        plugins: { markdown },
+        language: 'markdown/commonmark',
+        extends: [ 'markdown/recommended', tseslint.configs.disableTypeChecked ],
+    },
+
+    //prettier,
 
 ]);
