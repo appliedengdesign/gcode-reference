@@ -4,7 +4,7 @@
  * -------------------------------------------------------------------------------------------- */
 
 import { defineConfig, globalIgnores } from 'eslint/config';
-import _import from 'eslint-plugin-import';
+import importX from 'eslint-plugin-import-x';
 import globals from 'globals';
 import js from '@eslint/js';
 import json from '@eslint/json';
@@ -14,9 +14,6 @@ import tseslint from 'typescript-eslint';
 
 
 export default defineConfig([
-    
-    _import.flatConfigs.recommended,
-    _import.flatConfigs.typescript,
 
     globalIgnores([
         'out/*',
@@ -24,7 +21,6 @@ export default defineConfig([
         'eslint.config.mjs',
     ]),
 
-    //tseslint.configs.recommendedTypeChecked,
     {
         files: [
             'src/**/*.ts',
@@ -51,6 +47,13 @@ export default defineConfig([
             }
         },
 
+        plugins:{
+            'import-x': importX, 
+            '@typescript-eslint': tseslint.plugin
+        },
+
+        extends: [ 'import-x/flat/recommended', 'import-x/flat/typescript'],
+
         rules: {
             '@typescript-eslint/naming-convention': [
 				'warn',
@@ -72,9 +75,9 @@ export default defineConfig([
             ],
             'curly': ['error', 'all'],
             'eqeqeq': 'error',
-            'import/no-dynamic-require': 'error',
-            'import/no-default-export': 'error',
-            'import/no-self-import': 'error',
+            'import-x/no-dynamic-require': 'error',
+            'import-x/no-default-export': 'error',
+            'import-x/no-self-import': 'error',
             'max-len': ['error', {
                 'code': 120, // needs to be in sync w/ .prettierrc printWidth
                 'ignoreUrls': true,
