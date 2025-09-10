@@ -131,7 +131,7 @@ export default defineConfig([
     {
         files: ['**/*.md'],
         plugins: { markdown },
-        language: 'markdown/commonmark',
+        language: 'markdown/gfm',
         extends: [ 'markdown/recommended' ],
     },
 
