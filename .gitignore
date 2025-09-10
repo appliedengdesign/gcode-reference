@@ -1,7 +1,10 @@
 
+.DS_Store
 *.tsbuildinfo
 .npm
 .eslintcache
 dist
 out
 node_modules
+package-lock.json
+*.log
