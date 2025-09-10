@@ -9,7 +9,6 @@ eslint.config.mjs
 src/
 test/
 scripts/
-tslint.json
 tsconfig.build.json
 tsconfig.buildinfo
 *.tsbuildinfo
