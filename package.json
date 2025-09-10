@@ -4,8 +4,11 @@
     "description": "Node module to provide descriptions and reference to CNC G-Codes",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "exports": {
+        ".": "./dist/index.js"
+    },
     "files": [
-        "dist/"
+        "dist"
     ],
     "repository": {
         "type": "git",
@@ -24,7 +27,10 @@
         "turning",
         "appliedengdesign"
     ],
-    "author": "Mike Centola",
+    "author": {
+        "name": "Mike Centola",
+        "url": "https://github.com/mikecentola"
+    },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/appliedengdesign/gcode-reference/issues"
@@ -38,7 +44,7 @@
         "url": "https://github.com/sponsors/appliedengdesign"
     },
     "scripts": {
-        "build": "npm run test-all && tsc --project tsconfig.build.json",
+        "build": "npm run test:all && tsc --project tsconfig.build.json",
         "clean": "shx rm -rf dist/*",
         "compile": "tsc --project tsconfig.build.json",
         "copyJSON": "npx ts-node ./scripts/copyJSON.ts",
@@ -49,9 +55,9 @@
         "pretty": "prettier --config .prettierrc --check .",
         "pretty:fix": "prettier --config .prettierrc --write .",
         "refresh": "shx rm-rf ./node_modules ./package-lock.json && npm install",
-        "test-all": "mocha --require ts-node/register test/**/*.ts",
-        "test-gref": "mocha --require ts-node/register test/gReference.test.ts",
-        "test-validate-json": "mocha --require ts-node/register test/validateJSON.test.ts"
+        "test:all": "mocha --require ts-node/register test/**/*.ts",
+        "test:gref": "mocha --require ts-node/register test/gReference.test.ts",
+        "test:json": "mocha --require ts-node/register test/validateJSON.test.ts"
     },
     "devDependencies": {
         "@appliedengdesign/cnccodes-json-schema": "^0.3.0",
