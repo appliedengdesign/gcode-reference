@@ -1,6 +1,5 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "display": "Node 16",
     "compilerOptions": {
         "target": "es2024",
         "lib": [
@@ -8,17 +7,20 @@
         ],
         "module": "nodenext",
         "declaration": true,
-        "moduleResolution": "node16",
+        "moduleResolution": "nodenext",
+        "esModuleInterop": true,
         "strict": true,
         "newLine": "lf",
         "removeComments": true,
-        "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "skipLibCheck": true,
         "outDir": "./dist",
         "sourceMap": true,
         "resolveJsonModule": true,
-        "allowJs": true
+        "allowJs": true,
+        "checkJs": true,
+        "incremental": true,
+        "tsBuildInfoFile": ".tsbuildinfo"
     },
     "include": [
         "src/**/*.ts",
