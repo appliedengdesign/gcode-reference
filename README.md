@@ -3,7 +3,7 @@
 
 [![CodeQL](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql.yml/badge.svg)](https://github.com/appliedengdesign/gcode-reference/actions/workflows/codeql.yml) [![Node.js CI](https://github.com/appliedengdesign/gcode-reference/actions/workflows/nodejs-ci.yml/badge.svg)](https://github.com/appliedengdesign/gcode-reference/actions/workflows/nodejs-ci.yml)
 
-[![Follow @appliedengdesign](https://badgen.net/twitter/follow/appliedengdes)](https://twitter.com/appliedengdes)
+[![Follow @appliedengdesign](https://badgen.net/badge/icon/follow?icon=twitter&label)](https://twitter.com/appliedengdes)
 
 # G-Code Reference
 
