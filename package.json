@@ -61,15 +61,15 @@
     },
     "devDependencies": {
         "@appliedengdesign/cnccodes-json-schema": "^0.3.0",
-        "@eslint/js": "^9.35.0",
+        "@eslint/js": "^9.36.0",
         "@eslint/json": "^0.13.2",
-        "@eslint/markdown": "^7.2.0",
+        "@eslint/markdown": "^7.3.0",
         "@types/chai": "^5.2.2",
         "@types/mocha": "^10.0.10",
         "@types/node": "^22.18.8",
         "ajv": "^8.17.1",
         "chai": "^6.2.0",
-        "eslint": "^9.35.0",
+        "eslint": "^9.36.0",
         "eslint-config-prettier": "^10.1.8",
         "eslint-import-resolver-typescript": "^4.4.4",
         "eslint-plugin-import-x": "^4.16.1",
@@ -80,6 +80,6 @@
         "shx": "^0.4.0",
         "ts-node": "^10.9.2",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.43.0"
+        "typescript-eslint": "^8.45.0"
     }
 }
