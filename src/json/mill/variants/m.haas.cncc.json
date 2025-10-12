@@ -1,0 +1,327 @@
+{
+    "$schema": "https://appliedengdesign.github.io/cnccodes-json-schema/draft/2022-07/schema",
+    "type": "mcode",
+    "machineType": "mill",
+    "title": "M Code Milling Reference",
+    "variant": {
+        "name": "haas",
+        "remove": [
+            "M17",
+            "M18"
+        ]
+    },
+    "description": "M-Code Listing for Milling Machine Tools",
+    "keywords": [
+        "haas",
+        "mill",
+        "milling"
+    ],
+    "codes": {
+        "M21": {
+            "category": "mcode",
+            "shortDesc": "Optional User M Function with M-Fin",
+            "desc": "M21 closes one of the optional relays and waits for an external M-Fin signal"
+        },
+        "M22": {
+            "category": "mcode",
+            "shortDesc": "Optional User M Function with M-Fin",
+            "desc": "M22 closes one of the optional relays and waits for an external M-Fin signal"
+        },
+        "M23": {
+            "category": "mcode",
+            "shortDesc": "Optional User M Function with M-Fin",
+            "desc": "M23 closes one of the optional relays and waits for an external M-Fin signal"
+        },
+        "M24": {
+            "category": "mcode",
+            "shortDesc": "Optional User M Function with M-Fin",
+            "desc": "M24 closes one of the optional relays and waits for an external M-Fin signal"
+        },
+        "M25": {
+            "category": "mcode",
+            "shortDesc": "Optional User M Function with M-Fin",
+            "desc": "M25 closes one of the optional relays and waits for an external M-Fin signal"
+        },
+        "M29": {
+            "category": "mcode",
+            "shortDesc": "Set Output Relay with M-Fin",
+            "desc": "M29 turns on a relay, pauses the program, and waits for an external M-Fin signal. When the control receives the M-Fin signal, the relay turns off and the program continues. [RESET] stops any operation waiting for a relay-activated accessory to finish.",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Discrete output relay from 0 to 255",
+                    "optional": false
+                }
+            }
+        },
+        "M36": {
+            "category": "mcode",
+            "shortDesc": "Pallet Part Ready",
+            "desc": "M36 delays the pallet change until [PART READY] is pushed. A pallet change occurs after [PART READY] is pushed and the doors are closed."
+        },
+        "M39": {
+            "category": "mcode",
+            "shortDesc": "Rotate Tool Turret"
+        },
+        "M41": {
+            "category": "mcode",
+            "shortDesc": "Low Gear Override",
+            "desc": "On machines with a transmission, M41 holds the machine in low gear"
+        },
+        "M42": {
+            "category": "mcode",
+            "shortDesc": "High Gear Override",
+            "desc": "On machines with a transmission, M42 holds the machine in high gear"
+        },
+        "M46": {
+            "category": "mcode",
+            "shortDesc": "Qn Pmm Jump to Line",
+            "desc": "Jump to line mm in the current program if pallet n is loaded, otherwise go to the next block."
+        },
+        "M48": {
+            "category": "mcode",
+            "shortDesc": "Validate That The Current Program is Appropriate for Loaded Pallet"
+        },
+        "M50": {
+            "category": "mcode",
+            "shortDesc": "Pallet Change Sequence",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Pallet number",
+                    "optional": true
+                }
+            }
+        },
+        "M51": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M52": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M53": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M54": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M55": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M56": {
+            "category": "mcode",
+            "shortDesc": "Turn On Built-In M-code Relay"
+        },
+        "M59": {
+            "category": "mcode",
+            "shortDesc": "Set Output Relay",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Discrete output relay number",
+                    "optional": false
+                }
+            }
+        },
+        "M61": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M62": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M63": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M64": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M65": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M66": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Built-In M-code Relay"
+        },
+        "M69": {
+            "category": "mcode",
+            "shortDesc": "Turn Off Output Relay",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Discrete output relay number from 0 to 255",
+                    "optional": false
+                }
+            }
+        },
+        "M70": {
+            "category": "mcode",
+            "shortDesc": "Workholding Clamp",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Vise number (1 - 8)",
+                    "optional": false
+                },
+                "Q": {
+                    "shortDesc": "Enables or disables the vise unclamp check when commanding the spindle.\n\nQ = 0 or not specified: Enable Unclamp Check.\n\nQ = 1: Disable Unclamp Check. ",
+                    "optional": false
+                }
+            }
+        },
+        "M71": {
+            "category": "mcode",
+            "shortDesc": "Workholding Unclamp",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Vise number (1 - 8)",
+                    "optional": false
+                },
+                "Q": {
+                    "shortDesc": "Enables or disables the vise unclamp check when commanding the spindle.\n\nQ = 0 or not specified: Enable Unclamp Check.\n\nQ = 1: Disable Unclamp Check. ",
+                    "optional": false
+                }
+            }
+        },
+        "M73": {
+            "category": "mcode",
+            "shortDesc": "Tool Air Blast (TAB) On"
+        },
+        "M74": {
+            "category": "mcode",
+            "shortDesc": "Tool Air Blast (TAB) Off"
+        },
+        "M75": {
+            "category": "mcode",
+            "shortDesc": "Set G35 or G136 Reference Point"
+        },
+        "M78": {
+            "category": "mcode",
+            "shortDesc": "Alarm if Skip Signal Found"
+        },
+        "M79": {
+            "category": "mcode",
+            "shortDesc": "Alarm if Skip Signal Not Found"
+        },
+        "M90": {
+            "category": "mcode",
+            "shortDesc": "Fixture Clamp Input ON"
+        },
+        "M91": {
+            "category": "mcode",
+            "shortDesc": "Fixture Clamp Input OFF"
+        },
+        "M95": {
+            "category": "mcode",
+            "shortDesc": "Sleep Mode"
+        },
+        "M96": {
+            "category": "mcode",
+            "shortDesc": "Jump If No Input"
+        },
+        "M104": {
+            "category": "mcode",
+            "shortDesc": "Probe Arm Extend"
+        },
+        "M105": {
+            "category": "mcode",
+            "shortDesc": "Probe Arm Retract"
+        },
+        "M109": {
+            "category": "mcode",
+            "shortDesc": "Interactive User Input",
+            "parameters": {
+                "P": {
+                    "shortDesc": "A number in the range (500-549 or 10500-10549) representing the macro variable of the same name.",
+                    "optional": false
+                }
+            }
+        },
+        "M116": {
+            "category": "mcode",
+            "shortDesc": "Vise Air Chips Blast On"
+        },
+        "M117": {
+            "category": "mcode",
+            "shortDesc": "Vise Air Chips Blast Off"
+        },
+        "M130": {
+            "category": "mcode",
+            "shortDesc": "Display Media"
+        },
+        "M131": {
+            "category": "mcode",
+            "shortDesc": "Cancel Display Media"
+        },
+        "M138": {
+            "category": "mcode",
+            "shortDesc": "Spindle Speed Variation On"
+        },
+        "M139": {
+            "category": "mcode",
+            "shortDesc": "Spindle Speed Variation Off"
+        },
+        "M158": {
+            "category": "mcode",
+            "shortDesc": "Mist Condenser On"
+        },
+        "M159": {
+            "category": "mcode",
+            "shortDesc": "Mist Condenser Off"
+        },
+        "M160": {
+            "category": "mcode",
+            "shortDesc": "Cancel Active PulseJet"
+        },
+        "M161": {
+            "category": "mcode",
+            "shortDesc": "Pulse Jet Continuous Mode",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Pnn is the interval at which oil pulses occur (Min = 1 / Max = 99 seconds)",
+                    "optional": true
+                }
+            }
+        },
+        "M162": {
+            "category": "mcode",
+            "shortDesc": "PulseJet Single Event Mode",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Number of pulses (1-99 squirts)",
+                    "optional": true
+                }
+            }
+        },
+        "M163": {
+            "category": "mcode",
+            "shortDesc": "PulseJet Modal Mode",
+            "parameters": {
+                "P": {
+                    "shortDesc": "Number of pulses for each hole (1-99)",
+                    "optional": true
+                }
+            }
+        },
+        "M180": {
+            "category": "mcode",
+            "shortDesc": " Automatic Window Open"
+        },
+        "M181": {
+            "category": "mcode",
+            "shortDesc": " Automatic Window Close"
+        },
+        "M199": {
+            "category": "mcode",
+            "shortDesc": "Pallet / Part Load or Program End"
+        },
+        "M300": {
+            "category": "mcode",
+            "shortDesc": "APL/Robot Custom Sequence"
+        }
+    }
+}
